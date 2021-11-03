@@ -1,0 +1,72 @@
+{
+	"id": "e9b082f6-ea9d-4a23-9719-52ec8d5bb623",
+	"createdAt": "2019-04-08T14:25:43.000Z",
+	"updatedAt": "2019-09-05T12:16:52.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"changedBy": "ole-andre.haugen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "df500bc1-7745-4531-ef54-1dd02ae7db56",
+					"fieldName": "Init",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"// var applicationConfig = {};",
+						"",
+						"// var myMSALObj = new Msal.UserAgentApplication(applicationConfig.clientID, applicationConfig.authority, acquireTokenRedirectCallBack, {",
+						"//     storeAuthStateInCookie: true,",
+						"//     cacheLocation: \"localStorage\"",
+						"// });",
+						"",
+						"// function acquireTokenRedirectCallBack(eEvent) {}"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.9.5.1416",
+	"application": "demo_redirect_azure",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": false,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "<script src=\"https://secure.aadcdn.microsoftonline-p.com/lib/1.0.2/js/msal.min.js\"></script>",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": true,
+	"ui5_bootstrap": null,
+	"apis": []
+}

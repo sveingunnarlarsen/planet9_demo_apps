@@ -1,0 +1,139 @@
+{
+	"id": "3af790d9-36b6-4ab6-88fc-ca3876ebd371",
+	"createdAt": "2019-08-26T09:24:02.000Z",
+	"updatedAt": "2019-08-26T09:24:02.000Z",
+	"createdBy": "rommel",
+	"changedBy": "rommel",
+	"objects": [
+		{
+			"fieldNo": "c5fbc712-7960-4c90-b134-54672f08c4d9",
+			"fieldName": "oPage",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Page",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "dc424e9b-0968-482d-dbb0-d76d27418a6e",
+					"fieldName": "oBarFooter",
+					"fieldParent": "c5fbc712-7960-4c90-b134-54672f08c4d9",
+					"fieldType": "sap.m.Bar",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "setFooter",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "a04b6b31-bd5e-4d4c-9c7b-6c974d6dcf99",
+							"fieldName": "Left",
+							"fieldParent": "dc424e9b-0968-482d-dbb0-d76d27418a6e",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentLeft",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "00505c38-2b01-41f7-8706-feb31b566e99",
+							"fieldName": "Middle",
+							"fieldParent": "dc424e9b-0968-482d-dbb0-d76d27418a6e",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentMiddle",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "1165bc71-5bc3-4518-9bd5-65f55869506a",
+							"fieldName": "Right",
+							"fieldParent": "dc424e9b-0968-482d-dbb0-d76d27418a6e",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentRight",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": []
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.26.1124",
+	"application": "code_snippet",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

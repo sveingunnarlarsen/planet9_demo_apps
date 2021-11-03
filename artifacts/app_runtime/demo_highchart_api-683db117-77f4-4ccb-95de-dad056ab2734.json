@@ -1,0 +1,528 @@
+{
+	"id": "683db117-77f4-4ccb-95de-dad056ab2734",
+	"createdAt": "2018-08-15T09:33:13.000Z",
+	"updatedAt": "2021-01-28T08:46:21.763Z",
+	"createdBy": "priyanka",
+	"changedBy": "david.bartolome@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "378b60c1-2f1b-4015-b234-4d7f71f4f984",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "0bffe5e8-8331-48a1-8df3-2c9104d695d7",
+					"fieldName": "oApp",
+					"fieldParent": "378b60c1-2f1b-4015-b234-4d7f71f4f984",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "92f39118-aeca-49ea-e200-e59b33e5ff0f",
+							"fieldName": "oPage",
+							"fieldParent": "0bffe5e8-8331-48a1-8df3-2c9104d695d7",
+							"fieldType": "sap.m.Page",
+							"bindingValue": "API highchart_data>highchart_data",
+							"bindingType": "u",
+							"bindingSource": "API",
+							"bindingParentID": "34e8231d-c2fd-46b9-9b84-88e777fcbc28",
+							"bindingPathID": "34b38ed2-d4b2-4740-8bca-5f5efe68fc72",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Highchart Using API",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "a3e8b291-fa7c-472e-f37a-40df3f26cf43",
+									"fieldName": "oHighchart",
+									"fieldParent": "92f39118-aeca-49ea-e200-e59b33e5ff0f",
+									"fieldType": "neptune.chart.highchart",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "49aa9436-b6fd-4a6c-ace1-764b20d98e2f",
+											"fieldName": "oLine",
+											"fieldParent": "a3e8b291-fa7c-472e-f37a-40df3f26cf43",
+											"fieldType": "neptune.chart.series.line",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "e0c79d28-f8a3-440a-86a2-91566e82a473",
+											"fieldName": "oColumn",
+											"fieldParent": "a3e8b291-fa7c-472e-f37a-40df3f26cf43",
+											"fieldType": "neptune.chart.series.column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "f61f0c50-1346-44a6-bfab-4671d5a048d0",
+									"fieldName": "oBarFooter1",
+									"fieldParent": "92f39118-aeca-49ea-e200-e59b33e5ff0f",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "046c7ab6-4777-4b38-babe-c67e7b76e176",
+											"fieldName": "Right",
+											"fieldParent": "f61f0c50-1346-44a6-bfab-4671d5a048d0",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "c9961e56-a47b-4820-e0fc-5e5e36ed7e61",
+													"fieldName": "oButUpdate",
+													"fieldParent": "046c7ab6-4777-4b38-babe-c67e7b76e176",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Update",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"/**",
+																" * Name: API highchart_data",
+																" * Description: ",
+																" * ",
+																" * Path: /highchart_data",
+																" * Method: GET",
+																" * ",
+																" * Parameters:",
+																" * where - Optional parameter ",
+																" * Example: Equals: { \"column\": \"value\" }",
+																"Not equal: { \"column\": { \"!=\": \"value\" } }",
+																"",
+																" * select - Optional parameter ",
+																" * Example: column1,column2,column3",
+																" * limit - Optional parameter ",
+																" * skip - Optional parameter ",
+																" * sort - Optional parameter ",
+																" * ",
+																" */",
+																"var options = {",
+																"    parameters: {",
+																"        \"where\": \"\", // Optional ",
+																"        \"select\": \"\", // Optional ",
+																"        \"limit\": \"\", // Optional ",
+																"        \"skip\": \"\", // Optional ",
+																"        \"sort\": \"\" // Optional ",
+																"    }",
+																"};",
+																"apioGetData(options);",
+																"",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "9f5f3b45-8aeb-424b-bed9-bd34fbee98f9",
+													"fieldName": "oButNext",
+													"fieldParent": "046c7ab6-4777-4b38-babe-c67e7b76e176",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Next",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"oApp.to(oPage1);",
+																"",
+																"/**",
+																" * Name: API highchart_data",
+																" * Description: ",
+																" * ",
+																" * Path: /highchart_data",
+																" * Method: GET",
+																" * ",
+																" * Parameters:",
+																" * where - Optional parameter ",
+																" * Example: Equals: { \"column\": \"value\" }",
+																"Not equal: { \"column\": { \"!=\": \"value\" } }",
+																"",
+																" * select - Optional parameter ",
+																" * Example: column1,column2,column3",
+																" * limit - Optional parameter ",
+																" * skip - Optional parameter ",
+																" * sort - Optional parameter ",
+																" * ",
+																" */",
+																"var options = {",
+																"    parameters: {",
+																"        \"where\": \"\", // Optional ",
+																"        \"select\": \"\", // Optional ",
+																"        \"limit\": \"\", // Optional ",
+																"        \"skip\": \"\", // Optional ",
+																"        \"sort\": \"\" // Optional ",
+																"    }",
+																"};",
+																"",
+																"apiGetData(options);",
+																"",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "50466b62-e844-4907-de5a-0c79c070c3fb",
+							"fieldName": "oPage1",
+							"fieldParent": "0bffe5e8-8331-48a1-8df3-2c9104d695d7",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "showNavButton",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "navButtonPress",
+									"grouping": "Events",
+									"value": "oApp.back();",
+									"script": "oApp.back();",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "9af71467-ba2d-45b1-c328-5dc1d38770fe",
+									"fieldName": "oHighchart1",
+									"fieldParent": "50466b62-e844-4907-de5a-0c79c070c3fb",
+									"fieldType": "neptune.chart.highchart",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "72a9367a-10c3-4c17-a2c1-89e62c2db708",
+											"fieldName": "oPie",
+											"fieldParent": "9af71467-ba2d-45b1-c328-5dc1d38770fe",
+											"fieldType": "neptune.chart.series.pie",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "ca7b1b03-20e3-4a9f-dd6a-faca7a33f654",
+											"fieldName": "oxAxis",
+											"fieldParent": "9af71467-ba2d-45b1-c328-5dc1d38770fe",
+											"fieldType": "neptune.chart.xaxis",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "lineColor",
+													"grouping": "Properties",
+													"value": "red",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "4c1ce17b-4032-4be3-baad-5fae0ec9eba8",
+									"fieldName": "oBarFooter",
+									"fieldParent": "50466b62-e844-4907-de5a-0c79c070c3fb",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "ccb80951-7534-4259-bcbe-616dad03d09c",
+											"fieldName": "Right",
+											"fieldParent": "4c1ce17b-4032-4be3-baad-5fae0ec9eba8",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "4e724d7a-9c19-47f6-a261-b8d89ad56dfd",
+					"fieldName": "GetData",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "34e8231d-c2fd-46b9-9b84-88e777fcbc28",
+					"restOperation": "c22b2136-4505-4cc3-8472-c3ac36762a51",
+					"filePath": "orestapi",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": 200,
+							"dataId": "34b38ed2-d4b2-4740-8bca-5f5efe68fc72",
+							"modelFieldNo": "92f39118-aeca-49ea-e200-e59b33e5ff0f"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": [
+								"==OBJECT STRING==",
+								"debugger;",
+								"var test = modeloPage.getData();",
+								"var i, ",
+								"People = [],",
+								"City = [], ",
+								"Houses = [],",
+								"PieData = [];",
+								"",
+								"for (i = 0; i < test.length; i++) {",
+								"    People.push(test[i].People);",
+								"    City.push(test[i].City);",
+								"    Houses.push(test[i].Houses);",
+								"    PieData.push({",
+								"        name: test[i].City,",
+								"        y: test[i].People",
+								"    })",
+								"}",
+								"",
+								"if (oHighchart) {",
+								"    oHighchart.update({",
+								"        xAxis: {",
+								"            categories: City",
+								"        },",
+								"        series: [{",
+								"                name: 'People',",
+								"                data: People",
+								"            },",
+								"            {",
+								"                name: 'Houses',",
+								"                color: 'Lightgreen',",
+								"                data: Houses",
+								"            }",
+								"        ]",
+								"    });",
+								"}",
+								"",
+								"if (oHighchart1) {",
+								"    oHighchart1.update({",
+								"        series: [{",
+								"            name: 'People',",
+								"            colorByPoint: true,",
+								"            data: PieData",
+								"        }]",
+								"    });",
+								"}",
+								"",
+								"// oHighchart1.update({",
+								"  ",
+								"//     series: [{",
+								"//           data: People,",
+								"//           name: 'City'",
+								"//          }]",
+								"// });",
+								"",
+								"",
+								""
+							],
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "020305d9-9ae6-49f9-e69b-316bf66a3f51",
+					"fieldName": "oJavascript",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"sap.ui.getCore().attachInit(function(data) {",
+						"",
+						"    setTimeout(function() {",
+						"        apiGetData();",
+						"    }, 200);",
+						"",
+						"});"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.11.8.1219",
+	"application": "demo_highchart_api",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": [
+		"==OBJECT STRING==",
+		"<script src=\"/public/highsuite/modules/series-label.js\"></script>",
+		"<div id=\"container\" style=\"height: 400px; width: 500\"></div>"
+	],
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": true,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "34e8231d-c2fd-46b9-9b84-88e777fcbc28",
+			"name": "API highchart_data",
+			"ver": "21.1.28.846",
+			"updatedAt": "2021-01-28T08:46:21.742Z",
+			"changedBy": "priyanka"
+		}
+	]
+}

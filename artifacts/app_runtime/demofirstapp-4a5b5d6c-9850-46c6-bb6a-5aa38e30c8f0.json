@@ -1,0 +1,528 @@
+{
+	"id": "4a5b5d6c-9850-46c6-bb6a-5aa38e30c8f0",
+	"createdAt": "2018-06-07T06:50:00.000Z",
+	"updatedAt": "2020-04-16T09:06:17.896Z",
+	"createdBy": "",
+	"changedBy": "morten",
+	"objects": [
+		{
+			"fieldNo": "da58cec5-ad0c-4728-99fa-815cfe7a2a3b",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "188cef89-5e8d-412e-8f81-4fb81ecff079",
+					"fieldName": "oApp",
+					"fieldParent": "da58cec5-ad0c-4728-99fa-815cfe7a2a3b",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "7e9920c0-1512-4040-9749-b9738101c0f7",
+							"fieldName": "oPageStart",
+							"fieldParent": "188cef89-5e8d-412e-8f81-4fb81ecff079",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Start Page",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableScrolling",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+									"fieldName": "oTableUI",
+									"fieldParent": "7e9920c0-1512-4040-9749-b9738101c0f7",
+									"fieldType": "sap.ui.table.Table",
+									"bindingType": "h",
+									"modelPath": "oMultiModel>/result/IT_CUSTOMER",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "visibleRowCountMode",
+											"grouping": "Properties",
+											"value": "Interactive",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "3684febf-d85e-4a55-d840-5e4353df5abf",
+											"fieldName": "coloTableUIKUNNR",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "Customer",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "8a063034-5b88-46f1-e036-a7a6c776adc3",
+													"fieldName": "txtoTableUIKUNNR",
+													"fieldParent": "3684febf-d85e-4a55-d840-5e4353df5abf",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>KUNNR}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "dc024863-e434-4001-a4b4-e897ddace904",
+											"fieldName": "coloTableUINAME1",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "Name 1",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "e623ebda-035d-4adc-b00d-a5ae28370804",
+													"fieldName": "txtoTableUINAME1",
+													"fieldParent": "dc024863-e434-4001-a4b4-e897ddace904",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>NAME1}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "c0b99b90-6ca1-4c7c-90a9-6eae339f2350",
+											"fieldName": "coloTableUIORT01",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "City",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "1259f858-14c3-47b8-e7c2-6d23354d7085",
+													"fieldName": "txtoTableUIORT01",
+													"fieldParent": "c0b99b90-6ca1-4c7c-90a9-6eae339f2350",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>ORT01}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "656e7cdf-037a-442a-bc8b-c5d9aa387b7d",
+											"fieldName": "coloTableUILAND1",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "Country Key",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "1763720b-02fe-4385-dca5-c75685826e34",
+													"fieldName": "txtoTableUILAND1",
+													"fieldParent": "656e7cdf-037a-442a-bc8b-c5d9aa387b7d",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>LAND1}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "4183f4bc-b45b-469e-c637-eaa60353e13e",
+											"fieldName": "coloTableUISELECTED",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "SELECTED",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "4510506f-e47e-4258-b005-8b1d49f9a997",
+													"fieldName": "txtoTableUISELECTED",
+													"fieldParent": "4183f4bc-b45b-469e-c637-eaa60353e13e",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>SELECTED}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "ce6ca474-e109-4b7d-a345-bc0ef7962611",
+											"fieldName": "coloTableUISTRAS",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "House number/street",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "52575dfd-4749-4ed2-8db5-21cd0fbb3368",
+													"fieldName": "txtoTableUISTRAS",
+													"fieldParent": "ce6ca474-e109-4b7d-a345-bc0ef7962611",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>STRAS}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "d7bf652f-420f-4c81-fe5a-dd542b26e1c6",
+											"fieldName": "coloTableUIPSTLZ",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "Postal Code",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "5bb7246d-813f-444a-86f4-7ead30ce6314",
+													"fieldName": "txtoTableUIPSTLZ",
+													"fieldParent": "d7bf652f-420f-4c81-fe5a-dd542b26e1c6",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>PSTLZ}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "9b8ba048-06e1-4d98-e649-8112d5aa9d57",
+											"fieldName": "coloTableUITELF1",
+											"fieldParent": "02654c94-5f1f-4566-fe29-2faf495e92ca",
+											"fieldType": "sap.ui.table.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "label",
+													"grouping": "Properties",
+													"value": "Telephone 1",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "a8fc5bce-887f-436a-e0b6-b9bfa3a20dd7",
+													"fieldName": "txtoTableUITELF1",
+													"fieldParent": "9b8ba048-06e1-4d98-e649-8112d5aa9d57",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{oMultiModel>TELF1}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "4609707f-1c6b-4d10-e5b6-c8c1c7a3ed5a",
+									"fieldName": "setFooter",
+									"fieldParent": "7e9920c0-1512-4040-9749-b9738101c0f7",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "70ea8dd6-7330-4504-cccc-955d05ebdf89",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": "oTableUI.setVisibleRowCountMode(sap.ui.table.VisibleRowCountMode.Auto);",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "96d44529-3c6d-462d-db44-ee71bd5058cb",
+					"fieldName": "oMultiModel",
+					"fieldParent": 99999,
+					"fieldType": "neptune.model",
+					"bindingValue": "SAP Example API (Training)>getCustomerListResponse",
+					"bindingType": "h",
+					"bindingSource": "API",
+					"bindingParentID": "28f6eeb4-72e5-4b15-b6fa-ba291d283b5e",
+					"bindingPathID": "307dd293-7d88-4eaa-9cea-1b838ba1e116",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "3afdff24-f6dd-4a50-ba3f-f2f673340c28",
+					"fieldName": "oRestAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "28f6eeb4-72e5-4b15-b6fa-ba291d283b5e",
+					"restOperation": "4c12de52-d794-4831-d5a6-75ad92ab07a3",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "307dd293-7d88-4eaa-9cea-1b838ba1e116",
+							"modelFieldNo": "96d44529-3c6d-462d-db44-ee71bd5058cb"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": [
+								"==OBJECT STRING==",
+								"//¨",
+								"var tab = modeloMultiModel.oData.result;"
+							],
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "18.6.7.1132",
+	"application": "demofirstapp",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": null,
+	"ui5_table": true,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "1.54",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "28f6eeb4-72e5-4b15-b6fa-ba291d283b5e",
+			"name": "SAP Example API (Training)",
+			"ver": "20.4.16.96",
+			"updatedAt": "2020-04-16T09:06:17.860Z",
+			"changedBy": "ole-andre.haugen@neptune-software.com"
+		}
+	]
+}

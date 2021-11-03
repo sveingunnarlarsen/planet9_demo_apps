@@ -1,0 +1,303 @@
+{
+	"id": "fc0cbdb3-721a-47ee-9f4e-39b8eeb117fc",
+	"createdAt": "2019-08-19T13:07:10.000Z",
+	"updatedAt": "2020-05-06T08:33:35.279Z",
+	"createdBy": "priyanka",
+	"changedBy": "priyanka",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "2",
+					"fieldName": "oApp",
+					"fieldParent": "1",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "4",
+							"fieldName": "oPage",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Full Screen",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "e7e8659a-73b0-409b-f57b-ea8be7402ef0",
+									"fieldName": "oTree",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Tree",
+									"bindingValue": "Generic Array",
+									"bindingType": "h",
+									"bindingSource": "P9",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "mode",
+											"grouping": "Properties",
+											"value": "MultiSelect",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "headerText",
+											"grouping": "Properties",
+											"value": "tree",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "footerText",
+											"grouping": "Properties",
+											"value": "gfgf",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "3cbd820e-cb70-4be1-b01b-8a0e47f1ce48",
+											"fieldName": "oTreeItemCustom",
+											"fieldParent": "e7e8659a-73b0-409b-f57b-ea8be7402ef0",
+											"fieldType": "sap.m.CustomTreeItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Active",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "5",
+									"fieldName": "oFooter",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "6",
+											"fieldName": "Left",
+											"fieldParent": "5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "7",
+											"fieldName": "Middle",
+											"fieldParent": "5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "8",
+											"fieldName": "Right",
+											"fieldParent": "5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "2f455d09-12d6-4cf0-8edb-3e7033d45192",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": "buildTree();",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "6f48c379-052c-4473-e599-76e23104cfcc",
+					"fieldName": "oTreeData",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"function buildTree() {",
+						"",
+						"    var treeData = [",
+						"\t{",
+						"\t\t\"text\": \"Node1\",",
+						"\t\t\"nodes\":",
+						"\t\t[",
+						"\t\t\t{",
+						"\t\t\t\t\"text\": \"Node1-1\",",
+						"\t\t\t\t\"nodes\":[",
+						"\t\t\t\t\t{",
+						"\t\t\t\t\t\t\"text\": \"Node1-1-1\",",
+						"\t\t\t\t\t},",
+						"\t\t\t\t\t{",
+						"\t\t\t\t\t\t\"text\": \"Node1-1-2\",",
+						"\t\t\t\t\t\t\"nodes\":[",
+						"\t\t\t\t\t\t\t{",
+						"\t\t\t\t\t\t\t\t\"text\": \"Node1-1-1\",",
+						"\t\t\t\t\t\t\t\t\"nodes\":[",
+						"\t\t\t\t\t\t\t\t\t{",
+						"\t\t\t\t\t\t\t\t\t\t\"text\": \"Node1-1-1-1\",",
+						"\t\t\t\t\t\t\t\t\t},",
+						"\t\t\t\t\t\t\t\t\t{",
+						"\t\t\t\t\t\t\t\t\t\t\"text\": \"Node1-1-1-2\",",
+						"\t\t\t\t\t\t\t\t\t},",
+						"\t\t\t\t\t\t\t\t\t{",
+						"\t\t\t\t\t\t\t\t\t\t\"text\": \"Node1-1-1-3\",",
+						"\t\t\t\t\t\t\t\t\t}",
+						"\t\t\t\t\t\t\t\t]",
+						"\t\t\t\t\t\t\t}",
+						"\t\t\t\t\t\t]",
+						"\t\t\t\t\t}",
+						"\t\t\t\t]",
+						"\t\t\t},",
+						"\t\t\t{",
+						"\t\t\t\t\"text\": \"Node1-2\",",
+						"\t\t\t}",
+						"\t\t]",
+						"\t},",
+						"\t{",
+						"\t\t\"text\": \"Node2\",",
+						"\t}",
+						"]",
+						"",
+						"    modeloTreeMenu.setData({",
+						"        \"children\": _convertFlatToNested(treeData, \"nodes\", \"nodes\")",
+						"    });",
+						"",
+						"",
+						"",
+						"}"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.19.1522",
+	"application": "treeitemcustom",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": true,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

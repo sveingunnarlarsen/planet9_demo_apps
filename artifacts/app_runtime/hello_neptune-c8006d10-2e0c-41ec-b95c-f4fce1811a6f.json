@@ -1,0 +1,269 @@
+{
+	"id": "c8006d10-2e0c-41ec-b95c-f4fce1811a6f",
+	"createdAt": "2019-03-12T14:01:41.000Z",
+	"updatedAt": "2019-07-02T15:48:29.000Z",
+	"createdBy": "rommel",
+	"changedBy": "rommel",
+	"objects": [
+		{
+			"fieldNo": "a4240522-1610-4697-8420-6258192e7a63",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "f7f573ef-0444-4322-a9e2-ef5ffb68055d",
+					"fieldName": "oApp",
+					"fieldParent": "a4240522-1610-4697-8420-6258192e7a63",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "f84a9884-7e17-4509-e4c3-10c4aedb777b",
+							"fieldName": "oPage",
+							"fieldParent": "f7f573ef-0444-4322-a9e2-ef5ffb68055d",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Hello Neptune",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "73a83193-fa08-4eb0-dce9-e7eaca044632",
+									"fieldName": "oFlexBox",
+									"fieldParent": "f84a9884-7e17-4509-e4c3-10c4aedb777b",
+									"fieldType": "sap.m.FlexBox",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "direction",
+											"grouping": "Properties",
+											"value": "Column",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "alignItems",
+											"grouping": "Properties",
+											"value": "Center",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "alignContent",
+											"grouping": "Properties",
+											"value": "Center",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "63aa055f-48ab-43ed-fc38-ba36cc627d6d",
+											"fieldName": "oTitle",
+											"fieldParent": "73a83193-fa08-4eb0-dce9-e7eaca044632",
+											"fieldType": "sap.m.Title",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "titleStyle",
+													"grouping": "Properties",
+													"value": "H1",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Hello Neptune!!!",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "level",
+													"grouping": "Properties",
+													"value": "H1",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "e07be053-ca3a-4a5d-bb5d-a6b702aa34b6",
+											"fieldName": "oImage",
+											"fieldParent": "73a83193-fa08-4eb0-dce9-e7eaca044632",
+											"fieldType": "sap.m.Image",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "src",
+													"grouping": "Properties",
+													"value": "/media/root/planet9_login.jpg",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "height",
+													"grouping": "Properties",
+													"value": "30em",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"/*console.log(\"This is a test log...\");",
+														"console.log(unknownVariable);*/",
+														""
+													],
+													"translation": []
+												},
+												{
+													"attribute": "load",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"push();",
+														"// Send Push Notification to clients",
+														"async function push() {",
+														"try {",
+														"    const push = await p9.push.send({",
+														"        launchpadName: 'Hello Neptune World', // Only send to users for this Launchpad",
+														"        userNames: [\"test.operator\"], // Array with user names ",
+														"        userIds: [], // Array with user id ",
+														"        title: 'Hello world',",
+														"        body: 'This is the main text',",
+														"    })",
+														"    console.log('Result after push', push);",
+														"",
+														"} catch (error) {",
+														"    console.error('Error sending push: ', error);",
+														"}",
+														"}"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "37ca7263-01e2-46c1-cf2e-05912b5e4a33",
+					"fieldName": "oODataSource",
+					"fieldParent": 99999,
+					"fieldType": "sap.ui.model.odata.v2.ODataModel",
+					"odataSource": "7a197c41-db5f-42f9-a39e-7b8733d8bff0",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "0a1bbcb0-d822-42a5-c4de-23d72e516d53",
+					"fieldName": "oRestAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "725cd7ba-ee18-46f0-b7ea-65c025d4e079",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "e01fb9ca-7f07-4a49-b92a-355da0e1b2a7",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.7.2.1748",
+	"application": "hello_neptune",
+	"title": "",
+	"description": "Say hello to Neptune application",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

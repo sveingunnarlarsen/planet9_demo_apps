@@ -1,0 +1,109 @@
+{
+	"id": "f8c54060-b87a-45ef-bf9d-4b9438f5e31c",
+	"createdAt": "2019-06-07T12:24:23.000Z",
+	"updatedAt": "2019-06-07T12:30:17.000Z",
+	"createdBy": "gunnar",
+	"changedBy": "gunnar",
+	"objects": [
+		{
+			"fieldNo": "f787132d-fccf-44c8-d1a4-75c79cfeb4e2",
+			"fieldName": "oApp",
+			"fieldParent": 0,
+			"fieldType": "sap.m.App",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "746df00f-04d0-434b-c9f5-06465eb0d011",
+					"fieldName": "oPage",
+					"fieldParent": "f787132d-fccf-44c8-d1a4-75c79cfeb4e2",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "b136e02e-9c91-4a26-d3ad-ea4d3ddc3571",
+							"fieldName": "oTable",
+							"fieldParent": "746df00f-04d0-434b-c9f5-06465eb0d011",
+							"fieldType": "sap.m.Table",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "2c952065-7634-4e43-ec71-e883d6bddbe9",
+									"fieldName": "oColumn",
+									"fieldParent": "b136e02e-9c91-4a26-d3ad-ea4d3ddc3571",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "757de802-521e-4bf1-81eb-8494321f88d1",
+					"fieldName": "oJavascript",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": "window.oColumn = oColumn;",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.7.1430",
+	"application": "testsapmcolumnstyleclass",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

@@ -1,0 +1,1801 @@
+{
+	"id": "68813a80-2e96-463c-accd-7dfea523e245",
+	"createdAt": "2019-07-11T09:04:28.000Z",
+	"updatedAt": "2019-07-11T09:07:44.000Z",
+	"createdBy": "oah",
+	"changedBy": "oah",
+	"objects": [
+		{
+			"fieldNo": 3,
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"noAggregation": false,
+			"onlyDeclare": false,
+			"odataUI": false,
+			"odataSource": "",
+			"bindingValue": "",
+			"bindingType": "",
+			"bindingSource": "",
+			"disabled": false,
+			"refObject": "",
+			"script": "",
+			"fieldType": "sap.m.Shell",
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": 4,
+					"fieldName": "oApp",
+					"fieldParent": 3,
+					"noAggregation": false,
+					"onlyDeclare": false,
+					"odataUI": false,
+					"odataSource": "",
+					"bindingValue": "",
+					"bindingType": "",
+					"bindingSource": "",
+					"disabled": false,
+					"refObject": "",
+					"script": "",
+					"fieldType": "sap.m.App",
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": 5,
+							"fieldName": "oPageMain",
+							"fieldParent": 4,
+							"noAggregation": false,
+							"onlyDeclare": false,
+							"odataUI": false,
+							"odataSource": "",
+							"bindingValue": "",
+							"bindingType": "",
+							"bindingSource": "",
+							"disabled": false,
+							"refObject": "",
+							"script": "",
+							"fieldType": "sap.m.Page",
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addMasterPage",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Planet 8 Demo",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": 52,
+									"fieldName": "oSimpleFormPallet",
+									"fieldParent": 5,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"attributes": [
+										{
+											"attribute": "editable",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelMinWidth",
+											"grouping": "Properties",
+											"value": "100",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanS",
+											"grouping": "Properties",
+											"value": "5",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 53,
+											"fieldName": "lbloSimpleFormPalletLENUM",
+											"fieldParent": 52,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Label",
+											"attributes": [
+												{
+													"attribute": "required",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Pallet",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 54,
+											"fieldName": "inoSimpleFormPalletLENUM",
+											"fieldParent": 52,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Input",
+											"attributes": [
+												{
+													"attribute": "change",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"// if (inoSimpleFormPalletLENUM.getValue() === \"\" ||",
+														"//     inoSimpleFormPalletLENUM.getValue() === undefined) {",
+														"//     oLabelmsg.setText(oTextValidate.getText());",
+														"//     oDialog.open();",
+														"// } else {",
+														"//     oApp.setBusy(true);",
+														"// getOnlineValidate();",
+														"// }"
+													],
+													"translation": []
+												},
+												{
+													"attribute": "maxLength",
+													"grouping": "Properties",
+													"value": "10",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "showValueHelp",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "value",
+													"grouping": "Properties",
+													"value": "{LENUM}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "valueHelpOnly",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "valueHelpRequest",
+													"grouping": "Events",
+													"value": "Matnr_f4.open();",
+													"script": "Matnr_f4.open();",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 106,
+											"fieldName": "btnBinlst1",
+											"fieldParent": 52,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Button",
+											"attributes": [
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"oApp.setBusy(true);",
+														"getOnlineSave();"
+													],
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Post",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Emphasized",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 9,
+											"fieldName": "btnBinlst",
+											"fieldParent": 52,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Button",
+											"attributes": [
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"oApp.setBusy(true);",
+														"getOnlineGetBinlst();"
+													],
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "All data",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Emphasized",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": 85,
+									"fieldName": "oSimpleFormDest",
+									"fieldParent": 5,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"attributes": [
+										{
+											"attribute": "editable",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelMinWidth",
+											"grouping": "Properties",
+											"value": "100",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanS",
+											"grouping": "Properties",
+											"value": "5",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 88,
+											"fieldName": "lbloSimpleFormPalletBIN",
+											"fieldParent": 85,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Label",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Source Stroage Type",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 89,
+											"fieldName": "txtoSimpleFormPalletBIN",
+											"fieldParent": 85,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Text",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{VLTYP}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 90,
+											"fieldName": "lbloSimpleFormPalletSCN_BIN",
+											"fieldParent": 85,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Label",
+											"attributes": [
+												{
+													"attribute": "required",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Destination Storage Type",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 91,
+											"fieldName": "inoSimpleFormPalletSCN_BIN",
+											"fieldParent": 85,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Input",
+											"attributes": [
+												{
+													"attribute": "change",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"// var scn = inoSimpleFormPalletSCN_BIN.getValue().toUpperCase();",
+														"// if (scn === modeloPageMain.oData.NLPLA) {",
+														"//     modeloPageMain.oData.SCN_BIN = scn;",
+														"//     getOnlineSave();",
+														"// } else {",
+														"//     inoSimpleFormPalletSCN_BIN.setValue(\"\");",
+														"//     oLabelmsg.setText(oTextDest.getText());",
+														"//     oDialog.open();",
+														"// }"
+													],
+													"translation": []
+												},
+												{
+													"attribute": "maxLength",
+													"grouping": "Properties",
+													"value": "10",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "value",
+													"grouping": "Properties",
+													"value": "{NLTYP}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": 101,
+									"fieldName": "oTableBinLst",
+									"fieldParent": 5,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Table",
+									"attributes": [
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 107,
+											"fieldName": "coloTableBinLstLENUM",
+											"fieldParent": 101,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Column",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Pallet",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 108,
+											"fieldName": "coloTableBinLstMATNR",
+											"fieldParent": 101,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Column",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Material",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 109,
+											"fieldName": "coloTableBinLstMENGE",
+											"fieldParent": 101,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Column",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Quantity",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": 110,
+											"fieldName": "colItemoTableBinLst",
+											"fieldParent": 101,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.ColumnListItem",
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": 111,
+													"fieldName": "txtoTableBinLstLENUM",
+													"fieldParent": 110,
+													"noAggregation": false,
+													"onlyDeclare": false,
+													"odataUI": false,
+													"odataSource": "",
+													"bindingValue": "",
+													"bindingType": "",
+													"bindingSource": "",
+													"disabled": false,
+													"refObject": "",
+													"script": "",
+													"fieldType": "sap.m.Text",
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{LENUM}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": 112,
+													"fieldName": "txtoTableBinLstMATNR",
+													"fieldParent": 110,
+													"noAggregation": false,
+													"onlyDeclare": false,
+													"odataUI": false,
+													"odataSource": "",
+													"bindingValue": "",
+													"bindingType": "",
+													"bindingSource": "",
+													"disabled": false,
+													"refObject": "",
+													"script": "",
+													"fieldType": "sap.m.Text",
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Formatter",
+															"value": "string:RemoveLeadingZero",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{MATNR}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": 113,
+													"fieldName": "txtoTableBinLstMENGE",
+													"fieldParent": 110,
+													"noAggregation": false,
+													"onlyDeclare": false,
+													"odataUI": false,
+													"odataSource": "",
+													"bindingValue": "",
+													"bindingType": "",
+													"bindingSource": "",
+													"disabled": false,
+													"refObject": "",
+													"script": "",
+													"fieldType": "sap.m.Text",
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{SCN_MENGE}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": 97,
+							"fieldName": "oPageBinLst",
+							"fieldParent": 4,
+							"noAggregation": false,
+							"onlyDeclare": false,
+							"odataUI": false,
+							"odataSource": "",
+							"bindingValue": "",
+							"bindingType": "",
+							"bindingSource": "",
+							"disabled": false,
+							"refObject": "",
+							"script": "",
+							"fieldType": "sap.m.Page",
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": 98,
+									"fieldName": "oBarBinLst",
+									"fieldParent": 97,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Bar",
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 99,
+											"fieldName": "oBarContentleftBinLst",
+											"fieldParent": 98,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "neptune.BarContent",
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": 100,
+													"fieldName": "btnBackBinLst",
+													"fieldParent": 99,
+													"noAggregation": false,
+													"onlyDeclare": false,
+													"odataUI": false,
+													"odataSource": "",
+													"bindingValue": "",
+													"bindingType": "",
+													"bindingSource": "",
+													"disabled": false,
+													"refObject": "",
+													"script": "",
+													"fieldType": "sap.m.Button",
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://nav-back",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "oApp.to(oPageMain);",
+															"script": "oApp.to(oPageMain);",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": 55,
+							"fieldName": "oPageHidden",
+							"fieldParent": 4,
+							"noAggregation": false,
+							"onlyDeclare": false,
+							"odataUI": false,
+							"odataSource": "",
+							"bindingValue": "",
+							"bindingType": "",
+							"bindingSource": "",
+							"disabled": false,
+							"refObject": "",
+							"script": "",
+							"fieldType": "sap.m.Page",
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addDetailPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": 56,
+									"fieldName": "GetBinlst",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "neptune.Ajax",
+									"attributes": [
+										{
+											"attribute": "ajaxError",
+											"grouping": "Events",
+											"value": "oApp.setBusy(false);",
+											"script": "oApp.setBusy(false);",
+											"translation": []
+										},
+										{
+											"attribute": "ajaxSuccess",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oApp.setBusy(false);",
+												"// if (modeloTableBinLst.oData.length > 0) {",
+												"//     oApp.to(oPageBinLst);",
+												"// } else {",
+												"//     oLabelmsg.setText('No pallets ready to be picked yet.');",
+												"//     oDialog.open();",
+												"// }",
+												"oTableBinLst.setVisible(true);"
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 61,
+									"fieldName": "Matnr_f4",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.SelectDialog",
+									"attributes": [
+										{
+											"attribute": "confirm",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"var selectedItem = oEvent.getParameter(\"selectedItem\");",
+												"var context = selectedItem.getBindingContext();",
+												"var value = context.getProperty(\"NLTYP\");",
+												"modeloPageMain.oData.LENUM = context.getProperty(\"LENUM\");",
+												"var vltyp = context.getProperty(\"VLTYP\");",
+												"",
+												"  oApp.setBusy(true);",
+												"getOnlineValidate();"
+											],
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 62,
+											"fieldName": "oObjectListItem",
+											"fieldParent": 61,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.ObjectListItem",
+											"attributes": [
+												{
+													"attribute": "intro",
+													"grouping": "Properties",
+													"value": "{VLTYP}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "title",
+													"grouping": "Properties",
+													"value": "{LENUM}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": 63,
+									"fieldName": "Validate_matnr",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "neptune.Ajax",
+									"attributes": [
+										{
+											"attribute": "ajaxError",
+											"grouping": "Events",
+											"value": "oApp.setBusy(false);",
+											"script": "oApp.setBusy(false);",
+											"translation": []
+										},
+										{
+											"attribute": "ajaxSuccess",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oApp.setBusy(false);",
+												"if (modeloDialog.oData.MESSAGE === \"\" ||",
+												"    modeloDialog.oData.MESSAGE === undefined) {",
+												"    setTimeout(function() {",
+												"        inoSimpleFormDestNLPLA.focus();",
+												"    }, 500);",
+												"} else {",
+												"    oDialog.open();",
+												"    inoSimpleFormDestMATNR.setValue(\"\");",
+												"}"
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 64,
+									"fieldName": "Save",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "neptune.Ajax",
+									"attributes": [
+										{
+											"attribute": "ajaxError",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oApp.setBusy(false);",
+												"oLabelmsg.setText(oTextError.getText());",
+												"oDialog.open();"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "ajaxSuccess",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oApp.setBusy(false);",
+												"if (modeloDialog.oData.MESSAGE === \"\" ||",
+												"    modeloDialog.oData.MESSAGE === undefined) {",
+												"",
+												"    // Use MessageToast",
+												"    jQuery.sap.require(\"sap.m.MessageToast\");",
+												"    sap.m.MessageToast.show(oTextSave.getText());",
+												"    oSimpleFormDest.setVisible(false);",
+												"    oTableBinLst.setVisible(false);",
+												"    setTimeout(function() {",
+												"        inoSimpleFormPalletLENUM.focus();",
+												"    }, 500);",
+												"",
+												"",
+												"} else {",
+												"    oDialog.open();",
+												"    // inoSimpleFormDestNLPLA.setValue(\"\");",
+												"    inoSimpleFormPalletSCN_BIN.setValue(\"\");",
+												"",
+												"}"
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 65,
+									"fieldName": "Validate",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "neptune.Ajax",
+									"attributes": [
+										{
+											"attribute": "ajaxError",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oApp.setBusy(false);",
+												"oLabelmsg.setText(oTextError.getValue());",
+												"oDialog.open();"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "ajaxSuccess",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oApp.setBusy(false);",
+												"if (modeloDialog.oData.MESSAGE === \"\" ||",
+												"    modeloDialog.oData.MESSAGE === undefined) {",
+												"    oSimpleFormDest.setVisible(true);",
+												"    setTimeout(function() {",
+												"        inoSimpleFormPalletSCN_BIN.focus();",
+												"    }, 500);",
+												"",
+												"} else {",
+												"    oDialog.open();",
+												"    inoSimpleFormPalletLENUM.setValue(\"\");",
+												"    oSimpleFormDest.setVisible(false);",
+												"}",
+												"btnBinlst.setVisible(true);"
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 66,
+									"fieldName": "COUNT_OD",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "neptune.Ajax",
+									"attributes": [],
+									"data": []
+								},
+								{
+									"fieldNo": 67,
+									"fieldName": "COUNT_LF",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "neptune.Ajax",
+									"attributes": [],
+									"data": []
+								},
+								{
+									"fieldNo": 73,
+									"fieldName": "btnClose",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Button",
+									"attributes": [
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oDialog.close();",
+												"oLabelmsg.setText(\"\");"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Close",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 74,
+									"fieldName": "oDialog",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Dialog",
+									"attributes": [
+										{
+											"attribute": "afterOpen",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"var beep = document.createElement(\"audio\");",
+												"var url = AppCache.Url;",
+												"src = url + \"/neptune/public/images/beep-7.wav\";",
+												"beep.src = src;",
+												"beep.play();"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "beginButton",
+											"grouping": "Associations",
+											"value": "btnClose",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "state",
+											"grouping": "Properties",
+											"value": "Error",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Error",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 75,
+											"fieldName": "oLabelmsg",
+											"fieldParent": 74,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Label",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{MESSAGE}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "wrapping",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": 76,
+									"fieldName": "CheckWH",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"attributes": [
+										{
+											"attribute": "ajaxError",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oLabelmsg.setText(oTextError.getText());",
+												"oDialog.open();"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "ajaxSuccess",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"if (modeloDialog.oData.MESSAGE === \"\" ||",
+												"    modeloDialog.oData.MESSAGE === undefined) {",
+												"    setTimeout(function() {",
+												"        inoSimpleFormPalletLENUM.focus();",
+												"    }, 500);",
+												"} else {",
+												"    oDialog.open();",
+												"}"
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 94,
+									"fieldName": "btnBackYes",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Button",
+									"attributes": [
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"oDialogback.close();",
+												"appBack();"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Yes",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "type",
+											"grouping": "Properties",
+											"value": "Emphasized",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 95,
+									"fieldName": "btnBackNo",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Button",
+									"attributes": [
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "oDialogback.close();",
+											"script": "oDialogback.close();",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "No",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "type",
+											"grouping": "Properties",
+											"value": "Emphasized",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 92,
+									"fieldName": "oDialogback",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Dialog",
+									"attributes": [
+										{
+											"attribute": "afterOpen",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"",
+												"var beep = document.createElement(\"audio\");",
+												"var url = AppCache.Url;",
+												"src = url + \"/neptune/public/images/beep-7.wav\";",
+												"beep.src = src;",
+												"beep.play();"
+											],
+											"translation": []
+										},
+										{
+											"attribute": "beginButton",
+											"grouping": "Associations",
+											"value": "btnBackYes",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "endButton",
+											"grouping": "Associations",
+											"value": "btnBackNo",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Confirm Changes",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": 93,
+											"fieldName": "oTextBack",
+											"fieldParent": 92,
+											"noAggregation": false,
+											"onlyDeclare": false,
+											"odataUI": false,
+											"odataSource": "",
+											"bindingValue": "",
+											"bindingType": "",
+											"bindingSource": "",
+											"disabled": false,
+											"refObject": "",
+											"script": "",
+											"fieldType": "sap.m.Text",
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Data will be lost. Do you want to contine?",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": 77,
+									"fieldName": "Init",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": [
+										"==OBJECT STRING==",
+										"// Custom Init - Happens only once",
+										"sap.ui.getCore().attachInit(function(data) {",
+										"    debugger;",
+										"    if (sap.n) {",
+										"        AppCacheShellBack.setVisible(false);",
+										"        if (sap.n.Launchpad.currentTile.TILE_CONTENT == \"Finite\") {",
+										"            if (sap.n.Launchpad.currentTile.NAME.includes(\"Lift\") == true) {",
+										"                btnBinlst.setVisible(false);",
+										"            } else {",
+										"                coloTablePalletNLPLA.setVisible(false);",
+										"                txtoTablePalletNLPLA.setVisible(false);",
+										"            }",
+										"        }",
+										"    }",
+										"",
+										"    // data = startParameters from NAM Action settings on the tile",
+										"    // Do your Stuff",
+										"    getOnlineCheckWH();",
+										"    // Some stuff needs to be timed later. Run them inside a timeout",
+										"    setTimeout(function() {",
+										"        //  Do something",
+										"    }, 200);",
+										"",
+										"});",
+										""
+									],
+									"fieldType": "neptune.Script",
+									"attributes": [],
+									"data": []
+								},
+								{
+									"fieldNo": 96,
+									"fieldName": "function",
+									"fieldParent": 55,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": [
+										"==OBJECT STRING==",
+										"",
+										"function appBack() {",
+										"",
+										"    if (sap.n) {",
+										"        if (sap.n.Launchpad.currentTile === \"\") {",
+										"            AppCache.Back();",
+										"            return;",
+										"        }",
+										"        // Destroy current App or URL",
+										"        if (sap.n.Launchpad.currentTile.URL_EXTERNAL || sap.n.Launchpad.currentTile.SAP_TRANS) {",
+										"            var iframe = $(\"#iFrame\" + sap.n.Launchpad.currentTile.GUID);",
+										"            iframe[0].parentNode.removeChild(iframe[0]);",
+										"        } else if (sap.n.Launchpad.currentTile.FIORI_ID) {",
+										"            sap.n.Launchpad.fioriApps[sap.n.Launchpad.currentTile.FIORI_ID] = null;",
+										"            sap.n.currentView.destroy();",
+										"        } else {",
+										"            // Format ID",
+										"            var applid = sap.n.Launchpad.currentTile.APPLID.replace(/\\//g, \"\");",
+										"            // Custom beforeClose",
+										"            if (sap.n.Apps[applid].beforeClose) {",
+										"                $.each(sap.n.Apps[applid].beforeClose, function(i, data) {",
+										"                    data();",
+										"                });",
+										"            }",
+										"            if (AppCache.View[sap.n.Launchpad.currentTile.GUID]) {",
+										"                AppCache.View[sap.n.Launchpad.currentTile.GUID] = null;",
+										"            } else {",
+										"                AppCache.View[applid] = null;",
+										"            }",
+										"            sap.n.currentView.removeAllContent();",
+										"            sap.n.currentView.destroy();",
+										"        }",
+										"        // Destroy Button",
+										"        if (sap.ui.Device.system.phone === false) {",
+										"            var navBut = sap.ui.getCore().byId(\"but\" + sap.n.Launchpad.currentTile.GUID);",
+										"            navBut.destroy();",
+										"        }",
+										"        // Navigate Home",
+										"        AppCache.Load(AppCache.StartApp);",
+										"        // sap.n.Launchpad.SetHeader();",
+										"    }",
+										"",
+										"}"
+									],
+									"fieldType": "neptune.Script",
+									"attributes": [],
+									"data": []
+								}
+							]
+						},
+						{
+							"fieldNo": 68,
+							"fieldName": "oPageTranslation",
+							"fieldParent": 4,
+							"noAggregation": false,
+							"onlyDeclare": false,
+							"odataUI": false,
+							"odataSource": "",
+							"bindingValue": "",
+							"bindingType": "",
+							"bindingSource": "",
+							"disabled": false,
+							"refObject": "",
+							"script": "",
+							"fieldType": "sap.m.Page",
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": 69,
+									"fieldName": "oTextValidate",
+									"fieldParent": 68,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Text",
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Enter Pallet!",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 70,
+									"fieldName": "oTextDest",
+									"fieldParent": 68,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Text",
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Scan Correct Bin",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 71,
+									"fieldName": "oTextError",
+									"fieldParent": 68,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Text",
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Error while accessing SAP",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": 72,
+									"fieldName": "oTextSave",
+									"fieldParent": 68,
+									"noAggregation": false,
+									"onlyDeclare": false,
+									"odataUI": false,
+									"odataSource": "",
+									"bindingValue": "",
+									"bindingType": "",
+									"bindingSource": "",
+									"disabled": false,
+									"refObject": "",
+									"script": "",
+									"fieldType": "sap.m.Text",
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Pallet moved Successfully",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": []
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.7.11.112",
+	"application": "zwm_np_palmov",
+	"title": "",
+	"description": "Bin to kitting",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": null,
+	"ui5_table": true,
+	"ui5_tnt": true,
+	"ui5_uxap": true,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": true,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

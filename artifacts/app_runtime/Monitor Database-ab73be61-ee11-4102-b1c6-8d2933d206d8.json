@@ -1,0 +1,1789 @@
+{
+	"id": "ab73be61-ee11-4102-b1c6-8d2933d206d8",
+	"createdAt": "2018-01-24T13:32:37.000Z",
+	"updatedAt": "2021-03-17T12:13:29.099Z",
+	"createdBy": "thorsten.wolf@neptune-software.com",
+	"changedBy": "ole-andre.haugen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "2",
+			"fieldName": "oApp",
+			"fieldParent": 0,
+			"fieldType": "sap.m.App",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "3",
+					"fieldName": "oPage",
+					"fieldParent": "2",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "title",
+							"grouping": "Properties",
+							"value": "Planet 9",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "showHeader",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "46",
+							"fieldName": "oHeader",
+							"fieldParent": "3",
+							"fieldType": "sap.m.ObjectHeader",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Monitor Offline Data",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "responsive",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://database",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "39",
+									"fieldName": "oHeaderContent",
+									"fieldParent": "46",
+									"fieldType": "sap.m.HeaderContainer",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "100%",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "42",
+											"fieldName": "contentApps",
+											"fieldParent": "39",
+											"fieldType": "sap.m.TileContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "footer",
+													"grouping": "Properties",
+													"value": "Applications",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "43",
+													"fieldName": "numericApps",
+													"fieldParent": "42",
+													"fieldType": "sap.m.NumericContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "withMargin",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "valueColor",
+															"grouping": "Properties",
+															"value": "Good",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "truncateValueTo",
+															"grouping": "Properties",
+															"value": "10",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "formatterValue",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "40",
+											"fieldName": "contentLS",
+											"fieldParent": "39",
+											"fieldType": "sap.m.TileContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "footer",
+													"grouping": "Properties",
+													"value": "LocalStorage",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "41",
+													"fieldName": "numericLS",
+													"fieldParent": "40",
+													"fieldType": "sap.m.NumericContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "withMargin",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "valueColor",
+															"grouping": "Properties",
+															"value": "Good",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "truncateValueTo",
+															"grouping": "Properties",
+															"value": "10",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "formatterValue",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "44",
+											"fieldName": "contentIDB",
+											"fieldParent": "39",
+											"fieldType": "sap.m.TileContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "footer",
+													"grouping": "Properties",
+													"value": "IndexedDB",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "45",
+													"fieldName": "numericIDB",
+													"fieldParent": "44",
+													"fieldType": "sap.m.NumericContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "withMargin",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "valueColor",
+															"grouping": "Properties",
+															"value": "Good",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "truncateValueTo",
+															"grouping": "Properties",
+															"value": "10",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "formatterValue",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "66a67669-02a1-4899-fca1-5a73a05ced1d",
+											"fieldName": "contentDB",
+											"fieldParent": "39",
+											"fieldType": "sap.m.TileContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "footer",
+													"grouping": "Properties",
+													"value": "WebSQL",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "7a94c132-c2b5-4f22-e204-3deeec3a601e",
+													"fieldName": "numericDB",
+													"fieldParent": "66a67669-02a1-4899-fca1-5a73a05ced1d",
+													"fieldType": "sap.m.NumericContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "withMargin",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "valueColor",
+															"grouping": "Properties",
+															"value": "Good",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "truncateValueTo",
+															"grouping": "Properties",
+															"value": "10",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "formatterValue",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "5",
+							"fieldName": "barContent",
+							"fieldParent": "3",
+							"fieldType": "sap.m.IconTabBar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "expandable",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "backgroundDesign",
+									"grouping": "Properties",
+									"value": "Transparent",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "applyContentPadding",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "6",
+									"fieldName": "barContentApps",
+									"fieldParent": "5",
+									"fieldType": "sap.m.IconTabFilter",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Applications",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://attachment-html",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "4",
+											"fieldName": "tabApps",
+											"fieldParent": "6",
+											"fieldType": "sap.m.Table",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "fixedLayout",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "9",
+													"fieldName": "coltabAppsname",
+													"fieldParent": "4",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "10",
+															"fieldName": "colHtabAppsname",
+															"fieldParent": "9",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "61",
+													"fieldName": "coltabAppsTimestamp",
+													"fieldParent": "4",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "62",
+															"fieldName": "colHtabAppsTimestamp",
+															"fieldParent": "61",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Changed On",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "11",
+													"fieldName": "coltabAppslanguage",
+													"fieldParent": "4",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "12",
+															"fieldName": "colHtabAppslanguage",
+															"fieldParent": "11",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Language",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "17",
+													"fieldName": "coltabAppssize",
+													"fieldParent": "4",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "hAlign",
+															"grouping": "Properties",
+															"value": "End",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "18",
+															"fieldName": "colHtabAppssize",
+															"fieldParent": "17",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Size",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "13",
+													"fieldName": "colItemtabApps",
+													"fieldParent": "4",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "14",
+															"fieldName": "txttabAppsname",
+															"fieldParent": "13",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "63",
+															"fieldName": "txttabAppsTimestamp",
+															"fieldParent": "13",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{updatedAt}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "date:BrowserSetting",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "15",
+															"fieldName": "txttabAppslanguage",
+															"fieldParent": "13",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{language}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "20",
+															"fieldName": "txttabAppssize",
+															"fieldParent": "13",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{size}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"if (typeof size === \"undefined\" || size === null || size === \"\") { return; }  \r",
+																		"\r",
+																		"oFileSizeFormat = sap.ui.core.format.FileSizeFormat.getInstance({\r",
+																		"    binaryFilesize: false,\r",
+																		"    decimals: 2\r",
+																		"});\r",
+																		"return oFileSizeFormat.format(size);"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "8",
+									"fieldName": "barContentLS",
+									"fieldParent": "5",
+									"fieldType": "sap.m.IconTabFilter",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "LocalStorage",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://attachment-text-file",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "47",
+											"fieldName": "tabLS",
+											"fieldParent": "8",
+											"fieldType": "sap.m.Table",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "fixedLayout",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "48",
+													"fieldName": "coltabLSname",
+													"fieldParent": "47",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "49",
+															"fieldName": "colHtabLSname",
+															"fieldParent": "48",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "50",
+													"fieldName": "coltabLSapp",
+													"fieldParent": "47",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "51",
+															"fieldName": "colHtabLSapp",
+															"fieldParent": "50",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Application",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "52",
+													"fieldName": "coltabLSuser",
+													"fieldParent": "47",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "53",
+															"fieldName": "colHtabLSuser",
+															"fieldParent": "52",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "User",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "54",
+													"fieldName": "coltabLSsize",
+													"fieldParent": "47",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "hAlign",
+															"grouping": "Properties",
+															"value": "End",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "55",
+															"fieldName": "colHtabLSsize",
+															"fieldParent": "54",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Size",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "56",
+													"fieldName": "colItemtabLS",
+													"fieldParent": "47",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "57",
+															"fieldName": "txttabLSname",
+															"fieldParent": "56",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "58",
+															"fieldName": "txttabLSapp",
+															"fieldParent": "56",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{app}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "59",
+															"fieldName": "txttabLSuser",
+															"fieldParent": "56",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{user}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "60",
+															"fieldName": "txttabLSsize",
+															"fieldParent": "56",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{size}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"if (typeof size === \"undefined\" || size === null || size === \"\") { return; }  \r",
+																		"\r",
+																		"oFileSizeFormat = sap.ui.core.format.FileSizeFormat.getInstance({\r",
+																		"    binaryFilesize: false,\r",
+																		"    decimals: 2\r",
+																		"});\r",
+																		"return oFileSizeFormat.format(size);"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "7",
+									"fieldName": "barContentIDB",
+									"fieldParent": "5",
+									"fieldType": "sap.m.IconTabFilter",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "IndexedDB",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://database",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "21",
+											"fieldName": "tabIDB",
+											"fieldParent": "7",
+											"fieldType": "sap.m.Table",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "fixedLayout",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "22",
+													"fieldName": "coltabIDBname",
+													"fieldParent": "21",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "23",
+															"fieldName": "colHtabIDBname",
+															"fieldParent": "22",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "24",
+													"fieldName": "coltabIDBapp",
+													"fieldParent": "21",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "25",
+															"fieldName": "colHtabIDBapp",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Application",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "26",
+													"fieldName": "coltabIDBuser",
+													"fieldParent": "21",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "27",
+															"fieldName": "colHtabIDBuser",
+															"fieldParent": "26",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "User",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "28",
+													"fieldName": "coltabIDBsize",
+													"fieldParent": "21",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "hAlign",
+															"grouping": "Properties",
+															"value": "End",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "29",
+															"fieldName": "colHtabIDBsize",
+															"fieldParent": "28",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Size",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "30",
+													"fieldName": "colItemtabIDB",
+													"fieldParent": "21",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "31",
+															"fieldName": "txttabIDBname",
+															"fieldParent": "30",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "32",
+															"fieldName": "txttabIDBapp",
+															"fieldParent": "30",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{app}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "33",
+															"fieldName": "txttabIDBuser",
+															"fieldParent": "30",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{user}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "34",
+															"fieldName": "txttabIDBsize",
+															"fieldParent": "30",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{size}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"if (typeof size === \"undefined\" || size === null || size === \"\") { return; }  \r",
+																		"\r",
+																		"oFileSizeFormat = sap.ui.core.format.FileSizeFormat.getInstance({\r",
+																		"    binaryFilesize: false,\r",
+																		"    decimals: 2\r",
+																		"});\r",
+																		"return oFileSizeFormat.format(size);"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "01057185-912f-4059-d2ad-5b6c75fb6571",
+									"fieldName": "barContentDB",
+									"fieldParent": "5",
+									"fieldType": "sap.m.IconTabFilter",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "WebSQL",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://database",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "78344e1a-8961-49ec-e7aa-d0ac4872c0a1",
+											"fieldName": "tabDB",
+											"fieldParent": "01057185-912f-4059-d2ad-5b6c75fb6571",
+											"fieldType": "sap.m.Table",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "fixedLayout",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "87579a8b-4437-4d3e-8865-52f769ebaf74",
+													"fieldName": "coltabDBname",
+													"fieldParent": "78344e1a-8961-49ec-e7aa-d0ac4872c0a1",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "8a6306d8-b8f4-447b-c3ce-799aa85b4939",
+															"fieldName": "colHtabDBname",
+															"fieldParent": "87579a8b-4437-4d3e-8865-52f769ebaf74",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "aa53eedc-8d32-47a8-e9c4-5edfbcd18c6b",
+													"fieldName": "coltabDBsize",
+													"fieldParent": "78344e1a-8961-49ec-e7aa-d0ac4872c0a1",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "hAlign",
+															"grouping": "Properties",
+															"value": "End",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "6e6d45ce-e7b4-4fbe-9b11-98ab4999acca",
+															"fieldName": "colHtabDBsize",
+															"fieldParent": "aa53eedc-8d32-47a8-e9c4-5edfbcd18c6b",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Size",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "d95b8f82-25ed-49e1-b3c4-1ea5f94fbd3c",
+													"fieldName": "colItemtabDB",
+													"fieldParent": "78344e1a-8961-49ec-e7aa-d0ac4872c0a1",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "f6451324-e9bc-4cc3-fe10-094c8a0e7c83",
+															"fieldName": "txttabDBname",
+															"fieldParent": "d95b8f82-25ed-49e1-b3c4-1ea5f94fbd3c",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "5e73340e-bb0c-465a-9320-7b1f4829c838",
+															"fieldName": "txttabDBsize",
+															"fieldParent": "d95b8f82-25ed-49e1-b3c4-1ea5f94fbd3c",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{size}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"if (typeof size === \"undefined\" || size === null || size === \"\") { return; }  \r",
+																		"\r",
+																		"oFileSizeFormat = sap.ui.core.format.FileSizeFormat.getInstance({\r",
+																		"    binaryFilesize: false,\r",
+																		"    decimals: 2\r",
+																		"});\r",
+																		"return oFileSizeFormat.format(size);"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "36",
+							"fieldName": "oFooter",
+							"fieldParent": "3",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setFooter",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "37",
+									"fieldName": "Right",
+									"fieldParent": "36",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentRight",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "38",
+											"fieldName": "butUpdate",
+											"fieldParent": "37",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Update",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://synchronize",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "getAll();",
+													"script": "getAll();",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "35",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": [
+						"==OBJECT STRING==",
+						"jQuery.sap.require(\"sap.ui.core.format.FileSizeFormat\");",
+						"",
+						"var oFileSizeFormat = sap.ui.core.format.FileSizeFormat.getInstance({",
+						"    binaryFilesize: false,",
+						"    decimals: 2",
+						"});",
+						"",
+						"getAll();"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "16",
+					"fieldName": "Functions",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"var appSize = 0;",
+						"var dbSize = 0;",
+						"var lsSize = 0;",
+						"",
+						"",
+						"",
+						"function getAll() {",
+						"",
+						"    getView();",
+						"    getModel();",
+						"    getLS();",
+						"    getWebSQL();",
+						"",
+						"}",
+						"",
+						"",
+						"function getModel() {",
+						"",
+						"    modeltabIDB.setData([]);",
+						"    var dbSize = 0;",
+						"",
+						"    if (typeof p9Database === \"undefined\" || p9Database === null) return;",
+						"",
+						"    getItemsIDB(p9Models, \"model\", function (items) {",
+						"",
+						"        $.each(items, function (i, data) {",
+						"",
+						"            var json = JSON.stringify(data.value);",
+						"            var keys = data.key.split(\":\");",
+						"            var rec = {};",
+						"",
+						"            rec.name = keys[0];",
+						"            rec.app = keys[1];",
+						"            rec.user = keys[2];",
+						"            rec.size = json.length;",
+						"            ModelData.Add(tabIDB, rec);",
+						"            dbSize += rec.size;",
+						"",
+						"        });",
+						"",
+						"        modeltabIDB.refresh();",
+						"        barContentIDB.setCount(modeltabIDB.oData.length);",
+						"        numericIDB.setValue(oFileSizeFormat.format(dbSize));",
+						"",
+						"    })",
+						"",
+						"}",
+						"",
+						"",
+						"function getView() {",
+						"",
+						"    modeltabApps.setData([]);",
+						"    appSize = 0;",
+						"",
+						"    if (typeof p9Database === \"undefined\" || p9Database === null) return;",
+						"",
+						"    getItemsIDB(p9Views, \"view\", function (items) {",
+						"",
+						"        $.each(items, function (i, data) {",
+						"",
+						"            var json = JSON.stringify(data.value);",
+						"            var keys = data.key.split(\":\");",
+						"            var rec = {};",
+						"",
+						"            rec.name = keys[1];",
+						"            rec.language = keys[2];",
+						"            rec.size = json.length;",
+						"            ModelData.Add(tabApps, rec);",
+						"            appSize += rec.size;",
+						"",
+						"        });",
+						"",
+						"        modeltabApps.refresh();",
+						"        barContentApps.setCount(modeltabApps.oData.length);",
+						"",
+						"        numericApps.setValue(oFileSizeFormat.format(appSize));",
+						"",
+						"        // AppCache - Get Timestamp",
+						"        if (typeof AppCache !== \"undefined\") {",
+						"            $.each(modeltabApps.oData, function (i, data) {",
+						"                var app = ModelData.FindFirst(AppCacheData, [\"application\", \"language\"], [data.name, data.language]);",
+						"                if (app) {",
+						"                    data.updatedAt = app.updatedAt;",
+						"                }",
+						"            });",
+						"        }",
+						"",
+						"",
+						"    })",
+						"",
+						"",
+						"",
+						"}",
+						"",
+						"function getItemsIDB(idb, storeName, callback) {",
+						"",
+						"    var db = idb.result;",
+						"    var tx = db.transaction(storeName, \"readonly\");",
+						"    var store = tx.objectStore(storeName);",
+						"",
+						"    var items = [];",
+						"",
+						"    tx.oncomplete = function (evt) {",
+						"        callback(items);",
+						"    };",
+						"",
+						"    var cursorRequest = store.openCursor();",
+						"",
+						"    cursorRequest.onerror = function (error) {",
+						"        console.log(error);",
+						"    };",
+						"",
+						"    cursorRequest.onsuccess = function (evt) {",
+						"        var cursor = evt.target.result;",
+						"        if (cursor) {",
+						"            items.push(cursor.value);",
+						"            cursor.continue();",
+						"        }",
+						"    };",
+						"",
+						"}",
+						"",
+						"function getLS() {",
+						"",
+						"    lsSize = 0;",
+						"    modeltabLS.setData([]);",
+						"",
+						"    for (var i = 0; i < localStorage.length; i++) {",
+						"",
+						"        var size = localStorage.getItem(localStorage.key(i)).length;",
+						"",
+						"        if (localStorage.key(i).indexOf(\"state.key\") === -1) continue;",
+						"        var key = localStorage.key(i).replace(\"state.key_-\", \"\");",
+						"        var keys = key.split(\":\");",
+						"        var rec = {};",
+						"        rec.name = keys[0];",
+						"        rec.app = keys[1];",
+						"        rec.user = keys[2];",
+						"        rec.size = size;",
+						"        ModelData.Add(tabLS, rec);",
+						"",
+						"        lsSize += rec.size;",
+						"    }",
+						"",
+						"    modeltabLS.refresh();",
+						"    barContentLS.setCount(modeltabLS.oData.length);",
+						"    numericLS.setValue(oFileSizeFormat.format(lsSize));",
+						"}",
+						"",
+						"function getWebSQL() {",
+						"",
+						"    if (typeof AppSync === \"undefined\" || !AppSync.db) return;",
+						"",
+						"    AppSync.openDB();",
+						"",
+						"    modeltabDB.setData([]);",
+						"    numericDB.setValue(0);",
+						"",
+						"    var tabArray = [];",
+						"    var curTable = 1;",
+						"    var totMb = 0;",
+						"",
+						"    getDBTables(tabArray, function () {",
+						"",
+						"        $.each(tabArray, function (i, data) {",
+						"",
+						"            AppSync.db.transaction(function (tx) {",
+						"",
+						"                tx.executeSql('SELECT * FROM ' + data.name, [], function (tx, results) {",
+						"",
+						"                    if (window.sqlitePlugin) {",
+						"                        var sizeKb = 0;",
+						"                        for (var i = 0; i < results.rows.length; i++) {",
+						"                            sizeKb = sizeKb + JSON.stringify(results.rows.item(i)).length;",
+						"                        }",
+						"                        sizeKb = (sizeKb) / 2;",
+						"                    } else {",
+						"                        var sizeKb = JSON.stringify(results.rows).length;",
+						"                    }",
+						"",
+						"                    curTable++;",
+						"                    var rec = {};",
+						"                    rec.name = data.name;",
+						"                    rec.size = sizeKb;",
+						"                    totMb = totMb + rec.size;",
+						"",
+						"                    ModelData.Add(tabDB, rec);",
+						"                    barContentDB.setCount(modeltabDB.oData.length);",
+						"                    numericDB.setValue(oFileSizeFormat.format(totMb));",
+						"",
+						"                });",
+						"            });",
+						"",
+						"        });",
+						"    })",
+						"}",
+						"",
+						"function getDBTables(tabArray, callBack) {",
+						"    AppSync.db.transaction(function (tx) {",
+						"        tx.executeSql('SELECT name FROM sqlite_master where type = \"table\"', [], function (tx, r) {",
+						"            for (i = 0; i < r.rows.length; i++) {",
+						"                var name = r.rows.item(i).name",
+						"                if (name !== 'sync_info') {",
+						"                    var rec = {};",
+						"                    rec.name = name;",
+						"                    tabArray.push(rec);",
+						"                }",
+						"            }",
+						"            callBack();",
+						"        });",
+						"    });",
+						"",
+						"}"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "21.3.17.1313",
+	"application": "planet9_monitor_db",
+	"title": "Monitor Database",
+	"description": "Monitor Database",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

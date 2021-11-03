@@ -1,0 +1,630 @@
+{
+	"id": "bfa0667b-c967-485e-ba98-3663b0ebe827",
+	"createdAt": "2018-09-03T09:39:07.000Z",
+	"updatedAt": "2019-06-23T06:17:03.000Z",
+	"createdBy": "oah",
+	"changedBy": "oah",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "2",
+					"fieldName": "oApp",
+					"fieldParent": "1",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "4",
+							"fieldName": "oPageStart",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Test Title",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "navButtonPress",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+									"fieldName": "oTable",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Table",
+									"bindingValue": "Contacts API 2>Company",
+									"bindingType": "h",
+									"bindingSource": "API",
+									"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+									"bindingPathID": "72839400-14d3-4c9b-8829-992a8107bfa9",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "97ee6004-bb54-424c-d152-8c625303372c",
+											"fieldName": "coloTableid",
+											"fieldParent": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "67263c65-c17a-4785-ea54-560f741616e3",
+													"fieldName": "colHoTableid",
+													"fieldParent": "97ee6004-bb54-424c-d152-8c625303372c",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Auto-generated primary key field",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "cd4dc89d-6ee4-46cf-9d5f-a9ac7c86e323",
+											"fieldName": "coloTablename",
+											"fieldParent": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "bde7a153-33a1-4c0e-cb0b-206ef9e53618",
+													"fieldName": "colHoTablename",
+													"fieldParent": "cd4dc89d-6ee4-46cf-9d5f-a9ac7c86e323",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "name",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "5c02d2fd-be74-4ac7-9c69-583c3fcf34c4",
+											"fieldName": "coloTablestreet",
+											"fieldParent": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "343a4728-8234-453f-df1f-52a0571553de",
+													"fieldName": "colHoTablestreet",
+													"fieldParent": "5c02d2fd-be74-4ac7-9c69-583c3fcf34c4",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "street",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "d3f0c3ae-b5bb-4e0b-eb6f-be99b22437a4",
+											"fieldName": "coloTablecity",
+											"fieldParent": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "08056cc3-bbc2-4e62-d4eb-c11031d3976a",
+													"fieldName": "colHoTablecity",
+													"fieldParent": "d3f0c3ae-b5bb-4e0b-eb6f-be99b22437a4",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "city",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "12b02296-de0c-4c3d-d1ae-0653595eb41a",
+											"fieldName": "coloTablezipcode",
+											"fieldParent": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "4be0f9e4-8695-46ca-8cbb-6b9ca75085dc",
+													"fieldName": "colHoTablezipcode",
+													"fieldParent": "12b02296-de0c-4c3d-d1ae-0653595eb41a",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "zipcode",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "eefab8da-db08-4358-bf73-05604f85b5e7",
+											"fieldName": "colItemoTable",
+											"fieldParent": "a26074d0-8196-47a7-feb2-163a73e02fc9",
+											"fieldType": "sap.m.ColumnListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "d333fceb-201b-4c0c-c3cc-f25f7e7b5091",
+													"fieldName": "txtoTableid",
+													"fieldParent": "eefab8da-db08-4358-bf73-05604f85b5e7",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{id}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "962fe8b8-bb3b-41d7-fe97-dbf49a67fc69",
+													"fieldName": "txtoTablename",
+													"fieldParent": "eefab8da-db08-4358-bf73-05604f85b5e7",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{name}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "e3e04ad2-3443-476e-d967-10f3c3a30cba",
+													"fieldName": "txtoTablestreet",
+													"fieldParent": "eefab8da-db08-4358-bf73-05604f85b5e7",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{address/street}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "bf5c9ea5-2b8e-40e1-db6d-e51a3a14a2d6",
+													"fieldName": "txtoTablecity",
+													"fieldParent": "eefab8da-db08-4358-bf73-05604f85b5e7",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{address/city}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "cde76bf1-b659-4302-8cfa-777821baa683",
+													"fieldName": "txtoTablezipcode",
+													"fieldParent": "eefab8da-db08-4358-bf73-05604f85b5e7",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{address/zipcode}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "837bef44-eaed-4819-890d-5bea914446fd",
+									"fieldName": "oButton",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Button",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "tooltip",
+											"grouping": "Properties",
+											"value": "Look at me, I'm a Tooltip",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "BUTTON",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiForceWidthAuto",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://accept",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "alert(\"Hi\");",
+											"script": "alert(\"Hi\");",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "5",
+									"fieldName": "oFooter",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "6",
+											"fieldName": "Left",
+											"fieldParent": "5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "695dc630-6fb7-411f-81e8-89bb0f4ac98e",
+													"fieldName": "oLabel",
+													"fieldParent": "6",
+													"fieldType": "sap.m.Label",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "I'm a label",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "wrapping",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "7",
+											"fieldName": "Middle",
+											"fieldParent": "5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "cc73d532-61d1-49ae-93ac-0acc824993db",
+													"fieldName": "oButtonUpdate",
+													"fieldParent": "7",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Update",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"/**",
+																" * Name: Contacts API 2",
+																" * Description: An API for keeping track of your contacts and the companies they work for.",
+																" * ",
+																" * Path: /companies/",
+																" * Method: GET",
+																" * ",
+																" * Parameters:",
+																" * $size - Optional parameter ",
+																" * Description: Size of the page to retrieve.",
+																" * Example: 10",
+																" * $page - Optional parameter ",
+																" * Description: Number of the page to retrieve.",
+																" * Example: 1",
+																" * $sort - Optional parameter ",
+																" * Description: Order in which to retrieve the results. Multiple sort criteria can be passed. Example: sort=age ASC,height DESC",
+																" * Example: name ASC",
+																" * name - Optional parameter ",
+																" * Description: Allows to filter the collections of result by the value of field name",
+																" * Example: George Street Brewery",
+																" * ",
+																" */",
+																"var options = {",
+																"    parameters: {",
+																"        \"$size\": \"\", // Optional ",
+																"        \"$page\": \"\", // Optional ",
+																"        \"$sort\": \"\", // Optional ",
+																"        \"name\": \"\" // Optional ",
+																"    },",
+																"    emptyOption: {",
+																"        ",
+																"    }",
+																"};",
+																"",
+																"apioRestAPI(options);"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "8",
+											"fieldName": "Right",
+											"fieldParent": "5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "10581255-e33f-4478-b9d0-eee7ffd3012f",
+					"fieldName": "oRestAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "107e345f-f7d3-4caa-801c-858d030a8960",
+					"restOperation": "756d2442-13ee-49d7-d8c0-0a7d0d15f2d4",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "72839400-14d3-4c9b-8829-992a8107bfa9",
+							"modelFieldNo": "a26074d0-8196-47a7-feb2-163a73e02fc9"
+						}
+					],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "18.9.3.138",
+	"application": "testnils",
+	"title": "",
+	"description": "This is just some text ",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": true,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": null,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": true,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "107e345f-f7d3-4caa-801c-858d030a8960",
+			"name": "Contacts API 2",
+			"ver": "18.11.12.933",
+			"updatedAt": "2018-11-12T08:33:23.000Z",
+			"changedBy": "oah"
+		}
+	]
+}

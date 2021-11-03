@@ -1,0 +1,425 @@
+{
+	"id": "aeca8d12-5474-4af1-bf55-810a561f18b6",
+	"createdAt": "2019-08-29T08:49:29.000Z",
+	"updatedAt": "2019-08-29T14:28:03.000Z",
+	"createdBy": "oah",
+	"changedBy": "konstantin.kitmanov@fabres.pl",
+	"objects": [
+		{
+			"fieldNo": "c54e9b8a-9ac5-41ea-b175-0164a6639860",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "c8d0314d-2c75-4c2c-b782-b5961f04577a",
+					"fieldName": "oApp",
+					"fieldParent": "c54e9b8a-9ac5-41ea-b175-0164a6639860",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "e7cabdfb-5055-47d9-b819-91079d75930d",
+							"fieldName": "oPage",
+							"fieldParent": "c8d0314d-2c75-4c2c-b782-b5961f04577a",
+							"fieldType": "sap.m.Page",
+							"bindingType": "u",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Azure AD - Authentication",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "32fad062-c93d-4059-85ce-bf8d9e8ed6e3",
+									"fieldName": "oBarContent",
+									"fieldParent": "e7cabdfb-5055-47d9-b819-91079d75930d",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "loggedOut",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "addContent",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "c1762915-da80-4301-9268-736488a833ac",
+											"fieldName": "Left",
+											"fieldParent": "32fad062-c93d-4059-85ce-bf8d9e8ed6e3",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "dfdf77b2-8a7f-4fd1-f7bd-09a7d8860678",
+													"fieldName": "oButtonLogin",
+													"fieldParent": "c1762915-da80-4301-9268-736488a833ac",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Login ",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "login",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// NOTES:\r",
+																"\r",
+																"// 1) Before Login, we need to check myMSALObj.loginInProgress = false. If true, what should happen ? \r",
+																"\r",
+																"\r",
+																"myMSALObj.handleRedirectCallback(function(error, response) {\r",
+																"    debugger;\r",
+																"    alert(\"Inside handleRedirectCallback\");\r",
+																"});\r",
+																"\r",
+																"var request = {\r",
+																"    scopes: [\"user.read\", \"offline_access\"],\r",
+																"    prompt: 'login',\r",
+																"    // loginHint: 'konstantin.kitmanov@fabres.pl',\r",
+																"};\r",
+																"\r",
+																"function msalLogin() {\r",
+																"\r",
+																"    myMSALObj.loginPopup(request).then(function(response) {\r",
+																"\r",
+																"        console.log(\"From loginPopup\");\r",
+																"        console.log(response);\r",
+																"\r",
+																"        debugger;\r",
+																"\r",
+																"        // Login to Planet 9\r",
+																"        $.ajax({\r",
+																"            type: \"POST\",\r",
+																"            url: \"https://planet9dev.neptune-software.com:8081/user/logon/azure-bearer/planet9-ad-bearer\",\r",
+																"            headers: {\r",
+																"                \"Authorization\": \"Bearer \" + response.idToken.rawIdToken,\r",
+																"            },\r",
+																"            success: function(data) {\r",
+																"                console.log('Logged in!');\r",
+																"                $('#oBarContent').addClass('loggedIn').removeClass('loggedOut');\r",
+																"\r",
+																"            },\r",
+																"            error: function(result, status) {\r",
+																"\r",
+																"            }\r",
+																"        });\r",
+																"\r",
+																"        // Get Access Token\r",
+																"        msalGetAccessToken();\r",
+																"\r",
+																"    }).catch(function(error) {\r",
+																"        console.log(error);\r",
+																"    });\r",
+																"\r",
+																"}\r",
+																"\r",
+																"function windowOpenLogin() {\r",
+																"var url = \"https://login.microsoftonline.com/8fdb51da-e45d-423f-ae33-cf92118d5311/oauth2/v2.0/authorize?\" +\r",
+																"    \"&client_id=ca21abbe-b065-47a3-b38a-e0e2271e0144\" +\r",
+																"    \"&redirect_uri=https://planet9dev.neptune-software.com:8081/public/app/demo_redirect_azure/popup.htmlredirect_uri=https://planet9dev.neptune-software.com:8081/public/app/demo_redirect_azure/popup.html\" +\r",
+																"    \"&scope=openid profile offline_access\" +\r",
+																"    \"&response_mode=fragment\" +\r",
+																"    \"&nonce=7362CAEA-9CA5-4B43-9BA3-34D7C303EBA7\" +\r",
+																"    \"&state=12345\" +\r",
+																"    \"&login_hint=konstantin.kitmanov@fabres.pl\" +\r",
+																"    \"&prompt=none\" + // none/login\r",
+																"    \"&response_type=id_token\";\r",
+																"\r",
+																"\r",
+																"\r",
+																"var loginWin = window.open(url, \"_blank\", \"location=yes\");\r",
+																"if (loginWin) {\r",
+																"    \r",
+																"}\r",
+																"}\r",
+																"\r",
+																"\r",
+																"function msalGetAccessToken() {\r",
+																"\r",
+																"    myMSALObj.acquireTokenSilent(request).then(function(response) {\r",
+																"        console.log(\"TOKEN from acquireTokenSilent: \");\r",
+																"        console.log(response);\r",
+																"        console.log(\"ACCESS TOKEN: \");\r",
+																"        console.log(parseJwt(response.accessToken));\r",
+																"    }, function(error) {\r",
+																"        console.log(error);\r",
+																"\r",
+																"        if (error.name === \"InteractionRequiredAuthError\") {\r",
+																"            myMSALObj.acquireTokenPopup(request).then(\r",
+																"                function(response) {\r",
+																"                    console.log(response);\r",
+																"                    console.log(\"ACCESS TOKEN: \");\r",
+																"                    console.log(parseJwt(response.accessToken));\r",
+																"                }).catch(function(error) {\r",
+																"                console.log(error);\r",
+																"            });\r",
+																"        }\r",
+																"    });\r",
+																"\r",
+																"}\r",
+																"\r",
+																"msalLogin();"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "b990bb56-599a-44e0-d302-b9203cd7d70c",
+													"fieldName": "oButtonLogout",
+													"fieldParent": "c1762915-da80-4301-9268-736488a833ac",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Logout ",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "logout",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"myMSALObj.clearCache();",
+																"myMSALObj.account = null;",
+																"",
+																"myMSALObj.authorityInstance.resolveEndpointsAsync().then(function (authority) {",
+																"    var urlNavigate = authority.EndSessionEndpoint",
+																"        ? authority.EndSessionEndpoint",
+																"        : myMSALObj.authority + 'oauth2/v2.0/logout?';",
+																"",
+																"    $.ajax({",
+																"        type: 'get',",
+																"        url: '/proxy/' + encodeURIComponent(urlNavigate),",
+																"    }).then(function () {",
+																"        console.log('Logged out');",
+																"        $('#oBarContent').addClass('loggedOut').removeClass('loggedIn');",
+																"    })",
+																"});"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "a6140839-8d7d-4513-afae-01f291a501b0",
+													"fieldName": "oButtonLogout2",
+													"fieldParent": "c1762915-da80-4301-9268-736488a833ac",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Logout POPUP",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "logout",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"$.ajax({",
+																"    type: \"POST\",",
+																"    contentType: \"application/x-www-form-urlencoded\",",
+																"    url: \"/proxy/\" + encodeURIComponent(",
+																"        \"https://login.microsoftonline.com/8fdb51da-e45d-423f-ae33-cf92118d5311/oauth2/v2.0/logoutsession\"",
+																"    ),",
+																"    headers: {",
+																"        \"Accept\": \"application/json\"",
+																"    },",
+																"    success: function(data) {",
+																"",
+																"    },",
+																"    error: function(result, status) {",
+																"        console.log(result.responseJSON);",
+																"    }",
+																"});"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "8afc173f-b9f4-418d-a8b3-c4da6a718c55",
+					"fieldName": "Init",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"var loginPop = \"\";",
+						"var tokenResponse = \"\";",
+						"var accessToken = \"\";",
+						"",
+						"",
+						"// MSAL Object",
+						"var msalConfig = {",
+						"    auth: {",
+						"        clientId: \"ca21abbe-b065-47a3-b38a-e0e2271e0144\",",
+						"        authority: \"https://login.microsoftonline.com/8fdb51da-e45d-423f-ae33-cf92118d5311\",",
+						"        redirectUri: \"https://planet9dev.neptune-software.com:8081/public/app/demo_redirect_azure/token.html\",",
+						"    },",
+						"    cache: {",
+						"        cacheLocation: \"localStorage\",",
+						"        storeAuthStateInCookie: true",
+						"    }",
+						"};",
+						"",
+						"",
+						"myMSALObj = new Msal.UserAgentApplication(msalConfig);",
+						"",
+						"",
+						"",
+						"",
+						"function parseJwt(token) {",
+						"    try {",
+						"        return JSON.parse(atob(token.split('.')[1]));",
+						"    } catch (e) {",
+						"        return null;",
+						"    }",
+						"};"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.29.1628",
+	"application": "demo_login_azure_fabres",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "1.65CDN",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		".loggedIn .login { display: none; }",
+		".loggedOut .logout { display: none; }"
+	],
+	"header": "<script src=\"https://secure.aadcdn.microsoftonline-p.com/lib/1.1.2/js/msal.min.js\"></script>",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

@@ -1,0 +1,1621 @@
+{
+	"id": "83047606-e32d-4774-a752-689c81c6b813",
+	"createdAt": "2019-06-07T10:39:53.000Z",
+	"updatedAt": "2019-06-07T10:59:28.000Z",
+	"createdBy": "gunnar",
+	"changedBy": "gunnar",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oApp",
+			"fieldParent": 0,
+			"fieldType": "sap.m.App",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "3015ae5c-b09c-4902-a2ee-4fc074fce357",
+					"fieldName": "oPageLogin",
+					"fieldParent": "1",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "styleClass",
+							"grouping": "Properties",
+							"value": "sapMGlobalBackgroundColorStrong sapUiUfdShellBG",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "showHeader",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "showFooter",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "backgroundDesign",
+							"grouping": "Properties",
+							"value": "Solid",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "cf3af86d-4160-464b-9233-5cf523899bd2",
+							"fieldName": "boxLogon",
+							"fieldParent": "3015ae5c-b09c-4902-a2ee-4fc074fce357",
+							"fieldType": "sap.m.HBox",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "justifyContent",
+									"grouping": "Properties",
+									"value": "Center",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "alignItems",
+									"grouping": "Properties",
+									"value": "Center",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "alignContent",
+									"grouping": "Properties",
+									"value": "Center",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+									"fieldName": "formLogon",
+									"fieldParent": "cf3af86d-4160-464b-9233-5cf523899bd2",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanM",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanL",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "editable",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "backgroundDesign",
+											"grouping": "Properties",
+											"value": "Transparent",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "baa7076a-1df7-4e65-942b-6385b547179f",
+											"fieldName": "formLogonTexts",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "styleClassMargin",
+													"grouping": "Properties",
+													"value": "sapUiTinyMarginBottom",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "ea71279f-de74-4fd7-a1d2-e59dd782903d",
+											"fieldName": "formLogonTextsBox",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.VBox",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "styleClassMargin",
+													"grouping": "Properties",
+													"value": "sapUiTinyMarginBottom",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "bd657147-d146-42a7-f5d9-2b2d887853c5",
+													"fieldName": "formLogonTextsTitle",
+													"fieldParent": "ea71279f-de74-4fd7-a1d2-e59dd782903d",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleStyle",
+															"grouping": "Properties",
+															"value": "H1",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Welcome",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassMargin",
+															"grouping": "Properties",
+															"value": "sapUiSmallMarginBottom",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "6f51f0f6-bc60-4933-82a9-bf56373a03f3",
+													"fieldName": "formLogonTextsSubTitle1",
+													"fieldParent": "ea71279f-de74-4fd7-a1d2-e59dd782903d",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleStyle",
+															"grouping": "Properties",
+															"value": "H2",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Planet 9",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "7212febf-15fc-4dad-87ad-2fe0a564226b",
+													"fieldName": "formLogonTextsSubTitle2",
+													"fieldParent": "ea71279f-de74-4fd7-a1d2-e59dd782903d",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleStyle",
+															"grouping": "Properties",
+															"value": "H5",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Neptune Software",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "5829cb85-6aa1-4ded-8f92-6feb249465c6",
+											"fieldName": "lblFormLoginTypes",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Login Provider",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "8faf8847-8a57-41ec-8441-fd062db47c95",
+											"fieldName": "inFormLoginTypes",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Select",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "100%",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "change",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"if (inFormLoginTypes.getSelectedKey() === \"local\" && smtpVerified) {",
+														"    linkForgot.setVisible(true);",
+														"} else {",
+														"    linkForgot.setVisible(false);",
+														"}"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "3b6ae1d9-601c-4bc9-a8d2-e433389254e4",
+											"fieldName": "lblFormLoginUsername",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Username",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "9b661b76-011c-4971-998b-c9a9fade53b1",
+											"fieldName": "inFormLoginUsername",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "100%",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "change",
+													"grouping": "Events",
+													"value": "inFormLoginPassword.focus();",
+													"script": "inFormLoginPassword.focus();",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "a82e288e-2540-47d6-88e6-4730334d1a35",
+											"fieldName": "lblFormLoginPassword",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Password",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "c2f60f23-114c-483c-b4ec-0742c97c7765",
+											"fieldName": "inFormLoginPassword",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "100%",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Password",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "submit",
+													"grouping": "Events",
+													"value": "formLoginButton.firePress();",
+													"script": "formLoginButton.firePress();",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "7251d384-3b0f-42aa-d7f5-ade6d392cf97",
+											"fieldName": "lblFormLoginActions",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "1dcd49b1-725c-4d75-917d-f8653f6a5efc",
+											"fieldName": "boxActions",
+											"fieldParent": "9e53bdc2-560b-4ed0-dba2-00a40209e274",
+											"fieldType": "sap.m.HBox",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "0cf12c04-3f58-4672-9323-b3ce44345440",
+													"fieldName": "formLoginButton",
+													"fieldParent": "1dcd49b1-725c-4d75-917d-f8653f6a5efc",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "width",
+															"grouping": "Properties",
+															"value": "110px",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Log On",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var options = {};",
+																"options.username = inFormLoginUsername.getValue().toLowerCase();",
+																"options.password = inFormLoginPassword.getValue();",
+																"options.logonid = inFormLoginTypes.getSelectedKey()",
+																"",
+																"if (!options.username || !options.password) {",
+																"",
+																"    if (!options.username) {",
+																"        inFormLoginUsername.setValueState(\"Error\");",
+																"    } else {",
+																"        inFormLoginUsername.setValueState();",
+																"    }",
+																"",
+																"    if (!options.password) {",
+																"        inFormLoginPassword.setValueState(\"Error\");",
+																"    } else {",
+																"        inFormLoginPassword.setValueState();",
+																"    }",
+																"",
+																"    return;",
+																"}",
+																"",
+																"// Handle Logon ",
+																"if (isMobile) {",
+																"    AppCache.LogonCustom(options);",
+																"    inFormLoginUsername.setValue();",
+																"    inFormLoginPassword.setValue();",
+																"} else {",
+																"    if (options.logonid === \"local\") {",
+																"        logonLocal(options);",
+																"    } else {",
+																"        logonLDAP(options);",
+																"    }",
+																"}"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "a78d0edb-7eda-4e88-df3c-b90d9cf9109a",
+													"fieldName": "linkForgot",
+													"fieldParent": "1dcd49b1-725c-4d75-917d-f8653f6a5efc",
+													"fieldType": "sap.m.Link",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Forgot Password ",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassMargin",
+															"grouping": "Properties",
+															"value": "sapUiMediumMarginBegin",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"formLogon.setVisible(false);",
+																"formForgot.setVisible(true);"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "0d7c2fae-6779-4b82-c760-4eb4d8999e94",
+									"fieldName": "formForgot",
+									"fieldParent": "cf3af86d-4160-464b-9233-5cf523899bd2",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiMediumMarginTop",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "maxContainerCols",
+											"grouping": "Properties",
+											"value": "1",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanM",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanL",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "columnsL",
+											"grouping": "Properties",
+											"value": "1",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "d9ba2d6b-18f1-4da9-ffac-d8b86dca1440",
+											"fieldName": "lblFormForgotSubTitle",
+											"fieldParent": "0d7c2fae-6779-4b82-c760-4eb4d8999e94",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "styleClassMargin",
+													"grouping": "Properties",
+													"value": "sapUiTinyMarginBottom",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "64014e5e-4a76-4d95-dcbe-027d13775da0",
+											"fieldName": "boxForgotSubTitle",
+											"fieldParent": "0d7c2fae-6779-4b82-c760-4eb4d8999e94",
+											"fieldType": "sap.m.VBox",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "styleClassMargin",
+													"grouping": "Properties",
+													"value": "sapUiTinyMarginBottom",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "9365c307-fbb9-4b20-cc47-ab56d2af9f73",
+													"fieldName": "txtFormForgotTitle",
+													"fieldParent": "64014e5e-4a76-4d95-dcbe-027d13775da0",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleStyle",
+															"grouping": "Properties",
+															"value": "H1",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Welcome",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassMargin",
+															"grouping": "Properties",
+															"value": "sapUiSmallMarginBottom",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "ec2ac970-666c-4742-f6c3-cb771d3499e0",
+													"fieldName": "txtFormForgotSubTitle1",
+													"fieldParent": "64014e5e-4a76-4d95-dcbe-027d13775da0",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleStyle",
+															"grouping": "Properties",
+															"value": "H2",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Planet 9",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "6f1fc49e-32cd-4f84-da43-c19c35a08b2a",
+													"fieldName": "txtFormForgotSubTitle2",
+													"fieldParent": "64014e5e-4a76-4d95-dcbe-027d13775da0",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleStyle",
+															"grouping": "Properties",
+															"value": "H5",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Neptune Software",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "ca854d06-112a-4ace-a29c-6c85aaea43c5",
+											"fieldName": "lblForgotUsername",
+											"fieldParent": "0d7c2fae-6779-4b82-c760-4eb4d8999e94",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Username",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "9bb4c40b-f8ec-43f6-a11b-4a388f315ae7",
+											"fieldName": "inForgotUsername",
+											"fieldParent": "0d7c2fae-6779-4b82-c760-4eb4d8999e94",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "liveChange",
+													"grouping": "Events",
+													"value": "this.setValueState();",
+													"script": "this.setValueState();",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "071352a8-8608-4423-9a20-33b0a74c6df4",
+											"fieldName": "butSubmitForgot",
+											"fieldParent": "0d7c2fae-6779-4b82-c760-4eb4d8999e94",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "150px",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Emphasized",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Submit",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "forgotPassword();",
+													"script": "forgotPassword();",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "6d0e94b8-cfb8-449e-ebbc-d2a370267341",
+							"fieldName": "panLinksCustom",
+							"fieldParent": "3015ae5c-b09c-4902-a2ee-4fc074fce357",
+							"fieldType": "sap.m.Panel",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "styleClassPadding",
+									"grouping": "Properties",
+									"value": "sapUiNoContentPadding",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClass",
+									"grouping": "Properties",
+									"value": "customLinks",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableCompactMode",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "backgroundDesign",
+									"grouping": "Properties",
+									"value": "Transparent",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+									"fieldName": "toolLinksCustom",
+									"fieldParent": "6d0e94b8-cfb8-449e-ebbc-d2a370267341",
+									"fieldType": "sap.m.Toolbar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "design",
+											"grouping": "Properties",
+											"value": "Transparent",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "HeaderToolbar",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "0803fbba-0af3-4a75-edad-f907a08ad096",
+											"fieldName": "toolLinksCustomSpacer1",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.ToolbarSpacer",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "58f1c0f8-3c6a-4793-9922-fd07c967d8fa",
+											"fieldName": "toolLinksCustomText1",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Transparent",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"diaText.setTitle(this.getText());",
+														"$(\"#textDiv\").html(modelDataCustSettings.oData.customizing[0].txtLogin1);",
+														"diaText.open();"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "aeadd49a-e23e-4632-b85e-cf0adcf39c1c",
+											"fieldName": "toolLinksCustomSep1",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.ToolbarSeparator",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "fe51fc4c-4ea7-4efb-a251-314e65cc3ebb",
+											"fieldName": "toolLinksCustomText2",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Transparent",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"diaText.setTitle(this.getText());",
+														"$(\"#textDiv\").html(modelDataCustSettings.oData.customizing[0].txtLogin2);",
+														"diaText.open();"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "1203490c-a4c1-4222-9e91-7a4c3dc53bba",
+											"fieldName": "toolLinksCustomSep2",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.ToolbarSeparator",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "8ece4512-90af-4498-d341-b7bf2b66c03d",
+											"fieldName": "toolLinksCustomText3",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Transparent",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"diaText.setTitle(this.getText());",
+														"$(\"#textDiv\").html(modelDataCustSettings.oData.customizing[0].txtLogin3);",
+														"diaText.open();"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "9d0c01c0-f401-40a1-ce67-856bf7f6fe0f",
+											"fieldName": "toolLinksCustomSpacer2",
+											"fieldParent": "ecdbcd8f-b3f7-44fa-d73e-066d8726ea97",
+											"fieldType": "sap.m.ToolbarSpacer",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "06584067-a441-47b1-91cb-8236325ffa13",
+							"fieldName": "oHTMLStyle",
+							"fieldParent": "3015ae5c-b09c-4902-a2ee-4fc074fce357",
+							"fieldType": "sap.ui.core.HTML",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "780e41ba-c15e-48d1-cd51-77234f1a8aca",
+									"fieldName": "oHTML",
+									"fieldParent": "06584067-a441-47b1-91cb-8236325ffa13",
+									"fieldType": "neptune.Html",
+									"script": [
+										"==OBJECT STRING==",
+										"<style>",
+										"    .customLinks .sapMTB {",
+										"        border-bottom: none;",
+										"    }",
+										"    .customLinks {",
+										"        position: absolute;",
+										"        bottom: 0px;",
+										"    }",
+										"</style>"
+									],
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "7b9bdd01-5ebe-4974-9e88-5ca4031c4b47",
+					"fieldName": "Dialogs",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "4143f515-789d-494f-b3f7-8709ee3381e7",
+							"fieldName": "diaTextClose",
+							"fieldParent": "7b9bdd01-5ebe-4974-9e88-5ca4031c4b47",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Close",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "diaText.close();",
+									"script": "diaText.close();",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "cd35a839-8410-47ab-9cdb-20ea7f91b508",
+							"fieldName": "diaText",
+							"fieldParent": "7b9bdd01-5ebe-4974-9e88-5ca4031c4b47",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "resizable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "draggable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "800px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentHeight",
+									"grouping": "Properties",
+									"value": "600px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "endButton",
+									"grouping": "Associations",
+									"value": "diaTextClose",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "797fe20c-d214-4919-c18a-4c204c3381f7",
+									"fieldName": "oHTMLText",
+									"fieldParent": "cd35a839-8410-47ab-9cdb-20ea7f91b508",
+									"fieldType": "sap.ui.core.HTML",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "3caec3b2-7c96-4cc2-be72-0509081bbbe3",
+											"fieldName": "oHTML1",
+											"fieldParent": "797fe20c-d214-4919-c18a-4c204c3381f7",
+											"fieldType": "neptune.Html",
+											"script": "<div id=\"textDiv\" style=\"height:100%;width:100%\"></div>",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"fieldNo": "2028fd7c-6930-4bee-80be-74fc1e3c9528",
+					"fieldName": "Data",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "f1b91a27-2657-4bfe-c0fb-a3e1cdea010f",
+							"fieldName": "DataCustSettings",
+							"fieldParent": "2028fd7c-6930-4bee-80be-74fc1e3c9528",
+							"fieldType": "neptune.model",
+							"bindingValue": "Generic Array",
+							"bindingType": "h",
+							"bindingSource": "P9",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "setCacheType",
+									"grouping": "Model",
+									"value": "LocalStorage",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setEnableCache",
+									"grouping": "Model",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setInitLoad",
+									"grouping": "Model",
+									"value": "cache",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "15",
+					"fieldName": "Texts",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "14",
+							"fieldName": "txtWrongUsernamePassword",
+							"fieldParent": "15",
+							"fieldType": "sap.m.Text",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Wrong username/password combination",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "36d9be9f-e396-4b0d-bf94-fcdd46951aa9",
+					"fieldName": "Functions",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "7",
+							"fieldName": "init",
+							"fieldParent": "36d9be9f-e396-4b0d-bf94-fcdd46951aa9",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"var smtpVerified = false;",
+								"var isMobile = false;",
+								"var text1 = \"\";",
+								"var text2 = \"\";",
+								"var text3 = \"\";",
+								"var urlPrefix = \"\";",
+								"",
+								"if (sap && sap.n && sap.n.Shell) {",
+								"    console.log(\"AttachInit: \", sap.n.Shell);",
+								"}",
+								"",
+								"var sapCore = sap.ui.getCore();",
+								"",
+								"sapCore.attachInit(function(data) {",
+								"    ",
+								"    console.log(\"Inside init\");",
+								"",
+								"    // On Mobile - Set URL Path prefix",
+								"    if (typeof AppCache !== \"undefined\" && AppCache.isMobile) {",
+								"        urlPrefix = AppCache.Url;",
+								"        isMobile = true;",
+								"    }",
+								"",
+								"    // Fetch Logon Types",
+								"    getLogonTypes();",
+								"",
+								"});"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "1fd47256-b43d-49ad-9ad6-8bfe6d9ac75b",
+							"fieldName": "LogonTypes",
+							"fieldParent": "36d9be9f-e396-4b0d-bf94-fcdd46951aa9",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function getLogonTypes() {",
+								"",
+								"    var query = \"\";",
+								"",
+								"    if (location.pathname.toLowerCase().indexOf(\"/launchpad/\") > -1) {",
+								"        var path = location.pathname.split(\"/\");",
+								"        query = \"?launchpad=\" + path[path.length - 1];",
+								"    }",
+								"",
+								"    $.ajax({",
+								"        type: \"GET\",",
+								"        url: urlPrefix + \"/user/logon/types\" + query,",
+								"        success: function(data) {",
+								"",
+								"            // Save Data ",
+								"            modelDataCustSettings.setData(data);",
+								"            setCacheDataCustSettings();",
+								"",
+								"            // Handle Startup Actions ",
+								"            setSettings();",
+								"",
+								"        },",
+								"        error: function(result, status) {",
+								"            setSettings();",
+								"        }",
+								"    });",
+								"}",
+								"",
+								"function setSettings() {",
+								"",
+								"    if (!modelDataCustSettings.oData.settings) return;",
+								"",
+								"    smtpVerified = modelDataCustSettings.oData.showForgotPassword;",
+								"",
+								"    // If SMTP is verified -> Show forgotpassword",
+								"    if (smtpVerified) {",
+								"        linkForgot.setVisible(true);",
+								"    } else {",
+								"        linkForgot.setVisible(false);",
+								"    }",
+								"",
+								"    // Get System Name/Description ",
+								"    if (modelDataCustSettings.oData.settings.name) {",
+								"        formLogonTextsSubTitle1.setText(modelDataCustSettings.oData.settings.name);",
+								"    }",
+								"",
+								"    if (modelDataCustSettings.oData.settings.description) {",
+								"        formLogonTextsSubTitle2.setText(modelDataCustSettings.oData.settings.description);",
+								"    }",
+								"",
+								"    // Parse Logon Types",
+								"    var idps = [];",
+								"",
+								"    inFormLoginTypes.removeAllItems();",
+								"    inFormLoginTypes.addItem(new sap.ui.core.Item({",
+								"        key: \"local\",",
+								"        text: \"Local\"",
+								"    }));",
+								"",
+								"    for (var i = 0, length = modelDataCustSettings.oData.logonTypes.length; i < length; i++) {",
+								"        switch (modelDataCustSettings.oData.logonTypes[i].type) {",
+								"            case 'ldap':",
+								"                inFormLoginTypes.addItem(new sap.ui.core.Item({",
+								"                    key: modelDataCustSettings.oData.logonTypes[i].id,",
+								"                    text: modelDataCustSettings.oData.logonTypes[i].description",
+								"                }));",
+								"                inFormLoginTypes.setVisible(true);",
+								"                break;",
+								"        }",
+								"    }",
+								"",
+								"    // Default IDP",
+								"    if (modelDataCustSettings.oData.defaultLoginIDP) {",
+								"        inFormLoginTypes.setSelectedKey(modelDataCustSettings.oData.defaultLoginIDP);",
+								"    } else {",
+								"        inFormLoginTypes.setSelectedKey(\"local\");",
+								"    }",
+								"",
+								"    // Texts ",
+								"    if (modelDataCustSettings.oData.customizing.length === 1) {",
+								"",
+								"        if (modelDataCustSettings.oData.customizing[0].txtLogin1Enable) {",
+								"            toolLinksCustomText1.setText(modelDataCustSettings.oData.customizing[0].txtLogin1Label);",
+								"            toolLinksCustomText1.setVisible(true);",
+								"        }",
+								"",
+								"        if (modelDataCustSettings.oData.customizing[0].txtLogin2Enable) {",
+								"            toolLinksCustomText2.setText(modelDataCustSettings.oData.customizing[0].txtLogin2Label);",
+								"            toolLinksCustomText2.setVisible(true);",
+								"            toolLinksCustomSep1.setVisible(true);",
+								"        }",
+								"",
+								"        if (modelDataCustSettings.oData.customizing[0].txtLogin3Enable) {",
+								"            toolLinksCustomText3.setText(modelDataCustSettings.oData.customizing[0].txtLogin3Label);",
+								"            toolLinksCustomText3.setVisible(true);",
+								"            toolLinksCustomSep2.setVisible(true);",
+								"        }",
+								"",
+								"    }",
+								"",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "43",
+							"fieldName": "LogonRequests",
+							"fieldParent": "36d9be9f-e396-4b0d-bf94-fcdd46951aa9",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function getLogonTypeInfo(id) {",
+								"    var info = {};",
+								"    $.each(modelDataCustSettings.oData.logonTypes, function(i, data) {",
+								"        if (data.id === id) info = data;",
+								"    });",
+								"    return info;",
+								"}",
+								"",
+								"function logonLocal(options) {",
+								"    $.ajax({",
+								"        type: \"POST\",",
+								"        contentType: \"application/json\",",
+								"        url: \"/user/logon/local\",",
+								"        data: JSON.stringify(options),",
+								"        success: function(data) {",
+								"            location.reload(true);",
+								"        },",
+								"        error: function(result, status) {",
+								"            handleWrongUserPass(result);",
+								"        }",
+								"    });",
+								"}",
+								"",
+								"function logonLDAP(options) {",
+								"",
+								"    var logonData = getLogonTypeInfo(options.logonid);",
+								"",
+								"    $.ajax({",
+								"        type: \"POST\",",
+								"        contentType: \"application/json\",",
+								"        url: \"/user/logon/ldap/\" + logonData.path,",
+								"        data: JSON.stringify(options),",
+								"        success: function(data) {",
+								"            location.reload(true);",
+								"        },",
+								"        error: function(result, status) {",
+								"            handleWrongUserPass(result);",
+								"        }",
+								"    });",
+								"}",
+								"",
+								"function handleWrongUserPass(result) {",
+								"    if (result.status === 401) {",
+								"        inFormLoginUsername.setValueState(\"Error\");",
+								"        inFormLoginPassword.setValueState(\"Error\");",
+								"        sap.m.MessageToast.show(txtWrongUsernamePassword.getText());",
+								"    } else {",
+								"        if (result.responseJSON) {",
+								"            sap.m.MessageToast.show(result.status + \": \" + result.responseJSON.status);",
+								"        } else {",
+								"            sap.m.MessageToast.show(result.status + \": \" + result.statusText);",
+								"        }",
+								"    }",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "75b6c2f6-242c-4a63-c808-377239765f4a",
+							"fieldName": "ForgotPassword",
+							"fieldParent": "36d9be9f-e396-4b0d-bf94-fcdd46951aa9",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function forgotPassword() {",
+								"    ",
+								"    $.ajax({",
+								"        type: \"POST\",",
+								"        contentType: \"application/json\",",
+								"        url: urlPrefix + \"/user/forgot/generate\",",
+								"        data: JSON.stringify({",
+								"            username: inForgotUsername.getValue()",
+								"        }),",
+								"        success: function(data) {",
+								"            sap.m.MessageToast.show('A password reset link has been sent to the email address connected with the account');",
+								"",
+								"            setTimeout(function() {",
+								"                formLogon.setVisible(true);",
+								"                formForgot.setVisible(false);",
+								"            }, 300);",
+								"            ",
+								"        }",
+								"    });",
+								"}",
+								"",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.7.1259",
+	"application": "planet9_login_custom_debug",
+	"title": "Planet 9 Login",
+	"description": "Planet 9 Login",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "1.54",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": [
+		"==OBJECT STRING==",
+		"<link rel=\"shortcut icon\" href=\"/public/images/favicon.png\" type=\"image/x-icon\" />",
+		"",
+		"<style>",
+		"    .sapUiFormLblColon .sapUiFormElementLbl>.sapMLabel {",
+		"        padding-right: 0.3em;",
+		"        padding-top: 15px;",
+		"    }",
+		"    html.sap-desktop .sapUiLoSplitterH.sapUiLoSplitter>.sapUiLoSplitterBar,",
+		"    html.sap-desktop .sapUiLoSplitterH>.sapUiLoSplitterOverlay>.sapUiLoSplitterOverlayBar {",
+		"        width: 0;",
+		"    }",
+		"    .sapUiFormLblColon .sapUiFormElementLbl>.sapMLabel:after {",
+		"        content: \"\";",
+		"    }",
+		"    .sapMTitle {",
+		"        white-space: pre-wrap;",
+		"    }",
+		"    .sapMTitleStyleH1 {",
+		"        font-weight: bold !important;",
+		"    }",
+		"</style>"
+	],
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

@@ -1,0 +1,468 @@
+{
+	"id": "723d9c73-9674-49b6-96ea-d67d5b617c30",
+	"createdAt": "2019-08-12T11:17:02.000Z",
+	"updatedAt": "2021-04-30T08:05:45.343Z",
+	"createdBy": "oah",
+	"changedBy": "jens-uwe.gross@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "4151448b-dbf9-4dfb-b3dd-ced591cf7240",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "c8ade33c-d881-4c1d-d488-200f9e908d57",
+					"fieldName": "oApp",
+					"fieldParent": "4151448b-dbf9-4dfb-b3dd-ced591cf7240",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "cc1747e4-da89-4013-ea30-250dd6c46978",
+							"fieldName": "oPage",
+							"fieldParent": "c8ade33c-d881-4c1d-d488-200f9e908d57",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Customer LIst",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "66c8b613-a101-439e-e186-da53fbb47678",
+									"fieldName": "oBarSubHeader",
+									"fieldParent": "cc1747e4-da89-4013-ea30-250dd6c46978",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setSubHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "49b59c15-3a25-4cc8-83bb-c80ab596890d",
+											"fieldName": "Left",
+											"fieldParent": "66c8b613-a101-439e-e186-da53fbb47678",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "ff2fc8ba-07b0-4c64-96b1-77fb81da5aad",
+													"fieldName": "oSearchField",
+													"fieldParent": "49b59c15-3a25-4cc8-83bb-c80ab596890d",
+													"fieldType": "sap.m.SearchField",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "search",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"",
+																"/**",
+																" * Name: etnia CRM",
+																" * Description: ",
+																" * ",
+																" * Path: /getCustomer",
+																" * Method: GET",
+																" * ",
+																" * Parameters:",
+																" * name - Optional parameter ",
+																" * Description: Filter the customer name",
+																" * Example: ",
+																" * default: ",
+																" * ",
+																" */",
+																"var options = {",
+																"    parameters: {",
+																"        \"name\": \"%\" + oSearchField.getValue() + \"%\"",
+																"        }",
+																"};",
+																"",
+																"apigetCustomer(options);",
+																"",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "bc69cb3d-8449-4a2f-fbc6-a586d5e386ce",
+									"fieldName": "oTable",
+									"fieldParent": "cc1747e4-da89-4013-ea30-250dd6c46978",
+									"fieldType": "sap.m.Table",
+									"bindingType": "h",
+									"modelPath": "customer>/customer",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "644f4972-d341-4596-ff2a-87ef60955a70",
+											"fieldName": "coloTablename",
+											"fieldParent": "bc69cb3d-8449-4a2f-fbc6-a586d5e386ce",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "965fd1f5-d852-418d-9f8a-8f8e066df8f4",
+													"fieldName": "colHoTablename",
+													"fieldParent": "644f4972-d341-4596-ff2a-87ef60955a70",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "name",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "d02d63bc-d5b5-41cc-eee0-4ab79964dd08",
+											"fieldName": "coloTablecity",
+											"fieldParent": "bc69cb3d-8449-4a2f-fbc6-a586d5e386ce",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "6a593fbb-c0e4-4015-a754-837b108a6b22",
+													"fieldName": "colHoTablecity",
+													"fieldParent": "d02d63bc-d5b5-41cc-eee0-4ab79964dd08",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "city",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "c65d2cf8-4e89-41a4-a771-0920297a80dd",
+											"fieldName": "coloTablezip",
+											"fieldParent": "bc69cb3d-8449-4a2f-fbc6-a586d5e386ce",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "343dd6e0-cb13-43d4-83be-f43a6cba0994",
+													"fieldName": "colHoTablezip",
+													"fieldParent": "c65d2cf8-4e89-41a4-a771-0920297a80dd",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "zip",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "463989e2-b77e-43fc-d7a0-883f31d55941",
+											"fieldName": "coloTablecountry",
+											"fieldParent": "bc69cb3d-8449-4a2f-fbc6-a586d5e386ce",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "81573aaf-b184-450f-add6-64fcc83c93ed",
+													"fieldName": "colHoTablecountry",
+													"fieldParent": "463989e2-b77e-43fc-d7a0-883f31d55941",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "country",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "d3f24e9a-3adf-4dfb-cc44-2f4955238382",
+											"fieldName": "colItemoTable",
+											"fieldParent": "bc69cb3d-8449-4a2f-fbc6-a586d5e386ce",
+											"fieldType": "sap.m.ColumnListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "e78b2fba-24e5-41f0-e602-2a945b378f6c",
+													"fieldName": "txtoTablename",
+													"fieldParent": "d3f24e9a-3adf-4dfb-cc44-2f4955238382",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{customer>name}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "a20f8d71-a123-43f4-d0b7-06b43c598a35",
+													"fieldName": "txtoTablecity",
+													"fieldParent": "d3f24e9a-3adf-4dfb-cc44-2f4955238382",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{customer>city}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "d3c2df99-3bf3-4651-e9f7-96df4de190ae",
+													"fieldName": "txtoTablezip",
+													"fieldParent": "d3f24e9a-3adf-4dfb-cc44-2f4955238382",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{customer>zip}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "f2ff6116-d033-4397-d772-58f14fb79819",
+													"fieldName": "txtoTablecountry",
+													"fieldParent": "d3f24e9a-3adf-4dfb-cc44-2f4955238382",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{customer>country}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "83f0e8b6-fcb1-4389-efcd-71e1e60e05ba",
+							"fieldName": "oPage1",
+							"fieldParent": "c8ade33c-d881-4c1d-d488-200f9e908d57",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Page 2",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "0e1b92b6-1f98-417e-d73f-ab5debcef275",
+					"fieldName": "customer",
+					"fieldParent": 99999,
+					"fieldType": "neptune.model",
+					"bindingValue": "etnia CRM>customer",
+					"bindingType": "h",
+					"bindingSource": "API",
+					"bindingParentID": "ced52869-6fbc-4e8d-8ae6-e63f6c755cba",
+					"bindingPathID": "b7cf18e3-747b-410f-a94f-6ebcfff1de42",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "fd7c794a-b25b-44cb-eda8-ea08a216de1c",
+					"fieldName": "getCustomer",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "ced52869-6fbc-4e8d-8ae6-e63f6c755cba",
+					"restOperation": "7a79998a-b9e4-4324-b0ed-6597061debe9",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "b7cf18e3-747b-410f-a94f-6ebcfff1de42",
+							"modelFieldNo": "0e1b92b6-1f98-417e-d73f-ab5debcef275"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.12.1632",
+	"application": "demo_myapp",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

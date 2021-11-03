@@ -1,0 +1,37 @@
+{
+	"id": "31f4fb11-8ed3-4d1f-acf3-ab6e2ff30d0d",
+	"createdAt": "2017-12-18T08:31:18.000Z",
+	"createdBy": "rsletta",
+	"fields": [
+		{
+			"fieldName": "description",
+			"fieldType": "text",
+			"id": "59bfd661-4adc-41f3-b56b-0b643375db81"
+		},
+		{
+			"fieldName": "done",
+			"fieldType": "boolean",
+			"id": "4f3cffb2-f3c8-417f-8441-dee006c16792"
+		},
+		{
+			"fieldName": "taskDeadline",
+			"fieldType": "text",
+			"id": "cc4ffadf-99c2-4f50-bfc5-2dd633538629"
+		},
+		{
+			"fieldName": "items",
+			"fieldType": "text",
+			"description": "Test Nested",
+			"id": "44abcf40-ec6f-4ee6-9ac4-5d5336af3ac6"
+		}
+	],
+	"indices": null,
+	"foreignKeys": null,
+	"name": "demo_tasks",
+	"description": "Planet9 tasklist app demo - tasks",
+	"ver": "18.11.21.1741",
+	"enableAudit": false,
+	"package": "ebf9fa20-e061-460c-b9ab-b1340d1a24c1",
+	"rolesRead": [],
+	"rolesWrite": []
+}

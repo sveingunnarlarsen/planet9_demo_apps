@@ -1,0 +1,23 @@
+{
+	"id": "8e36d932-aa07-496b-856c-f3192c8e0780",
+	"createdAt": "2017-10-22T11:29:13.000Z",
+	"createdBy": "gunnar",
+	"content": [],
+	"name": "test5",
+	"ver": "20.6.8.1510",
+	"description": "",
+	"ui5Theme": "sap_belize",
+	"stylesheet": [
+		"==OBJECT STRING==",
+		"body {",
+		"    background: blue;",
+		"}"
+	],
+	"calculated": [
+		"==OBJECT STRING==",
+		"body {",
+		"    background: blue;",
+		"}"
+	],
+	"package": "ebf9fa20-e061-460c-b9ab-b1340d1a24c1"
+}

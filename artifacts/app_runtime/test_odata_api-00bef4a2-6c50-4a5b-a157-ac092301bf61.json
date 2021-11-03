@@ -1,0 +1,171 @@
+{
+	"id": "00bef4a2-6c50-4a5b-a157-ac092301bf61",
+	"createdAt": "2019-08-06T13:34:51.000Z",
+	"updatedAt": "2020-10-18T13:05:34.935Z",
+	"createdBy": "oah",
+	"changedBy": "ole-andre.haugen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "5599c322-8e7e-4b02-a90e-8c427dee020e",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "8be7f4a5-c4bc-4b72-a466-31a43f451c1a",
+					"fieldName": "oApp",
+					"fieldParent": "5599c322-8e7e-4b02-a90e-8c427dee020e",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "b3538b48-8e70-47e8-920a-9b7cd9ac6367",
+							"fieldName": "oPage",
+							"fieldParent": "8be7f4a5-c4bc-4b72-a466-31a43f451c1a",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "e57ab299-5f6a-493f-bce6-6def3ea492c4",
+									"fieldName": "oList",
+									"fieldParent": "b3538b48-8e70-47e8-920a-9b7cd9ac6367",
+									"fieldType": "sap.m.List",
+									"script": "",
+									"bindingType": "h",
+									"modelPath": "oMultiModel>/d/results",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "c074809f-09c3-4589-f78d-2e945843f9fd",
+											"fieldName": "oObjectListItem",
+											"fieldParent": "e57ab299-5f6a-493f-bce6-6def3ea492c4",
+											"fieldType": "sap.m.ObjectListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "intro",
+													"grouping": "Properties",
+													"value": "{oMultiModel>POId}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "4fddf6c2-2a66-41e1-f9d0-a88c37494e1a",
+					"fieldName": "oMultiModel",
+					"fieldParent": 99999,
+					"fieldType": "neptune.model",
+					"script": "",
+					"bindingValue": "SAP oData>PurchaseOrder",
+					"bindingType": "h",
+					"bindingSource": "API",
+					"bindingParentID": "47d35938-03bd-49f3-9a51-f876b7e3a3a8",
+					"bindingPathID": "61cd6eb8-c49f-4b54-e1af-8429cdda78cf",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "826dc80d-133e-4cf8-9708-d38a0ca96a56",
+					"fieldName": "oRestAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"script": "",
+					"restSource": "47d35938-03bd-49f3-9a51-f876b7e3a3a8",
+					"restOperation": "61b9e9f9-3d13-4e87-9856-c06d2d4085d3",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "61cd6eb8-c49f-4b54-e1af-8429cdda78cf",
+							"modelFieldNo": "4fddf6c2-2a66-41e1-f9d0-a88c37494e1a"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "20.10.18.155",
+	"application": "test_odata_api",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": true,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "47d35938-03bd-49f3-9a51-f876b7e3a3a8",
+			"name": "SAP oData",
+			"ver": "19.8.15.811",
+			"updatedAt": "2019-08-15T08:11:27.000Z",
+			"changedBy": "oah"
+		}
+	]
+}

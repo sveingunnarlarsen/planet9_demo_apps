@@ -1,0 +1,5031 @@
+{
+	"id": "8a3dbf58-127f-4335-9d56-1a72cba83415",
+	"createdAt": "2018-02-08T17:20:37.000Z",
+	"updatedAt": "2021-05-14T14:27:17.489Z",
+	"createdBy": "oah",
+	"changedBy": "helder",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oApp",
+			"fieldParent": 0,
+			"fieldType": "sap.m.SplitApp",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "defaultTransitionNameMaster",
+					"grouping": "Properties",
+					"value": "show",
+					"script": "",
+					"translation": []
+				},
+				{
+					"attribute": "defaultTransitionNameDetail",
+					"grouping": "Properties",
+					"value": "show",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "2",
+					"fieldName": "oPageMaster",
+					"fieldParent": "1",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "title",
+							"grouping": "Properties",
+							"value": "Inbox",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "showHeader",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "addMasterPage",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "10",
+							"fieldName": "oSubMaster",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setSubHeader",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "11",
+									"fieldName": "Left",
+									"fieldParent": "10",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentLeft",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "12",
+											"fieldName": "oFilterWorkflow",
+											"fieldParent": "11",
+											"fieldType": "sap.m.SearchField",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "liveChange",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"var binding = oListWorkflow.getBinding(\"items\");",
+														"var filter = new sap.ui.model.Filter({",
+														"    filters: [",
+														"        new sap.ui.model.Filter(\"title\", \"Contains\", this.getValue()),",
+														"        new sap.ui.model.Filter(\"subTitle\", \"Contains\", this.getValue()),",
+														"        new sap.ui.model.Filter(\"objectKey\", \"Contains\", this.getValue()),",
+														"        new sap.ui.model.Filter(\"amount\", \"Contains\", this.getValue()),",
+														"    ],",
+														"    and: false",
+														"})",
+														"binding.filter([filter]);",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "8",
+							"fieldName": "oListWorkflow",
+							"fieldParent": "2",
+							"fieldType": "sap.m.List",
+							"script": "",
+							"bindingValue": "Generic Array",
+							"bindingType": "h",
+							"bindingSource": "P9",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "mode",
+									"grouping": "Properties",
+									"value": "SingleSelectMaster",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "growingThreshold",
+									"grouping": "Properties",
+									"value": "100",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "growing",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "itemPress",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"var selectedItem = this.getSelectedItem();",
+										"",
+										"if (selectedItem) {",
+										"",
+										"    var context = selectedItem.getBindingContext();",
+										"    var data = context.getObject();",
+										"",
+										"    // Start WF",
+										"    sap.n.Planet9.function({",
+										"        id: \"WorkflowInbox\",",
+										"        method: \"Get\",",
+										"        data: data,",
+										"        success: function (data) {",
+										"",
+										"            modeloPageDetail.setData(data);",
+										"            modeloListNotes.setData(data.notes || []);",
+										"            modeloListAttachment.setData(data.attachment);",
+										"            modeltabLog.setData(data.log);",
+										"",
+										"            if (!modeloListAttachment.oData.length) oSectionAttachment.setVisible(false);",
+										"            if (!modeloListNotes.oData.length) oSectionNotes.setVisible(false);",
+										"",
+										"            if (data.inboxApp) {",
+										"                AppCache.Load(data.inboxApp, {",
+										"                    appGUID: ModelData.genID(), ",
+										"                    parentObject: appContent,",
+										"                    startParams: data",
+										"                });",
+										"            } else {",
+										"                appContent.destroyContent();",
+										"            }",
+										"",
+										"            oApp.toDetail(oPageDetail);",
+										"            oObjectPageLayout._scrollTo(0);",
+										"",
+										"            // Make WF Data available in global memory ",
+										"            sap.n.Inbox = {",
+										"                id: data.id,",
+										"                createdAt: data.createdAt,",
+										"                updatedAt: data.updatedAt,",
+										"                createdBy: data.createdBy,",
+										"                changedBy: data.changedBy,",
+										"                objectType: data.objectType,",
+										"                objectKey: data.objectKey,",
+										"                overDueDate: data.overDueDate,",
+										"                amount: data.amount,",
+										"                currency: data.currency,",
+										"                status: data.status,",
+										"                title: data.title,",
+										"                subTitle: data.subTitle,",
+										"                icon: data.icon,",
+										"            }",
+										"        },",
+										"        error: function (data) {",
+										"            sap.m.MessageToast.show(data.status);",
+										"        }",
+										"",
+										"    });",
+										"",
+										"}"
+									],
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "9",
+									"fieldName": "oItemWorkflow",
+									"fieldParent": "8",
+									"fieldType": "sap.m.ObjectListItem",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "type",
+											"grouping": "Properties",
+											"value": "Active",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "{title}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberUnit",
+											"grouping": "Properties",
+											"value": "{currency}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "number",
+											"grouping": "Properties",
+											"value": "{amount}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "intro",
+											"grouping": "Properties",
+											"value": "{taskTitle}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "{icon}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "number",
+											"grouping": "Formatter",
+											"value": "number:Decimals2Comma",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "96",
+											"fieldName": "oItemWorkflowOverdue",
+											"fieldParent": "9",
+											"fieldType": "sap.m.ObjectStatus",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "title",
+													"grouping": "Properties",
+													"value": "Due",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{overDueDate}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "state",
+													"grouping": "Properties",
+													"value": "{overDueDate}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Formatter",
+													"value": "date:BrowserSetting",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "state",
+													"grouping": "Formatter",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"if (typeof overDueDate === \"undefined\" || overDueDate === null || overDueDate === \"\") {",
+														"    return;",
+														"}",
+														"",
+														"var today = new Date().getTime();",
+														"",
+														"if (today < new Date(overDueDate).getTime()) {",
+														"    return \"Success\";",
+														"} else {",
+														"    return \"Error\"",
+														"}",
+														"",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "101",
+											"fieldName": "oItemWorkflowDocument",
+											"fieldParent": "9",
+											"fieldType": "sap.m.ObjectStatus",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{objectKey}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Formatter",
+													"value": "string:RemoveLeadingZero",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "4",
+							"fieldName": "oFooterMaster",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setFooter",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "6",
+									"fieldName": "Left",
+									"fieldParent": "4",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentLeft",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "34",
+											"fieldName": "oButUpdate",
+											"fieldParent": "6",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Emphasized",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Update",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://synchronize",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"sap.n.Planet9.function({",
+														"    id: \"WorkflowInbox\",",
+														"    method: \"List\",",
+														"    success: function (data) {",
+														"        if (!modeloListWorkflow.oData.length) oApp.toDetail(oPageHome);",
+														"        modeloListWorkflow.setData(data);",
+														"    },",
+														"    error: function (data) {",
+														"",
+														"    }",
+														"",
+														"});"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"fieldNo": "18",
+					"fieldName": "oPageHome",
+					"fieldParent": "1",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "title",
+							"grouping": "Properties",
+							"value": "Inbox",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "addDetailPage",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "16",
+							"fieldName": "oPageMessage",
+							"fieldParent": "18",
+							"fieldType": "sap.m.MessagePage",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "showHeader",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://inbox",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addDetailPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "19",
+							"fieldName": "oFooterHome",
+							"fieldParent": "18",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setFooter",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "20",
+									"fieldName": "Left",
+									"fieldParent": "19",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentLeft",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"fieldNo": "58",
+					"fieldName": "oPageDetail",
+					"fieldParent": "1",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"bindingValue": "Generic Object",
+					"bindingType": "u",
+					"bindingSource": "P9",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "showHeader",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "addDetailPage",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "59",
+							"fieldName": "oObjectPageLayout",
+							"fieldParent": "58",
+							"fieldType": "sap.uxap.ObjectPageLayout",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "useTwoColumnsForLargeScreen",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "upperCaseAnchorBar",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "60",
+									"fieldName": "oObjectPageHeader",
+									"fieldParent": "59",
+									"fieldType": "sap.uxap.ObjectPageHeader",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "objectTitle",
+											"grouping": "Properties",
+											"value": "{/title}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "objectSubtitle",
+											"grouping": "Properties",
+											"value": "{/subTitle}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "objectImageURI",
+											"grouping": "Properties",
+											"value": "{/icon}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "objectImageShape",
+											"grouping": "Properties",
+											"value": "Circle",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "isObjectIconAlwaysVisible",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "84",
+											"fieldName": "butAddNotes",
+											"fieldParent": "60",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Add Note",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"inNote.setValue();",
+														"diaNote.open();"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "88",
+											"fieldName": "butAddAttachment",
+											"fieldParent": "60",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Transparent",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Add Attachment",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "$(\"#_wf_fileUploader\").click();",
+													"script": "$(\"#_wf_fileUploader\").click();",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "61",
+									"fieldName": "oObjectPageHeaderContent",
+									"fieldParent": "59",
+									"fieldType": "sap.uxap.ObjectPageHeaderContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "99",
+											"fieldName": "documentAmount",
+											"fieldParent": "61",
+											"fieldType": "sap.m.ObjectNumber",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "unit",
+													"grouping": "Properties",
+													"value": "{/currency}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "number",
+													"grouping": "Properties",
+													"value": "{/amount}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "number",
+													"grouping": "Formatter",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"if (typeof amount === \"undefined\" || amount === null || amount === \"\") {",
+														"    return;",
+														"}",
+														"",
+														"if (amount === \"0\") {",
+														"    return \"\";",
+														"} else {",
+														"    return amount;",
+														"}"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "62",
+									"fieldName": "oSectionDocument",
+									"fieldParent": "59",
+									"fieldType": "sap.uxap.ObjectPageSection",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "titleUppercase",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Document",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "65",
+											"fieldName": "oSectionDocumentSub",
+											"fieldParent": "62",
+											"fieldType": "sap.uxap.ObjectPageSubSection",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "63",
+													"fieldName": "oSectionDocumentContent",
+													"fieldParent": "65",
+													"fieldType": "neptune.ObjectPageSubSectionContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "Block",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "86",
+															"fieldName": "appContent",
+															"fieldParent": "63",
+															"fieldType": "sap.m.ScrollContainer",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "100%",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "height",
+																	"grouping": "Properties",
+																	"value": "100%",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "70",
+									"fieldName": "oSectionNotes",
+									"fieldParent": "59",
+									"fieldType": "sap.uxap.ObjectPageSection",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "titleUppercase",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Notes",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "71",
+											"fieldName": "oSectionNotesSub",
+											"fieldParent": "70",
+											"fieldType": "sap.uxap.ObjectPageSubSection",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "72",
+													"fieldName": "oSectionNotesContent",
+													"fieldParent": "71",
+													"fieldType": "neptune.ObjectPageSubSectionContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "Block",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "89",
+															"fieldName": "oListNotes",
+															"fieldParent": "72",
+															"fieldType": "sap.m.List",
+															"script": "",
+															"bindingValue": "Generic Array",
+															"bindingType": "h",
+															"bindingSource": "P9",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "showNoData",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": [
+																{
+																	"fieldNo": "90",
+																	"fieldName": "oItemNotes",
+																	"fieldParent": "89",
+																	"fieldType": "sap.m.FeedListItem",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "timestamp",
+																			"grouping": "Properties",
+																			"value": "{createdAt}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "text",
+																			"grouping": "Properties",
+																			"value": "{text}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "sender",
+																			"grouping": "Properties",
+																			"value": "{createdBy}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "timestamp",
+																			"grouping": "Formatter",
+																			"value": "date:BrowserSetting",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "senderPress",
+																			"grouping": "Events",
+																			"value": "Anonymous Function",
+																			"script": [
+																				"==OBJECT STRING==",
+																				"var context = oEvent.oSource.getBindingContext();",
+																				"var data = context.getObject();",
+																				"showUserInfo(data.createdBy, this);"
+																			],
+																			"translation": []
+																		}
+																	],
+																	"data": []
+																}
+															]
+														}
+													]
+												},
+												{
+													"fieldNo": "83",
+													"fieldName": "oSectionNotesAction",
+													"fieldParent": "71",
+													"fieldType": "neptune.ObjectPageSubSectionContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "Action",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "74",
+									"fieldName": "oSectionAttachment",
+									"fieldParent": "59",
+									"fieldType": "sap.uxap.ObjectPageSection",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "titleUppercase",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Attachment",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "75",
+											"fieldName": "oSectionAttachmentSub",
+											"fieldParent": "74",
+											"fieldType": "sap.uxap.ObjectPageSubSection",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "76",
+													"fieldName": "oSectionAttachmentContent",
+													"fieldParent": "75",
+													"fieldType": "neptune.ObjectPageSubSectionContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "Block",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "5a4cff65-2297-4c7d-86f1-47405e9b6239",
+															"fieldName": "oListAttachment",
+															"fieldParent": "76",
+															"fieldType": "sap.m.Table",
+															"script": "",
+															"bindingValue": "Generic Array",
+															"bindingType": "h",
+															"bindingSource": "P9",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "showNoData",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "mode",
+																	"grouping": "Properties",
+																	"value": "Delete",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "fixedLayout",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "delete",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"var deleteItem = oEvent.getParameter(\"listItem\");",
+																		"var context = deleteItem.getBindingContext();",
+																		"var dataFile = context.getObject();",
+																		"",
+																		"sap.n.Planet9.function({",
+																		"    id: \"Gos\",",
+																		"    method: \"Delete\",",
+																		"    data: dataFile,",
+																		"    success: function(data) {",
+																		"        ModelData.Delete(oListAttachment, \"id\", dataFile.id);",
+																		"    },",
+																		"    error: function(data) {",
+																		"        console.log(data);",
+																		"    }",
+																		"});"
+																	],
+																	"translation": []
+																}
+															],
+															"data": [
+																{
+																	"fieldNo": "fe940763-7be6-4440-d97a-cfc4a4a2c4e1",
+																	"fieldName": "coloListAttachmentname",
+																	"fieldParent": "5a4cff65-2297-4c7d-86f1-47405e9b6239",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "3a25145c-7a82-45d0-d565-8d0ed6e24e57",
+																			"fieldName": "colHoListAttachmentname",
+																			"fieldParent": "fe940763-7be6-4440-d97a-cfc4a4a2c4e1",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Name",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "d69d1481-054e-42d9-c643-62bcd1ee55ba",
+																	"fieldName": "coloListAttachmentfileSize",
+																	"fieldParent": "5a4cff65-2297-4c7d-86f1-47405e9b6239",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "ef458830-3019-4ddf-82c5-8a650f667531",
+																			"fieldName": "colHoListAttachmentfileSize",
+																			"fieldParent": "d69d1481-054e-42d9-c643-62bcd1ee55ba",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Size",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "911851b7-34fc-4c6d-d2e6-4802a13df488",
+																	"fieldName": "coloListAttachmentupdatedAt",
+																	"fieldParent": "5a4cff65-2297-4c7d-86f1-47405e9b6239",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "4f5fe654-f138-474f-a275-2ccadb42e35e",
+																			"fieldName": "colHoListAttachmentupdatedAt",
+																			"fieldParent": "911851b7-34fc-4c6d-d2e6-4802a13df488",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Uploaded At",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "0f3c024d-d2be-4d27-c1bf-2c07cf1ba091",
+																	"fieldName": "coloListAttachmentchangedBy",
+																	"fieldParent": "5a4cff65-2297-4c7d-86f1-47405e9b6239",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "037e6389-c620-46ec-ec93-134d535712dc",
+																			"fieldName": "colHoListAttachmentchangedBy",
+																			"fieldParent": "0f3c024d-d2be-4d27-c1bf-2c07cf1ba091",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Uploaded By",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "1c8ecc12-bd46-4167-d107-8b54d4c75323",
+																	"fieldName": "colItemoListAttachment",
+																	"fieldParent": "5a4cff65-2297-4c7d-86f1-47405e9b6239",
+																	"fieldType": "sap.m.ColumnListItem",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "type",
+																			"grouping": "Properties",
+																			"value": "Active",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "press",
+																			"grouping": "Events",
+																			"value": "Anonymous Function",
+																			"script": [
+																				"==OBJECT STRING==",
+																				"var context = oEvent.oSource.getBindingContext();",
+																				"var dataFile = context.getObject();",
+																				"",
+																				"sap.n.Planet9.function({",
+																				"    id: \"Gos\",",
+																				"    method: \"Get\",",
+																				"    data: dataFile,",
+																				"    success: function(data) {",
+																				"",
+																				"        // Mobile ",
+																				"        if (isCordova()) {",
+																				"            var fileData = data.content.split(\",\");",
+																				"            attachmentNativeOpen(fileData[1], dataFile.fileType, dataFile.name);",
+																				"        } else {",
+																				"            // Download Browser",
+																				"            if (window.navigator.msSaveOrOpenBlob) {",
+																				"                var fileData = [data.content];",
+																				"                var blobObject = new Blob(fileData);",
+																				"                window.navigator.msSaveOrOpenBlob(blobObject, dataFile.name);",
+																				"            } else {",
+																				"                a = document.createElement('a');",
+																				"                a.setAttribute(\"href\", data.content);",
+																				"                a.setAttribute(\"download\", dataFile.name);",
+																				"                a.click();",
+																				"            }",
+																				"",
+																				"        }",
+																				"",
+																				"    },",
+																				"    error: function(data) {",
+																				"        console.log(data);",
+																				"    }",
+																				"});"
+																			],
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "4ee5688a-34a9-460c-b446-96acaaeb8a5b",
+																			"fieldName": "txtoListAttachmentname",
+																			"fieldParent": "1c8ecc12-bd46-4167-d107-8b54d4c75323",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{name}",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "9df776a1-481b-4782-ed47-a57fa1f3a992",
+																			"fieldName": "txtoListAttachmentfileSize",
+																			"fieldParent": "1c8ecc12-bd46-4167-d107-8b54d4c75323",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{fileSize}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "text",
+																					"grouping": "Formatter",
+																					"value": "Anonymous Function",
+																					"script": [
+																						"==OBJECT STRING==",
+																						"if (typeof fileSize === \"undefined\" || fileSize === null || fileSize === \"\") {\r",
+																						"    return;\r",
+																						"}\r",
+																						"return oFileSizeFormat.format(fileSize);"
+																					],
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "1281bbaf-2523-40d8-f644-8aa9c05d7766",
+																			"fieldName": "txtoListAttachmentupdatedAt",
+																			"fieldParent": "1c8ecc12-bd46-4167-d107-8b54d4c75323",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{updatedAt}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "text",
+																					"grouping": "Formatter",
+																					"value": "date:BrowserSetting",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "0e8243a4-a6e9-4ebb-d525-b152b1e44d5a",
+																			"fieldName": "txtoListAttachmentchangedBy",
+																			"fieldParent": "1c8ecc12-bd46-4167-d107-8b54d4c75323",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{changedBy}",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"fieldNo": "87",
+													"fieldName": "oSectionLogAction",
+													"fieldParent": "75",
+													"fieldType": "neptune.ObjectPageSubSectionContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "Action",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "78",
+									"fieldName": "oSectionLog",
+									"fieldParent": "59",
+									"fieldType": "sap.uxap.ObjectPageSection",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "titleUppercase",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Log",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "79",
+											"fieldName": "oSectionLogSub",
+											"fieldParent": "78",
+											"fieldType": "sap.uxap.ObjectPageSubSection",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "80",
+													"fieldName": "oSectionLogContent",
+													"fieldParent": "79",
+													"fieldType": "neptune.ObjectPageSubSectionContent",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "Block",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "110",
+															"fieldName": "tabLog",
+															"fieldParent": "80",
+															"fieldType": "sap.m.Table",
+															"script": "",
+															"bindingValue": "Generic Array",
+															"bindingType": "h",
+															"bindingSource": "P9",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "fixedLayout",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": [
+																{
+																	"fieldNo": "115",
+																	"fieldName": "coltabLogaction",
+																	"fieldParent": "110",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "116",
+																			"fieldName": "colHtabLogaction",
+																			"fieldParent": "115",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Action",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "124",
+																	"fieldName": "coltabLogTask",
+																	"fieldParent": "110",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "125",
+																			"fieldName": "colHtabLogTask",
+																			"fieldParent": "124",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Description",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "111",
+																	"fieldName": "coltabLogcreatedAt",
+																	"fieldParent": "110",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "112",
+																			"fieldName": "colHtabLogcreatedAt",
+																			"fieldParent": "111",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Created At",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "113",
+																	"fieldName": "coltabLogcreatedBy",
+																	"fieldParent": "110",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "114",
+																			"fieldName": "colHtabLogcreatedBy",
+																			"fieldParent": "113",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Created By",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "168",
+																	"fieldName": "coltabLogApprovers",
+																	"fieldParent": "110",
+																	"fieldType": "sap.m.Column",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "width",
+																			"grouping": "Properties",
+																			"value": "20px",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "popinHAlign",
+																			"grouping": "Properties",
+																			"value": "Center",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": []
+																},
+																{
+																	"fieldNo": "117",
+																	"fieldName": "colItemtabLog",
+																	"fieldParent": "110",
+																	"fieldType": "sap.m.ColumnListItem",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "vAlign",
+																			"grouping": "Properties",
+																			"value": "Middle",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "120",
+																			"fieldName": "txttabLogaction",
+																			"fieldParent": "117",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{action}",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "126",
+																			"fieldName": "txttabLogTask",
+																			"fieldParent": "117",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{taskTitle}",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "118",
+																			"fieldName": "txttabLogcreatedAt",
+																			"fieldParent": "117",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{createdAt}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "text",
+																					"grouping": "Formatter",
+																					"value": "date:BrowserSetting",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "167",
+																			"fieldName": "txttabLogcreatedBy",
+																			"fieldParent": "117",
+																			"fieldType": "sap.m.Link",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{createdBy}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "press",
+																					"grouping": "Events",
+																					"value": "Anonymous Function",
+																					"script": [
+																						"==OBJECT STRING==",
+																						"var context = oEvent.oSource.getBindingContext();",
+																						"var data = context.getObject();",
+																						"showUserInfo(data.createdBy, this);"
+																					],
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "6fe0771f-b26d-43f4-8431-e7cbe74fed42",
+																			"fieldName": "txttabLogapprovers",
+																			"fieldParent": "117",
+																			"fieldType": "sap.m.ObjectStatus",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "visible",
+																					"grouping": "Properties",
+																					"value": "{showApprovers}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "tooltip",
+																					"grouping": "Properties",
+																					"value": "Open approver determination log",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "state",
+																					"grouping": "Properties",
+																					"value": "Success",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "icon",
+																					"grouping": "Properties",
+																					"value": "sap-icon://employee-lookup",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "active",
+																					"grouping": "Properties",
+																					"value": "true",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "press",
+																					"grouping": "Events",
+																					"value": "Anonymous Function",
+																					"script": [
+																						"==OBJECT STRING==",
+																						"var context = oEvent.oSource.getBindingContext();",
+																						"var data = context.getObject();",
+																						"",
+																						"modeltabApprovers.setData(data.approvers);",
+																						"diaApprovers.open();"
+																					],
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "5",
+							"fieldName": "oFooterDetail",
+							"fieldParent": "58",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setFooter",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "7",
+									"fieldName": "Left",
+									"fieldParent": "5",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentLeft",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "28",
+											"fieldName": "toolDetail",
+											"fieldParent": "7",
+											"fieldType": "sap.m.Toolbar",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "HeaderToolbar",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "29",
+													"fieldName": "toolDetailSpacer",
+													"fieldParent": "28",
+													"fieldType": "sap.m.ToolbarSpacer",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": []
+												},
+												{
+													"fieldNo": "32",
+													"fieldName": "oButForward",
+													"fieldParent": "28",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "{/enableForward}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Forward",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "openUserDialog(\"Forward\");",
+															"script": "openUserDialog(\"Forward\");",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "33",
+													"fieldName": "oButQuery",
+													"fieldParent": "28",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "{/enableQuery}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Query",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "openUserDialog(\"Query\");",
+															"script": "openUserDialog(\"Query\");",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "31",
+													"fieldName": "oButReject",
+													"fieldParent": "28",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "{/enableReject}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "{/rejectButtonType}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{/rejectLabel}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"",
+																"// Start WF",
+																"oApp.setBusy(true);",
+																"sap.n.Planet9.function({",
+																"    id: \"WorkflowInbox\",",
+																"    method: \"Reject\",",
+																"    data: { id: modeloPageDetail.oData.id },",
+																"    success: function (data) {",
+																"        handleUpdate(\"Reject\");",
+																"        oApp.setBusy(false);",
+																"    },",
+																"    error: function (data) {",
+																"        oApp.setBusy(false);",
+																"",
+																"    }",
+																"});"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "30",
+													"fieldName": "oButApprove",
+													"fieldParent": "28",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "{/enableApprove}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "{/approveButtonType}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{/approveLabel}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// Start WF",
+																"oApp.setBusy(true);",
+																"sap.n.Planet9.function({",
+																"    id: \"WorkflowInbox\",",
+																"    method: \"Approve\",",
+																"    data: { id: modeloPageDetail.oData.id },",
+																"    success: function (data) {",
+																"        handleUpdate(\"Approve\");",
+																"        oApp.setBusy(false);",
+																"    },",
+																"    error: function (data) {",
+																"        oApp.setBusy(false);",
+																"",
+																"    }",
+																"});"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "95",
+													"fieldName": "oButSave",
+													"fieldParent": "28",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "{/enableSave}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "{/saveButtonType}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{/saveLabel}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var rec = {};",
+																"rec.id = modeloPageDetail.oData.id;",
+																"",
+																"// Start WF",
+																"oApp.setBusy(true);",
+																"sap.n.Planet9.function({",
+																"    id: \"WorkflowInbox\",",
+																"    method: \"Save\",",
+																"    data: rec,",
+																"    success: function(data) {",
+																"        handleUpdate(\"Save\");",
+																"        oApp.setBusy(false);",
+																"    },",
+																"    error: function(data) {",
+																"        oApp.setBusy(false);",
+																"",
+																"    }",
+																"});"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"fieldNo": "ac701a09-0078-456f-8ac7-8c071ad32511",
+					"fieldName": "oHTMLUpload",
+					"fieldParent": "1",
+					"fieldType": "sap.ui.core.HTML",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "e20ccfb7-3861-40da-92b9-a0789c345b56",
+							"fieldName": "oHTMLCode",
+							"fieldParent": "ac701a09-0078-456f-8ac7-8c071ad32511",
+							"fieldType": "neptune.Html",
+							"script": [
+								"==OBJECT STRING==",
+								"<input name='_wf_fileUploader' accept='*' id='_wf_fileUploader' type='file' onchange='uploadFile(event)' style='display:none;' value='' />",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "103",
+					"fieldName": "Events",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "c9fd93b3-5f00-4872-dddc-366ce461ea40",
+							"fieldName": "onBeforeDisplay",
+							"fieldParent": "103",
+							"fieldType": "neptune.event.onbeforedisplay",
+							"script": "oButUpdate.firePress();",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "7f102965-4709-4cba-b4ff-87263c5aff9f",
+							"fieldName": "Init",
+							"fieldParent": "103",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"jQuery.sap.require(\"sap.ui.core.format.FileSizeFormat\");",
+								"",
+								"var oFileSizeFormat = sap.ui.core.format.FileSizeFormat.getInstance({",
+								"    binaryFilesize: false,",
+								"    decimals: 2",
+								"});",
+								"",
+								"// Custom Init - Happens only once",
+								"sap.ui.getCore().attachInit(function (data) {",
+								"",
+								"",
+								"    setTimeout(function () {",
+								"",
+								"        oPageDetail.setShowNavButton(sap.ui.Device.system.phone);",
+								"",
+								"        // Sort Inbox",
+								"        var oSorter = new sap.ui.model.Sorter(\"overDueDate\", true, false);",
+								"        var binding = oListWorkflow.getBinding(\"items\");",
+								"        binding.sort(oSorter);",
+								"",
+								"        // Sort Notes",
+								"        var oSorter = new sap.ui.model.Sorter(\"createdAt\", true, false);",
+								"        var binding = oListNotes.getBinding(\"items\");",
+								"        binding.sort(oSorter);",
+								"",
+								"        // Sort Log",
+								"        var oSorter = new sap.ui.model.Sorter(\"sort\", false, false);",
+								"        var binding = tabLog.getBinding(\"items\");",
+								"        binding.sort(oSorter);",
+								"",
+								"    }, 1);",
+								"",
+								"});",
+								"",
+								"if (sap.n && sap.n.Shell && sap.n.Shell.attachBeforeBack) {",
+								"    sap.n.Shell.attachBeforeBack(function (oEvent) {",
+								"        if (sap.ui.Device.system.phone) {",
+								"            if (oApp.getCurrentPage() === oPageDetail) {",
+								"                oApp.backDetail();",
+								"                oEvent.preventDefault();",
+								"            }",
+								"        }",
+								"    });",
+								"}",
+								"",
+								"function isCordova() {",
+								"    if (window.hasOwnProperty(\"cordova\") || typeof (cordova) == \"object\") {",
+								"        return true;",
+								"    } else {",
+								"        return false;",
+								"    }",
+								"}",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "13",
+					"fieldName": "Translation",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "208",
+							"fieldName": "txtSaveOK",
+							"fieldParent": "13",
+							"fieldType": "sap.m.Text",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Workflow successfully saved",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "122",
+							"fieldName": "txtRejectOK",
+							"fieldParent": "13",
+							"fieldType": "sap.m.Text",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Workflow successfully rejected",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "123",
+							"fieldName": "txtApproveOK",
+							"fieldParent": "13",
+							"fieldType": "sap.m.Text",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Workflow successfully approved",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "156",
+							"fieldName": "txtForwardOK",
+							"fieldParent": "13",
+							"fieldType": "sap.m.Text",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Workflow successfully forwarded",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "155",
+							"fieldName": "txtQueryOK",
+							"fieldParent": "13",
+							"fieldType": "sap.m.Text",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Query sent to another user",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "97",
+					"fieldName": "Functions",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "121",
+							"fieldName": "handleUpdate",
+							"fieldParent": "97",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function handleUpdate(action) {",
+								"",
+								"    oButUpdate.firePress();",
+								"",
+								"    if (sap.ui.Device.system.phone) {",
+								"        oApp.back();",
+								"    } else {",
+								"        oApp.toDetail(oPageHome);",
+								"    }",
+								"",
+								"    oListWorkflow.removeSelections();",
+								"",
+								"    switch (action) {",
+								"",
+								"        case \"Save\":",
+								"            sap.m.MessageToast.show(txtSaveOK.getText());",
+								"            break;",
+								"",
+								"        case \"Reject\":",
+								"            sap.m.MessageToast.show(txtRejectOK.getText());",
+								"            break;",
+								"",
+								"        case \"Approve\":",
+								"            sap.m.MessageToast.show(txtApproveOK.getText());",
+								"            break;",
+								"",
+								"        case \"Forward\":",
+								"            sap.m.MessageToast.show(txtForwardOK.getText());",
+								"            break;",
+								"",
+								"        case \"Query\":",
+								"            sap.m.MessageToast.show(txtQueryOK.getText());",
+								"            break;",
+								"",
+								"    }",
+								"",
+								"}",
+								"",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "148",
+							"fieldName": "openUserDialog",
+							"fieldParent": "97",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"forwardProcess = \"\";",
+								"",
+								"function openUserDialog(process) {",
+								"",
+								"    if (!modeltabUsers.oData.length) {",
+								"        butUserUpdate.firePress();",
+								"    }",
+								"",
+								"    forwardProcess = process;",
+								"",
+								"    if (process === \"Query\") {",
+								"        objHeaderForward.setIcon(\"sap-icon://fa-regular/question-circle\");",
+								"    } else {",
+								"        objHeaderForward.setIcon(\"sap-icon://forward\");",
+								"    }",
+								"",
+								"    objHeaderForward.setTitle(process);",
+								"    diaForward.open();",
+								"",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "166",
+							"fieldName": "showUserInfo",
+							"fieldParent": "97",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function showUserInfo(username, object) {",
+								"    ",
+								"    var rec = {};",
+								"    rec.username = username;",
+								"    ",
+								"    sap.n.Planet9.function({",
+								"        id: \"User\",",
+								"        method: \"Show\",",
+								"        data: rec,",
+								"        success: function(data) {",
+								"            modelpopUserInfo.setData(data);",
+								"            popUserInfo.openBy(object);",
+								"        },",
+								"        error: function(data) {",
+								"",
+								"        }",
+								"    });",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "1adbee28-f558-4629-cc14-90639ac34039",
+							"fieldName": "uploadFile",
+							"fieldParent": "97",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function uploadFile(event) {",
+								"",
+								"    $.each(event.target.files, function(i, data) {",
+								"",
+								"        var file = {",
+								"            name: data.name,",
+								"            description: \"\",",
+								"            objectKey: modeloPageDetail.oData.id,",
+								"            objectType: \"P9INBOX\",",
+								"            fileType: data.type,",
+								"            fileSize: data.size",
+								"        };",
+								"",
+								"        try {",
+								"            var fileReader = new FileReader();",
+								"",
+								"            fileReader.onload = function(fileData) {",
+								"",
+								"                file.content = fileData.target.result;",
+								"",
+								"                sap.n.Planet9.function({",
+								"                    id: \"Gos\",",
+								"                    method: \"Save\",",
+								"                    data: file,",
+								"                    success: function(data) {",
+								"                        ModelData.Add(oListAttachment, data);",
+								"                        oSectionAttachment.setVisible(true);",
+								"                    },",
+								"                    error: function(data) {",
+								"                        console.log(data);",
+								"                    }",
+								"                });",
+								"",
+								"                document.getElementById(\"_wf_fileUploader\").value = '';",
+								"",
+								"            };",
+								"            fileReader.readAsDataURL(data);",
+								"        } catch (e) {",
+								"            try {} catch (e) {}",
+								"        }",
+								"    });",
+								"",
+								"}",
+								"",
+								"window.uploadFile = uploadFile;"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "9662f5c8-720e-4e23-9071-f9472e56af7b",
+							"fieldName": "mobileAttachment",
+							"fieldParent": "97",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"// var attachmentDataArray = [];\r",
+								"\r",
+								"// ---------------------------------------------------\r",
+								"// Common functions\r",
+								"// ---------------------------------------------------\r",
+								"function attachmentMakeBinary(fileData) {\r",
+								"\r",
+								"    var raw = window.atob(fileData);\r",
+								"    var rawLength = raw.length;\r",
+								"\r",
+								"    var array = new Uint8Array(rawLength);\r",
+								"\r",
+								"    for (i = 0; i < rawLength; i++) {\r",
+								"        array[i] = raw.charCodeAt(i);\r",
+								"    }\r",
+								"\r",
+								"    return array;\r",
+								"\r",
+								"}\r",
+								"\r",
+								"\r",
+								"// ---------------------------------------------------\r",
+								"// Open mobile native PDF Reader\r",
+								"// ---------------------------------------------------\r",
+								"function attachmentNativeOpen(fileData, fileType, fileName) {\r",
+								"\r",
+								"    var attachmentNativeDir = \"\";\r",
+								"    var attachmentDataArray = attachmentMakeBinary(fileData);\r",
+								"\r",
+								"    // Set Directory\r",
+								"    switch (sap.ui.Device.os.name) {\r",
+								"\r",
+								"        case 'Android':\r",
+								"            attachmentNativeDir = cordova.file.externalCacheDirectory;\r",
+								"            break;\r",
+								"\r",
+								"        case 'iOS':\r",
+								"            attachmentNativeDir = cordova.file.tempDirectory;\r",
+								"            break;\r",
+								"\r",
+								"        case 'winphone':\r",
+								"            attachmentNativeDir = cordova.file.externalCacheDirectory;\r",
+								"            break;\r",
+								"\r",
+								"        case 'win':\r",
+								"            attachmentNativeDir = cordova.file.cacheDirectory;\r",
+								"            break;\r",
+								"\r",
+								"        default:\r",
+								"            break;\r",
+								"\r",
+								"    }\r",
+								"\r",
+								"    // Create and Display File\r",
+								"    window.resolveLocalFileSystemURL(attachmentNativeDir, function(dir) {\r",
+								"        dir.getFile(fileName, {\r",
+								"            create: true\r",
+								"        }, function(file) {\r",
+								"\r",
+								"            file.createWriter(function(fileWriter) {\r",
+								"\r",
+								"                fileWriter.onwriteend = function(e) {\r",
+								"                    cordova.plugins.fileOpener2.open(\r",
+								"                        attachmentNativeDir + fileName,\r",
+								"                        fileType, {\r",
+								"                            error: function(e) {\r",
+								"                                console.log('Error open: ' + e.status + ' - Error message: ' + e.message);\r",
+								"                            }\r",
+								"                        }\r",
+								"                    );\r",
+								"                };\r",
+								"\r",
+								"                fileWriter.onerror = function(e) {\r",
+								"                    console.log(e);\r",
+								"                };\r",
+								"\r",
+								"                var blob = new Blob([attachmentDataArray], {\r",
+								"                    type: fileType\r",
+								"                });\r",
+								"\r",
+								"                fileWriter.write(blob);\r",
+								"\r",
+								"            }, function(e) {\r",
+								"                console.log('Error write: ' + e.status + ' - Error message: ' + e.message);\r",
+								"            });\r",
+								"\r",
+								"        });\r",
+								"    });\r",
+								"\r",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "102",
+					"fieldName": "Dialogs",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "174",
+							"fieldName": "diaApprovers",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "verticalScrolling",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Approvers",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClassPadding",
+									"grouping": "Properties",
+									"value": "sapUiNoContentPadding",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClass",
+									"grouping": "Properties",
+									"value": "nepDialogWithObjHeader ",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "resizable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "draggable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "1024px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentHeight",
+									"grouping": "Properties",
+									"value": "800px",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "2c3e0ab6-1b0d-492a-fff5-80f0d875e7d0",
+									"fieldName": "subHeaderApprovers",
+									"fieldParent": "174",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "sapContrast sapContrastPlus",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "design",
+											"grouping": "Properties",
+											"value": "Footer",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "61ff33fe-c5fa-4484-8187-f9605701efaf",
+											"fieldName": "Right",
+											"fieldParent": "2c3e0ab6-1b0d-492a-fff5-80f0d875e7d0",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "cdc9ec80-bb49-4256-f39c-16d0c6999ce5",
+													"fieldName": "butApproversClose",
+													"fieldParent": "61ff33fe-c5fa-4484-8187-f9605701efaf",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"onlyDeclare": true,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepCloseBtn",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://decline",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "this.getParent().getParent().close();",
+															"script": "this.getParent().getParent().close();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "9f2dfbe6-f7be-405b-f818-6bdd627aabdf",
+									"fieldName": "objHeaderApprovers",
+									"fieldParent": "174",
+									"fieldType": "sap.m.ObjectHeader",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Approvers",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "responsive",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberUnit",
+											"grouping": "Properties",
+											"value": "ENTRIES",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberState",
+											"grouping": "Properties",
+											"value": "Warning",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "intro",
+											"grouping": "Properties",
+											"value": "Workflow approvers from determination",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://employee-approvals",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "ffabb480-1817-40ea-9d46-51f6efed8444",
+									"fieldName": "scrollApprovers",
+									"fieldParent": "174",
+									"fieldType": "sap.m.ScrollContainer",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "vertical",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "horizontal",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "height",
+											"grouping": "Properties",
+											"value": "calc(100% - 73px)",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "182",
+											"fieldName": "tabApprovers",
+											"fieldParent": "ffabb480-1817-40ea-9d46-51f6efed8444",
+											"fieldType": "sap.m.Table",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "fixedLayout",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "183",
+													"fieldName": "coltabApproversName",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "184",
+															"fieldName": "colHtabApproversName",
+															"fieldParent": "183",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Username",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "185",
+													"fieldName": "coltabApproversStrategy",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "186",
+															"fieldName": "colHtabApproversStrategy",
+															"fieldParent": "185",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Strategy",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "187",
+													"fieldName": "coltabApproversAmountFrom",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "188",
+															"fieldName": "colHtabApproversAmountFrom",
+															"fieldParent": "187",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Amount From",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "194",
+													"fieldName": "coltabApproversAmountTo",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "195",
+															"fieldName": "colHtabApproversAmountTo",
+															"fieldParent": "194",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Amount To",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "198",
+													"fieldName": "coltabApproversTaskAction",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "199",
+															"fieldName": "colHtabApproversTaskAction",
+															"fieldParent": "198",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Task Action",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "205",
+													"fieldName": "coltabApproversFoundAmount",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "width",
+															"grouping": "Properties",
+															"value": "65px",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "206",
+															"fieldName": "colHtabApproversFoundAmount",
+															"fieldParent": "205",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Amount",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "203",
+													"fieldName": "coltabApproversFoundAction",
+													"fieldParent": "182",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "width",
+															"grouping": "Properties",
+															"value": "60px",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "204",
+															"fieldName": "colHtabApproversFoundAction",
+															"fieldParent": "203",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Action",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "189",
+													"fieldName": "colItemtabApproverss",
+													"fieldParent": "182",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "207",
+															"fieldName": "txttabApproversName",
+															"fieldParent": "189",
+															"fieldType": "sap.m.Link",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{username}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "showUserInfo(this.getText(), this);",
+																	"script": "showUserInfo(this.getText(), this);",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "191",
+															"fieldName": "txttabApproversStrategy",
+															"fieldParent": "189",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{nameDetermination}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "192",
+															"fieldName": "txttabApproversAmountFrom",
+															"fieldParent": "189",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{amountFrom}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "number:BrowserSetting",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "196",
+															"fieldName": "txttabApproversAmountTo",
+															"fieldParent": "189",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{amountTo}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Formatter",
+																	"value": "number:BrowserSetting",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "200",
+															"fieldName": "txttabApproversTaskAction",
+															"fieldParent": "189",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{taskAction}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "201",
+															"fieldName": "txttabApproversFoundAmount",
+															"fieldParent": "189",
+															"fieldType": "sap.m.CheckBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "selected",
+																	"grouping": "Properties",
+																	"value": "{foundAmount}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "editable",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "202",
+															"fieldName": "txttabApproversFoundTaskAction",
+															"fieldParent": "189",
+															"fieldType": "sap.m.CheckBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "selected",
+																	"grouping": "Properties",
+																	"value": "{foundTaskAction}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "editable",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "150",
+							"fieldName": "oButForwardSend",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Send",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"if (!informForwardUsers.getTokens() || !informForwardNote.getValue()) {",
+										"    sap.m.MessageToast.show(\"Please fill in required fields\");",
+										"    return;",
+										"}",
+										"",
+										"// Add Note ",
+										"var rec = {};",
+										"rec.id = modeloPageDetail.oData.id;",
+										"rec.text = informForwardNote.getValue();",
+										"",
+										"diaForward.setBusy(true);",
+										"sap.n.Planet9.function({",
+										"    id: \"WorkflowInbox\",",
+										"    method: \"NoteSave\",",
+										"    data: rec,",
+										"    success: function(data) {",
+										"",
+										"        modeloListNotes.setData(data.notes);",
+										"",
+										"        // User tokens",
+										"        var tokens = informForwardUsers.getTokens();",
+										"        var separator = \"\";",
+										"        var rec = {};",
+										"        rec.id = modeloPageDetail.oData.id;",
+										"        rec.approver = \"\";",
+										"",
+										"        $.each(tokens, function(i, token) {",
+										"            rec.approver += separator + token.getKey();",
+										"            separator = \",\";",
+										"        });",
+										"",
+										"        // Forward or Query",
+										"        sap.n.Planet9.function({",
+										"            id: \"WorkflowInbox\",",
+										"            method: forwardProcess,",
+										"            data: rec,",
+										"            success: function(data) {",
+										"                handleUpdate(forwardProcess);",
+										"                diaForward.setBusy(false);",
+										"            },",
+										"            error: function(data) {",
+										"                diaForward.setBusy(false);",
+										"",
+										"            }",
+										"        });",
+										"",
+										"        diaForward.close();",
+										"",
+										"    },",
+										"    error: function(data) {",
+										"        diaForward.setBusy(false);",
+										"    }",
+										"",
+										"});"
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "149",
+							"fieldName": "diaForward",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "verticalScrolling",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClass",
+									"grouping": "Properties",
+									"value": "nepDialogWithObjHeader ",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "draggable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "600px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "beforeClose",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"informForwardUsers.removeAllTokens();\r",
+										"informForwardNote.setValue();"
+									],
+									"translation": []
+								},
+								{
+									"attribute": "beginButton",
+									"grouping": "Associations",
+									"value": "oButForwardSend",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "d7634f68-0cfe-491d-ed1e-dd947034d58f",
+									"fieldName": "subHeaderForward",
+									"fieldParent": "149",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "sapContrast sapContrastPlus",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "design",
+											"grouping": "Properties",
+											"value": "Footer",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5dedcd8f-8fc6-404a-f0b4-867b5c4de9f2",
+											"fieldName": "Right",
+											"fieldParent": "d7634f68-0cfe-491d-ed1e-dd947034d58f",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "bf787d24-32e6-41c1-9fcd-3f75b58b07bd",
+													"fieldName": "butForwardClose",
+													"fieldParent": "5dedcd8f-8fc6-404a-f0b4-867b5c4de9f2",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"onlyDeclare": true,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepCloseBtn",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://decline",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "this.getParent().getParent().close();",
+															"script": "this.getParent().getParent().close();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "5aead54b-8cb5-4e09-8e07-0c0318b900dc",
+									"fieldName": "objHeaderForward",
+									"fieldParent": "149",
+									"fieldType": "sap.m.ObjectHeader",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Forward Workflow to other user(s)",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "responsive",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberUnit",
+											"grouping": "Properties",
+											"value": "ENTRIES",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberState",
+											"grouping": "Properties",
+											"value": "Warning",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "intro",
+											"grouping": "Properties",
+											"value": "Select users from the list ",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://fa-regular/question-circle",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "153",
+									"fieldName": "formForward",
+									"fieldParent": "149",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanM",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanL",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "154",
+											"fieldName": "lblformForwardUsers",
+											"fieldParent": "153",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Users",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "required",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "152",
+											"fieldName": "informForwardUsers",
+											"fieldParent": "153",
+											"fieldType": "sap.m.MultiInput",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "showValueHelp",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "valueHelpOnly",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "enableMultiLineMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "valueHelpRequest",
+													"grouping": "Events",
+													"value": "diaUser.open();",
+													"script": "diaUser.open();",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "157",
+											"fieldName": "lblformForwardNote",
+											"fieldParent": "153",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Note",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "required",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "158",
+											"fieldName": "informForwardNote",
+											"fieldParent": "153",
+											"fieldType": "sap.m.TextArea",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "100%",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "rows",
+													"grouping": "Properties",
+													"value": "10",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "108",
+							"fieldName": "butNoteSave",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Save",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"",
+										"var rec = {};",
+										"rec.id = modeloPageDetail.oData.id;",
+										"rec.text = inNote.getValue();",
+										"",
+										"sap.n.Planet9.function({",
+										"    id: \"WorkflowInbox\",",
+										"    method: \"NoteSave\",",
+										"    data: rec,",
+										"    success: function(data) {",
+										"        modeloListNotes.setData(data.notes);",
+										"        oSectionNotes.setVisible(true);",
+										"    },",
+										"    error: function(data) {",
+										"        ",
+										"    }",
+										"    ",
+										"});",
+										"",
+										"",
+										"diaNote.close();"
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "104",
+							"fieldName": "diaNote",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"bindingValue": "Generic Object",
+							"bindingType": "u",
+							"bindingSource": "P9",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "verticalScrolling",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Note",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClass",
+									"grouping": "Properties",
+									"value": "nepDialogWithObjHeader ",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "draggable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "600px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "beginButton",
+									"grouping": "Associations",
+									"value": "butNoteSave",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "f9929ab1-72d6-4aaf-d157-f80feb6abe43",
+									"fieldName": "subHeaderNote",
+									"fieldParent": "104",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "sapContrast sapContrastPlus",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "design",
+											"grouping": "Properties",
+											"value": "Footer",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "f1c571ae-f06f-47cc-a83b-820476e58540",
+											"fieldName": "Right",
+											"fieldParent": "f9929ab1-72d6-4aaf-d157-f80feb6abe43",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "c7cb0068-8763-4efa-9598-b50394bd6274",
+													"fieldName": "butNoteClose",
+													"fieldParent": "f1c571ae-f06f-47cc-a83b-820476e58540",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"onlyDeclare": true,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepCloseBtn",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://decline",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "this.getParent().getParent().close();",
+															"script": "this.getParent().getParent().close();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "487764e8-63c4-4bde-f07c-634e8143636e",
+									"fieldName": "objHeaderNote",
+									"fieldParent": "104",
+									"fieldType": "sap.m.ObjectHeader",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Add note to the Workflow",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "responsive",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberUnit",
+											"grouping": "Properties",
+											"value": "ENTRIES",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberState",
+											"grouping": "Properties",
+											"value": "Warning",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://notes",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "105",
+									"fieldName": "formNote",
+									"fieldParent": "104",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "maxContainerCols",
+											"grouping": "Properties",
+											"value": "1",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanM",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanL",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "106",
+											"fieldName": "lblNote",
+											"fieldParent": "105",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "107",
+											"fieldName": "inNote",
+											"fieldParent": "105",
+											"fieldType": "sap.m.TextArea",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "100%",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "rows",
+													"grouping": "Properties",
+													"value": "10",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "146",
+							"fieldName": "butUserClear",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Clear",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"informForwardUsers.removeAllTokens();\r",
+										"diaUser.close();"
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "127",
+							"fieldName": "diaUser",
+							"fieldParent": "102",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "User",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClassPadding",
+									"grouping": "Properties",
+									"value": "sapUiNoContentPadding",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "styleClass",
+									"grouping": "Properties",
+									"value": "nepDialogWithObjHeader ",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "resizable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "draggable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "1024px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentHeight",
+									"grouping": "Properties",
+									"value": "800px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "afterOpen",
+									"grouping": "Events",
+									"value": "inUserFilter.focus();",
+									"script": "inUserFilter.focus();",
+									"translation": []
+								},
+								{
+									"attribute": "beginButton",
+									"grouping": "Associations",
+									"value": "butUserClear",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "6ac62115-b191-4287-fd1e-51115236299b",
+									"fieldName": "subHeaderUser",
+									"fieldParent": "127",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "sapContrast sapContrastPlus",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "design",
+											"grouping": "Properties",
+											"value": "Footer",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "3503e9de-a92b-4dc8-a249-b801f509b32b",
+											"fieldName": "Right",
+											"fieldParent": "6ac62115-b191-4287-fd1e-51115236299b",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "d6360eee-1c8a-4784-e82b-fda97bb0c9f7",
+													"fieldName": "butUserClose",
+													"fieldParent": "3503e9de-a92b-4dc8-a249-b801f509b32b",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"onlyDeclare": true,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepCloseBtn",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://decline",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "this.getParent().getParent().close();",
+															"script": "this.getParent().getParent().close();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "f9ac1ff9-4622-4643-89f4-d118af0f8f0b",
+									"fieldName": "objHeaderUser",
+									"fieldParent": "127",
+									"fieldType": "sap.m.ObjectHeader",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Select Users ",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "responsive",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberUnit",
+											"grouping": "Properties",
+											"value": "ENTRIES",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "numberState",
+											"grouping": "Properties",
+											"value": "Warning",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://fa-regular/user",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "cd11155b-d974-44f0-a9e5-b3823f5c6d82",
+									"fieldName": "scrollUser",
+									"fieldParent": "127",
+									"fieldType": "sap.m.ScrollContainer",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "vertical",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "horizontal",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "height",
+											"grouping": "Properties",
+											"value": "calc(100% - 73px)",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "135",
+											"fieldName": "tabUsers",
+											"fieldParent": "cd11155b-d974-44f0-a9e5-b3823f5c6d82",
+											"fieldType": "sap.m.Table",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "sticky",
+													"grouping": "Properties",
+													"value": "[\"ColumnHeaders\",\"HeaderToolbar\"]",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "130",
+													"fieldName": "toolUser",
+													"fieldParent": "135",
+													"fieldType": "sap.m.Toolbar",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "enableCompactMode",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "HeaderToolbar",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "131",
+															"fieldName": "butUserUpdate",
+															"fieldParent": "130",
+															"fieldType": "sap.m.Button",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Update",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "icon",
+																	"grouping": "Properties",
+																	"value": "sap-icon://synchronize",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"tabUsers.setBusy(true);",
+																		"sap.n.Planet9.function({",
+																		"    id: \"User\",",
+																		"    method: \"List\",",
+																		"    data: {",
+																		"        appType: sap.n.Planet9.appType || \"\"",
+																		"    },",
+																		"    success: function(data) {",
+																		"        modeltabUsers.setData(data.userRecords);",
+																		"        objHeaderUser.setNumber(data.userRecords.length);",
+																		"        tabUsers.setBusy(false);",
+																		"    },",
+																		"    error: function(data) {",
+																		"        sap.m.MessageToast.show(data.status);",
+																		"        tabUsers.setBusy(false);",
+																		"    }",
+																		"});"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "132",
+															"fieldName": "toolUserSep",
+															"fieldParent": "130",
+															"fieldType": "sap.m.ToolbarSeparator",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": []
+														},
+														{
+															"fieldNo": "134",
+															"fieldName": "inUserFilter",
+															"fieldParent": "130",
+															"fieldType": "sap.m.SearchField",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "200px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "liveChange",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"",
+																		"// Set List Filter",
+																		"var binding = tabUsers.getBinding(\"items\");",
+																		"var filter = new sap.ui.model.Filter({",
+																		"    filters: [",
+																		"        new sap.ui.model.Filter(\"username\", \"Contains\", this.getValue()),",
+																		"        new sap.ui.model.Filter(\"name\", \"Contains\", this.getValue()),",
+																		"        new sap.ui.model.Filter(\"email\", \"Contains\", this.getValue())",
+																		"    ],",
+																		"    and: false",
+																		"})",
+																		"binding.filter([filter]);",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "136",
+													"fieldName": "coltabUsersname",
+													"fieldParent": "135",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "137",
+															"fieldName": "colHtabUsersname",
+															"fieldParent": "136",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "138",
+													"fieldName": "coltabUsersusername",
+													"fieldParent": "135",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "139",
+															"fieldName": "colHtabUsersusername",
+															"fieldParent": "138",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Username",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "140",
+													"fieldName": "coltabUsersemail",
+													"fieldParent": "135",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "141",
+															"fieldName": "colHtabUsersemail",
+															"fieldParent": "140",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "eMail",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "142",
+													"fieldName": "colItemtabUsers",
+													"fieldParent": "135",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Active",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var context = oEvent.oSource.getBindingContext();  \r",
+																"var data = context.getObject();\r",
+																"\r",
+																"informForwardUsers.addToken(new sap.m.Token({\r",
+																"    key: data.username,\r",
+																"    text: data.name\r",
+																"}));\r",
+																"\r",
+																"diaUser.close();\r",
+																"\r",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "143",
+															"fieldName": "txttabUsersname",
+															"fieldParent": "142",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "144",
+															"fieldName": "txttabUsersusername",
+															"fieldParent": "142",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{username}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "145",
+															"fieldName": "txttabUsersemail",
+															"fieldParent": "142",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{email}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "159",
+							"fieldName": "popUserInfo",
+							"fieldParent": "102",
+							"fieldType": "sap.m.QuickView",
+							"script": "",
+							"bindingValue": "Generic Object",
+							"bindingType": "u",
+							"bindingSource": "P9",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "160",
+									"fieldName": "popUserPage",
+									"fieldParent": "159",
+									"fieldType": "sap.m.QuickViewPage",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "{/name}",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "header",
+											"grouping": "Properties",
+											"value": "User Information",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "161",
+											"fieldName": "popUserGroup",
+											"fieldParent": "160",
+											"fieldType": "sap.m.QuickViewGroup",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "162",
+													"fieldName": "popUserGroupUsername",
+													"fieldParent": "161",
+													"fieldType": "sap.m.QuickViewGroupElement",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "value",
+															"grouping": "Properties",
+															"value": "{/username}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "label",
+															"grouping": "Properties",
+															"value": "Username",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "163",
+													"fieldName": "popUserGroupEmail",
+													"fieldParent": "161",
+													"fieldType": "sap.m.QuickViewGroupElement",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "value",
+															"grouping": "Properties",
+															"value": "{/email}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "email",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "label",
+															"grouping": "Properties",
+															"value": "eMail",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "164",
+													"fieldName": "popUserGroupMobile",
+													"fieldParent": "161",
+													"fieldType": "sap.m.QuickViewGroupElement",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "value",
+															"grouping": "Properties",
+															"value": "{/mobile}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "mobile",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "label",
+															"grouping": "Properties",
+															"value": "Mobile",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "165",
+													"fieldName": "popUserGroupPhone",
+													"fieldParent": "161",
+													"fieldType": "sap.m.QuickViewGroupElement",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "value",
+															"grouping": "Properties",
+															"value": "{/phone}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "phone",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "label",
+															"grouping": "Properties",
+															"value": "Phone",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "21.3.19.219",
+	"application": "planet9_inbox_backup_1621002437455",
+	"title": "Workflow Inbox",
+	"description": "Workflow Inbox",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": true,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

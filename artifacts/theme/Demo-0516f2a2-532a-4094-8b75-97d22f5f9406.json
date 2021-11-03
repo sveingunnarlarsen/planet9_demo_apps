@@ -1,0 +1,67 @@
+{
+	"id": "0516f2a2-532a-4094-8b75-97d22f5f9406",
+	"createdAt": "2018-11-21T20:51:23.000Z",
+	"createdBy": "helder",
+	"content": [
+		{
+			"class": ".sapUiGlobalBackgroundColor",
+			"prop": "background",
+			"value": "#ffffff"
+		},
+		{
+			"class": ".sapUiUfdShell .sapUiUfdShellHead>div",
+			"prop": "background-color",
+			"value": "#ffffff"
+		},
+		{
+			"class": ".sapUiUfdShellBG",
+			"prop": "background",
+			"value": "#eff8ff"
+		},
+		{
+			"class": ".sapUiUfdShellBG - to",
+			"prop": "background",
+			"value": "#ffffff"
+		}
+	],
+	"name": "Demo",
+	"ver": "21.4.7.1343",
+	"description": "Demo ",
+	"ui5Theme": "sap_belize",
+	"stylesheet": [
+		"==OBJECT STRING==",
+		".sapUiGlobalBackgroundColor *>.sapUiGlobalBackgroundImage {",
+		"    background-color: #ffffff;",
+		"}",
+		".sapUiIcon::before {",
+		"    color: #F6B221;",
+		"}"
+	],
+	"calculated": [
+		"==OBJECT STRING==",
+		".sapUiTheme-sap_belize .sapUiGlobalBackgroundColor {",
+		"    background: #ffffff !important",
+		"}",
+		"",
+		".sapUiTheme-sap_belize .sapUiUfdShell .sapUiUfdShellHead>div {",
+		"    background-color: #ffffff",
+		"}",
+		"",
+		".sapUiTheme-sap_belize .sapUiUfdShellBG {",
+		"    background: linear-gradient(to bottom, #eff8ff, #ffffff);",
+		"}",
+		"",
+		".sapUiTheme-sap_belize .sapUiUfdShellBG {",
+		"    background: linear-gradient(to bottom, #eff8ff, #ffffff);",
+		"}",
+		"",
+		".sapUiGlobalBackgroundColor *>.sapUiGlobalBackgroundImage {",
+		"    background-color: #ffffff;",
+		"}",
+		"",
+		".sapUiIcon::before {",
+		"    color: #F6B221;",
+		"}"
+	],
+	"package": "ebf9fa20-e061-460c-b9ab-b1340d1a24c1"
+}

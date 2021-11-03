@@ -1,0 +1,1269 @@
+{
+	"id": "884a8cdf-c3d6-492a-8ef8-dd034e84934e",
+	"createdAt": "2017-09-21T10:29:17.000Z",
+	"updatedAt": "2019-01-15T11:11:21.000Z",
+	"createdBy": "priyanka",
+	"changedBy": "priyanka",
+	"objects": [
+		{
+			"fieldNo": "13",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "1",
+					"fieldName": "oApp",
+					"fieldParent": "13",
+					"fieldType": "sap.m.SplitApp",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "2",
+							"fieldName": "oPageMaster",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Master Page",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addMasterPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "15",
+									"fieldName": "oSubMaster",
+									"fieldParent": "2",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setSubHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "16",
+											"fieldName": "Left",
+											"fieldParent": "15",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "17",
+													"fieldName": "oFilterMaster",
+													"fieldParent": "16",
+													"fieldType": "sap.m.SearchField",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "14",
+									"fieldName": "oList",
+									"fieldParent": "2",
+									"fieldType": "sap.m.List",
+									"bindingValue": "Contacts API 2>Contact",
+									"bindingType": "h",
+									"bindingSource": "API",
+									"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+									"bindingPathID": "1f045892-db3a-47e1-a151-fed3147a8700",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "itemPress",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"// List Get Selected Row",
+												"// Replace yourField with Field ID and yourList with correct List ID",
+												"",
+												"console.log(\"getSelectedItem\");",
+												"var selectedItem = oList.getSelectedItem();",
+												"console.log(getSelectedItem)",
+												"",
+												"if (selectedItem) {",
+												"    ",
+												"    var context = selectedItem.getBindingContext();",
+												"",
+												"    ",
+												"",
+												"    // Get Entire Model",
+												"    var data = context.getObject();",
+												"",
+												"}"
+											],
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "18",
+											"fieldName": "oObjectListItem",
+											"fieldParent": "14",
+											"fieldType": "sap.m.ObjectListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "title",
+													"grouping": "Properties",
+													"value": "{firstName},{lastName}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "selected",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "numberUnit",
+													"grouping": "Properties",
+													"value": "Units",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "intro",
+													"grouping": "Properties",
+													"value": "{rank}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://accounting-document-verification",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"// List Get Selected Row",
+														"// Replace yourField with Field ID and yourList with correct List ID",
+														"",
+														"console.log(\"getSelectedItem\");",
+														"var selectedItem = oList.getSelectedItem();",
+														"console.log(getSelectedItem)",
+														"",
+														"if (selectedItem) {",
+														"    ",
+														"    var context = selectedItem.getBindingContext();",
+														"",
+														"    ",
+														"",
+														"    // Get Entire Model",
+														"    var data = context.getObject();",
+														"",
+														"}"
+													],
+													"translation": []
+												},
+												{
+													"attribute": "detailPress",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"// List Get Selected Row",
+														"// Replace yourField with Field ID and yourList with correct List ID",
+														"",
+														"var selectedItem = oList.getSelectedItem();",
+														"console.log(getSelectedItem)",
+														"",
+														"if (selectedItem) {",
+														"    ",
+														"    var context = selectedItem.getBindingContext();",
+														"",
+														"    ",
+														"",
+														"    // Get Entire Model",
+														"    var data = context.getObject();",
+														"",
+														"}"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "4",
+									"fieldName": "oFooterMaster",
+									"fieldParent": "2",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5",
+											"fieldName": "Right",
+											"fieldParent": "4",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "6",
+													"fieldName": "butCreate",
+													"fieldParent": "5",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://add",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"",
+																"",
+																"/**",
+																" * Name: Contacts API 2",
+																" * Description: An API for keeping track of your contacts and the companies they work for.",
+																" * ",
+																" * Path: /contacts/",
+																" * Method: GET",
+																" * ",
+																" * Parameters:",
+																" * $size - Optional parameter ",
+																" * Description: Size of the page to retrieve.",
+																" * Example: 10",
+																" * $page - Optional parameter ",
+																" * Description: Number of the page to retrieve.",
+																" * Example: 1",
+																" * $sort - Optional parameter ",
+																" * Description: Order in which to retrieve the results. Multiple sort criteria can be passed.",
+																" * Example: birthday DESC",
+																" * firstName - Optional parameter ",
+																" * Description: Allows to filter the collections of result by the value of field firstName",
+																" * Example: John",
+																" * lastName - Optional parameter ",
+																" * Description: Allows to filter the collections of result by the value of field lastName",
+																" * Example: Doe",
+																" * active - Optional parameter ",
+																" * Description: Allows to filter the collections of result by the value of field active",
+																" * Example: true",
+																" * company - Optional parameter ",
+																" * Description: Allows to filter the collections of result by the value of field company",
+																" * Example: 0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f",
+																" * ",
+																" */",
+																"var options = {",
+																"    parameters: {",
+																"        \"$size\": \"\", // Optional ",
+																"        \"$page\": \"\", // Optional ",
+																"        \"$sort\": \"\", // Optional ",
+																"        \"firstName\": \"\", // Optional ",
+																"        \"lastName\": \"\", // Optional ",
+																"        \"active\": \"\", // Optional ",
+																"        \"company\": \"\" // Optional ",
+																"    }",
+																"};",
+																"",
+																"apioRestAPI(options);",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "3",
+							"fieldName": "oPageDetail",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Detail Page",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addDetailPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "21",
+									"fieldName": "barDetail",
+									"fieldParent": "3",
+									"fieldType": "sap.m.IconTabBar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "expandable",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "22",
+											"fieldName": "barDetailInfo",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "General",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://hint",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "24",
+													"fieldName": "formDetail",
+													"fieldParent": "22",
+													"fieldType": "sap.ui.layout.form.SimpleForm",
+													"bindingValue": "Contacts API 2>Company",
+													"bindingType": "u",
+													"bindingSource": "API",
+													"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+													"bindingPathID": "72839400-14d3-4c9b-8829-992a8107bfa9",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "{/Company}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "validateFieldGroup",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "a6366ad3-0296-454f-ab8e-78c07e50327d",
+															"fieldName": "lblformDetailid",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Auto-generated primary key field",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "3559487e-757a-4cef-fdbf-d9826f674c02",
+															"fieldName": "txtformDetailid",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{/id}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "708f8e9a-c05a-440b-c8bc-e5ebfaa2baa4",
+															"fieldName": "lblformDetailfirstName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "firstName",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "bd446d93-376a-446a-ccc5-5c5040047425",
+															"fieldName": "txtformDetailfirstName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{oMultiModel>/name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "897835e1-8498-4224-8280-8340e3c318a8",
+															"fieldName": "lblformDetaillastName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "lastName",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "33fa82c3-8c3b-45e0-d2a4-e29f25a5992a",
+															"fieldName": "txtformDetaillastName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{/lastName}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "2e524665-66c1-4b13-ca73-87d502fd817b",
+															"fieldName": "lblformDetailbirthday",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Birthday as unix timestamp (in ms)",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "bf77ce2d-d8e1-463a-d703-50a320248d67",
+															"fieldName": "txtformDetailbirthday",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{/birthday}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "008c2a2d-7cad-4273-e958-4c8f35d61abf",
+															"fieldName": "lblformDetailactive",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "active",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "0fe77201-54ea-4e46-ea94-41d4c4b12656",
+															"fieldName": "txtformDetailactive",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{/active}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "98e8a917-de4e-4fed-b7d4-e3f66fa899b5",
+															"fieldName": "lblformDetailrank",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "rank",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "44254ea6-fafd-41c0-9ebe-02528dde978d",
+															"fieldName": "txtformDetailrank",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{/rank}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "5f185c69-c84c-455d-eb6f-8c0543e6c709",
+															"fieldName": "lblformDetailcompany",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "This property is a reference to a Company",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "f661c372-fb97-4365-9082-1eff057a2969",
+															"fieldName": "txtformDetailcompany",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{/company}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "25",
+															"fieldName": "oLabel",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Label 1",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "28",
+															"fieldName": "oText",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Some information text",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "26",
+															"fieldName": "oLabel1",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Label 2",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "29",
+															"fieldName": "oText1",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Some information text",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "27",
+															"fieldName": "oLabel2",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Label 3",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "30",
+															"fieldName": "oText2",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Some information text",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "54dc0173-b09b-4d9d-ff05-2dbf91e680b7",
+											"fieldName": "oTable",
+											"fieldParent": "21",
+											"fieldType": "sap.m.Table",
+											"bindingValue": "Contacts API 2>Company",
+											"bindingType": "h",
+											"bindingSource": "API",
+											"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+											"bindingPathID": "72839400-14d3-4c9b-8829-992a8107bfa9",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "headerText",
+													"grouping": "Properties",
+													"value": "test",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "0d3112f6-0025-447e-e5cd-b882375498d0",
+													"fieldName": "coloTableid",
+													"fieldParent": "54dc0173-b09b-4d9d-ff05-2dbf91e680b7",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "447f433b-545c-415c-9657-e21526110f12",
+															"fieldName": "colHoTableid",
+															"fieldParent": "0d3112f6-0025-447e-e5cd-b882375498d0",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Auto-generated primary key field",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "99926348-f11e-41c8-a19f-4ebb1d4ad25f",
+													"fieldName": "coloTablename",
+													"fieldParent": "54dc0173-b09b-4d9d-ff05-2dbf91e680b7",
+													"fieldType": "sap.m.Column",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "5b46017f-363c-4ddf-cfe2-ff76d93c8770",
+															"fieldName": "colHoTablename",
+															"fieldParent": "99926348-f11e-41c8-a19f-4ebb1d4ad25f",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "f628d3aa-9bfc-47b3-ee0b-2be407abe404",
+													"fieldName": "colItemoTable",
+													"fieldParent": "54dc0173-b09b-4d9d-ff05-2dbf91e680b7",
+													"fieldType": "sap.m.ColumnListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "b2619c7a-adf5-49c8-af62-b3a35485ec84",
+															"fieldName": "inoTableid",
+															"fieldParent": "f628d3aa-9bfc-47b3-ee0b-2be407abe404",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{id}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "1aeb72cd-44be-4d12-f5e3-91a47e281286",
+															"fieldName": "inoTablename",
+															"fieldParent": "f628d3aa-9bfc-47b3-ee0b-2be407abe404",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "23",
+											"fieldName": "barDetailList",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Items",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://list",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "7",
+									"fieldName": "oFooterDetail",
+									"fieldParent": "3",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "8",
+											"fieldName": "Right",
+											"fieldParent": "7",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "9",
+													"fieldName": "butApprove",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Approve",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "10",
+													"fieldName": "butReject",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Reject",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Reject",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "11",
+													"fieldName": "butEmp",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "12",
+													"fieldName": "butTransp",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "1878ecab-70c4-4612-f518-20d995fc5411",
+					"fieldName": "oRestAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "107e345f-f7d3-4caa-801c-858d030a8960",
+					"restOperation": "f4f44b63-a1be-4263-9c9a-c4745085de1f",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "1f045892-db3a-47e1-a151-fed3147a8700",
+							"modelFieldNo": "14"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "f149627b-c506-46e3-ea40-33b004a3723b",
+					"fieldName": "oMultiModel",
+					"fieldParent": 99999,
+					"fieldType": "neptune.model",
+					"bindingValue": "Contacts API 2>Company",
+					"bindingType": "h",
+					"bindingSource": "API",
+					"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+					"bindingPathID": "72839400-14d3-4c9b-8829-992a8107bfa9",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "cacheInitLoadFinished",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "setCacheGlobal",
+							"grouping": "Model",
+							"value": "true",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.1.15.1211",
+	"application": "secondapp",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": true,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "107e345f-f7d3-4caa-801c-858d030a8960",
+			"name": "Contacts API 2",
+			"ver": "18.11.12.933",
+			"updatedAt": "2018-11-12T08:33:23.000Z",
+			"changedBy": "oah"
+		}
+	]
+}

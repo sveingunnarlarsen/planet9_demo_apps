@@ -1,0 +1,149 @@
+{
+	"id": "94add53d-cbf6-499b-b63d-670f20a747f9",
+	"createdAt": "2019-06-28T07:06:13.000Z",
+	"updatedAt": "2019-06-28T07:23:47.000Z",
+	"createdBy": "priyanka",
+	"changedBy": "priyanka",
+	"objects": [
+		{
+			"fieldNo": "bb90c761-5549-488b-c27c-9361e1040004",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "6efd7e2a-f883-4207-997d-c29d28ce79c8",
+					"fieldName": "oApp",
+					"fieldParent": "bb90c761-5549-488b-c27c-9361e1040004",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "62a0cf6c-4ace-4f06-82bf-b2433e886f64",
+							"fieldName": "oPage",
+							"fieldParent": "6efd7e2a-f883-4207-997d-c29d28ce79c8",
+							"fieldType": "sap.m.Page",
+							"bindingType": "u",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Sample Charts",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "e72cff14-3576-4ed1-d916-708235a0730a",
+									"fieldName": "oHighchart",
+									"fieldParent": "62a0cf6c-4ace-4f06-82bf-b2433e886f64",
+									"fieldType": "neptune.chart.highchart",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "0ff90369-0a77-4109-a0ef-1744184e3868",
+											"fieldName": "oLine",
+											"fieldParent": "e72cff14-3576-4ed1-d916-708235a0730a",
+											"fieldType": "neptune.chart.series.line",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "94067a3e-0680-4357-8037-1757d247d794",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": [
+						"==OBJECT STRING==",
+						"",
+						"sap.ui.getCore().attachInit(function(data) {",
+						"",
+						"    // data = startParameters from NAM Action settings on the tile",
+						"    // Do your Stuff",
+						"",
+						"    // Some stuff needs to be timed later. Run them inside a timeout",
+						"    setTimeout(function() {",
+						"        console.log(oHighchart)",
+						"        oHighchart.update({",
+						"            series: [{",
+						"                data: [1000, 4000, 6000, 7000, 200, 10000, 2000, 1000, 35000]",
+						"            }]",
+						"        });",
+						"    }, 200);",
+						"",
+						"});"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.28.923",
+	"application": "samplecharting",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": true,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

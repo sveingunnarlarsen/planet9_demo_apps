@@ -1,0 +1,26 @@
+{
+	"id": "c38bde7a-6691-4285-8816-c61cd0367e96",
+	"createdAt": "2019-03-27T13:57:49.000Z",
+	"createdBy": "rommel",
+	"fields": [
+		{
+			"id": "90a61ff3-a72b-4192-e28a-1168a6dee1e5",
+			"fieldName": "employeeName",
+			"fieldType": "text"
+		},
+		{
+			"id": "416bc343-73a7-4400-9ec2-c6fe995612ab",
+			"fieldName": "employeeAddress",
+			"fieldType": "text"
+		}
+	],
+	"indices": null,
+	"foreignKeys": null,
+	"name": "sample_table",
+	"description": "This is a sample description",
+	"ver": "19.5.23.1037",
+	"enableAudit": false,
+	"package": "ebf9fa20-e061-460c-b9ab-b1340d1a24c1",
+	"rolesRead": [],
+	"rolesWrite": []
+}

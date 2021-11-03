@@ -1,0 +1,567 @@
+{
+	"id": "16dc9fa6-a814-4660-bae9-e8166bb28e37",
+	"createdAt": "2019-05-30T07:29:34.000Z",
+	"updatedAt": "2019-05-30T07:29:34.000Z",
+	"createdBy": "oah",
+	"changedBy": "oah",
+	"objects": [
+		{
+			"fieldNo": "72f93ed0-70e0-4d44-c19d-41ccfcb24763",
+			"fieldName": "oApp",
+			"fieldParent": 0,
+			"fieldType": "sap.m.App",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "1c0942f4-9c1a-4e6d-f7b2-87ab0fa21053",
+					"fieldName": "oPage",
+					"fieldParent": "72f93ed0-70e0-4d44-c19d-41ccfcb24763",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "title",
+							"grouping": "Properties",
+							"value": "Progressive Web App",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "5",
+							"fieldName": "tabContacts",
+							"fieldParent": "1c0942f4-9c1a-4e6d-f7b2-87ab0fa21053",
+							"fieldType": "sap.m.Table",
+							"bindingValue": "Contacts API>Contact",
+							"bindingType": "h",
+							"bindingSource": "API",
+							"bindingParentID": "09de5b25-6e0e-4d92-8b2e-f3a9a6c2fbbb",
+							"bindingPathID": "6364255a-2d63-4966-9d94-cb4fb856389c",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "setInitLoad",
+									"grouping": "Model",
+									"value": "cache",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setEnableCache",
+									"grouping": "Model",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setCacheType",
+									"grouping": "Model",
+									"value": "IndexedDB",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "sticky",
+									"grouping": "Properties",
+									"value": "[\"ColumnHeaders\"]",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "6",
+									"fieldName": "coltabContactsfirstName",
+									"fieldParent": "5",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "7",
+											"fieldName": "colHtabContactsfirstName",
+											"fieldParent": "6",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Firstname",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "8",
+									"fieldName": "coltabContactslastName",
+									"fieldParent": "5",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "9",
+											"fieldName": "colHtabContactslastName",
+											"fieldParent": "8",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Lastname",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "10",
+									"fieldName": "coltabContactsactive",
+									"fieldParent": "5",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "11",
+											"fieldName": "colHtabContactsactive",
+											"fieldParent": "10",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "active",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "12",
+									"fieldName": "coltabContactsrank",
+									"fieldParent": "5",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "13",
+											"fieldName": "colHtabContactsrank",
+											"fieldParent": "12",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "rank",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "14",
+									"fieldName": "colItemtabContacts",
+									"fieldParent": "5",
+									"fieldType": "sap.m.ColumnListItem",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "15",
+											"fieldName": "txttabContactsfirstName",
+											"fieldParent": "14",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{firstName}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "16",
+											"fieldName": "txttabContactslastName",
+											"fieldParent": "14",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{lastName}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "17",
+											"fieldName": "txttabContactsactive",
+											"fieldParent": "14",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{active}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "18",
+											"fieldName": "txttabContactsrank",
+											"fieldParent": "14",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "{rank}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "a935d7f3-bd1f-4d5c-d3bb-2907de6be94b",
+							"fieldName": "oFooter",
+							"fieldParent": "1c0942f4-9c1a-4e6d-f7b2-87ab0fa21053",
+							"fieldType": "sap.m.Bar",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "setFooter",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "5ea106b9-ad4f-4473-a35f-494372f68eea",
+									"fieldName": "oBarContent",
+									"fieldParent": "a935d7f3-bd1f-4d5c-d3bb-2907de6be94b",
+									"fieldType": "neptune.BarContent",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "ContentLeft",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5c9b86b5-101a-4a68-d167-188d0636fce8",
+											"fieldName": "butUpdate",
+											"fieldParent": "5ea106b9-ad4f-4473-a35f-494372f68eea",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Update",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://fa-brands/angellist",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"apiGetContacts();",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "f1556003-0b25-407a-c3eb-9ca0523885a6",
+											"fieldName": "butFullscreen",
+											"fieldParent": "5ea106b9-ad4f-4473-a35f-494372f68eea",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Fullscreen",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://full-screen",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "toggleFullScreen();",
+													"script": "toggleFullScreen();",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "d478ea9b-9ef3-4e69-ba91-dae7096b3eab",
+					"fieldName": "GetContacts",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "09de5b25-6e0e-4d92-8b2e-f3a9a6c2fbbb",
+					"restOperation": "79e3771c-e7be-4163-d8a7-722c6c939ce8",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "6364255a-2d63-4966-9d94-cb4fb856389c",
+							"modelFieldNo": "5"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "sap.m.MessageToast.show(\"Data Updated\");",
+							"script": "sap.m.MessageToast.show(\"Data Updated\");",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "6851bc9d-7d2e-4557-d4d2-b5c5266c2943",
+					"fieldName": "toggleFullScreen",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"function toggleFullScreen() {",
+						"    var doc = window.document;",
+						"    var docEl = doc.documentElement;",
+						"",
+						"    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;",
+						"    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;",
+						"",
+						"    if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {",
+						"        requestFullScreen.call(docEl);",
+						"    } else {",
+						"        cancelFullScreen.call(doc);",
+						"    }",
+						"}",
+						"",
+						"var isPWAinBrowser = true;",
+						"// replace standalone with fullscreen or minimal-ui according to your manifest",
+						"if (matchMedia('(display-mode: standalone)').matches) {",
+						"    // Android and iOS 11.3+",
+						"    isPWAinBrowser = false;",
+						"} else if ('standalone' in navigator) {",
+						"    // useful for iOS < 11.3",
+						"    isPWAinBrowser = !navigator.standalone;",
+						"}",
+						"",
+						"sap.m.MessageToast.show(\"Browser : \" + isPWAinBrowser);"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.5.30.929",
+	"application": "pwanjal",
+	"title": "PWA",
+	"description": "PWA",
+	"enableFileStorage": false,
+	"enableManifest": true,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "1.58CDN",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": [
+		"==OBJECT STRING==",
+		"<meta name=\"theme-color\" content=\"#ffa500\"/>",
+		"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"/>"
+	],
+	"manifest": [
+		"==OBJECT STRING==",
+		"{",
+		"  \"name\": \"Planet 9 Contacts\",",
+		"  \"short_name\": \"Contacts\",",
+		"  \"start_url\": \"/app/demo_contacts?utm_source=standalone&utm_medium=pwa\",",
+		"  \"display\": \"standalone\",",
+		"  \"theme_color\": \"#ffa500\",",
+		"  \"background_color\": \"#ffa500\",",
+		"  \"icons\": [{",
+		"    \"src\": \"/media/root/pwa/homescreen48.png\",",
+		"    \"sizes\": \"48x48\",",
+		"    \"type\": \"image/png\"",
+		"  }, {",
+		"    \"src\": \"/media/root/pwa/homescreen72.png\",",
+		"    \"sizes\": \"72x72\",",
+		"    \"type\": \"image/png\"",
+		"  }, {",
+		"    \"src\": \"/media/root/pwa/homescreen96.png\",",
+		"    \"sizes\": \"96x96\",",
+		"    \"type\": \"image/png\"",
+		"  }, {",
+		"    \"src\": \"/media/root/pwa/homescreen144.png\",",
+		"    \"sizes\": \"144x144\",",
+		"    \"type\": \"image/png\"",
+		"  }, {",
+		"    \"src\": \"/media/root/pwa/homescreen192.png\",",
+		"    \"sizes\": \"168x168\",",
+		"    \"type\": \"image/png\"",
+		"  }, {",
+		"    \"src\": \"/media/root/pwa/homescreen192.png\",",
+		"    \"sizes\": \"192x192\",",
+		"    \"type\": \"image/png\"",
+		"  }, {",
+		"    \"src\": \"/media/root/pwa/homescreen256.png\",",
+		"    \"sizes\": \"256x256\",",
+		"    \"type\": \"image/png\"",
+		"  }] ",
+		"}",
+		""
+	],
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": true,
+	"ui5_bootstrap": null,
+	"apis": []
+}

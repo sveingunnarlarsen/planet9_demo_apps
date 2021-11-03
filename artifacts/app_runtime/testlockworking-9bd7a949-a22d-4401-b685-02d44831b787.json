@@ -1,0 +1,73 @@
+{
+	"id": "9bd7a949-a22d-4401-b685-02d44831b787",
+	"createdAt": "2019-08-29T13:08:03.000Z",
+	"updatedAt": "2019-08-29T13:08:03.000Z",
+	"createdBy": "gunnar",
+	"changedBy": "gunnar",
+	"objects": [
+		{
+			"fieldNo": "c2f7f215-0135-44fe-db37-248c64c5d877",
+			"fieldName": "oApp",
+			"fieldParent": 0,
+			"fieldType": "sap.m.App",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "2622770b-8fd5-4ba8-d13e-8d3db8cd351b",
+					"fieldName": "oPage",
+					"fieldParent": "c2f7f215-0135-44fe-db37-248c64c5d877",
+					"fieldType": "sap.m.Page",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": []
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.29.158",
+	"application": "testlockworking",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

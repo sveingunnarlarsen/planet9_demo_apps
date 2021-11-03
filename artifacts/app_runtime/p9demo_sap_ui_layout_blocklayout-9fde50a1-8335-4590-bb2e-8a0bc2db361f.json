@@ -1,0 +1,463 @@
+{
+	"id": "9fde50a1-8335-4590-bb2e-8a0bc2db361f",
+	"createdAt": "2018-04-10T06:43:52.000Z",
+	"updatedAt": "2018-06-13T12:04:01.000Z",
+	"createdBy": "morten",
+	"changedBy": "morten",
+	"objects": [
+		{
+			"fieldNo": "04035244-06b2-4376-a8bb-f392267c0f5c",
+			"fieldName": "Shell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "d2647462-92c0-4ff2-ec1d-c94b37a09236",
+					"fieldName": "SplitApp",
+					"fieldParent": "04035244-06b2-4376-a8bb-f392267c0f5c",
+					"fieldType": "sap.m.SplitApp",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "2a99b100-4369-494c-cc0f-9ae42e2d0e10",
+							"fieldName": "PageMaster",
+							"fieldParent": "d2647462-92c0-4ff2-ec1d-c94b37a09236",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addMasterPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "2ec897ff-9997-4d1e-df3d-cef22dd56ca6",
+									"fieldName": "Form",
+									"fieldParent": "2a99b100-4369-494c-cc0f-9ae42e2d0e10",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "80c242aa-2843-4a4e-eff6-a3c41c73d150",
+											"fieldName": "oLabel",
+											"fieldParent": "2ec897ff-9997-4d1e-df3d-cef22dd56ca6",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "f8cd27de-60f7-41f1-de42-85a18e861011",
+											"fieldName": "oButton",
+											"fieldParent": "2ec897ff-9997-4d1e-df3d-cef22dd56ca6",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "layout",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"console.log('pressed...');",
+														"var layout = blockLayout;",
+														"if (1 === 2) {",
+														"    ",
+														"}"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "88d9579f-93ad-49f7-8846-e291b7d99a5d",
+							"fieldName": "PageDetail",
+							"fieldParent": "d2647462-92c0-4ff2-ec1d-c94b37a09236",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addDetailPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "c31bd8fb-3387-4661-937e-9b4c14e1bf7f",
+									"fieldName": "blockLayout",
+									"fieldParent": "88d9579f-93ad-49f7-8846-e291b7d99a5d",
+									"fieldType": "sap.ui.layout.BlockLayout",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "8d1a12ec-6f6d-4f93-c0b4-fa30f3ff87f2",
+											"fieldName": "blockLayoutRow",
+											"fieldParent": "c31bd8fb-3387-4661-937e-9b4c14e1bf7f",
+											"fieldType": "sap.ui.layout.BlockLayoutRow",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "rowColorSet",
+													"grouping": "Properties",
+													"value": "ColorSet1",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "fa0628f0-05dc-4e80-fdd7-9ba08bfdedb0",
+													"fieldName": "blockLayoutCell1",
+													"fieldParent": "8d1a12ec-6f6d-4f93-c0b4-fa30f3ff87f2",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleAlignment",
+															"grouping": "Properties",
+															"value": "Center",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Cell1",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet1",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeA",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "6ec0f234-4fdf-481d-8b0e-6c3216dbabd7",
+															"fieldName": "oText1",
+															"fieldParent": "fa0628f0-05dc-4e80-fdd7-9ba08bfdedb0",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Lorem ipsum dolor",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "53ec6cde-876f-4e2d-c41e-23db42030970",
+													"fieldName": "blockLayoutCell2",
+													"fieldParent": "8d1a12ec-6f6d-4f93-c0b4-fa30f3ff87f2",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleAlignment",
+															"grouping": "Properties",
+															"value": "Center",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Cell2",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet2",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeA",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "c44ab644-69b8-410e-9039-70a9466c2039",
+															"fieldName": "oText5",
+															"fieldParent": "53ec6cde-876f-4e2d-c41e-23db42030970",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Lorem ipsum dolor",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "102f70fe-c662-4bce-a234-5fcbff027aa2",
+													"fieldName": "blockLayoutCell3",
+													"fieldParent": "8d1a12ec-6f6d-4f93-c0b4-fa30f3ff87f2",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleAlignment",
+															"grouping": "Properties",
+															"value": "Center",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Cell3",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet3",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeA",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "854c4eb6-a524-4b46-bb7a-0db08347b87e",
+															"fieldName": "oText6",
+															"fieldParent": "102f70fe-c662-4bce-a234-5fcbff027aa2",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Lorem ipsum dolor",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "f32f82fc-c687-48ef-8caa-40e568fffbf7",
+													"fieldName": "blockLayoutCell4",
+													"fieldParent": "8d1a12ec-6f6d-4f93-c0b4-fa30f3ff87f2",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "titleAlignment",
+															"grouping": "Properties",
+															"value": "Center",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Cell4",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet4",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeA",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "c7d8fda6-fbc4-4a88-a490-be718110ffd8",
+															"fieldName": "oText4",
+															"fieldParent": "f32f82fc-c687-48ef-8caa-40e568fffbf7",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Lorem ipsum dolor",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "96301c41-76c0-4443-a7ed-3876b3bd6cc8",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "18.4.10.1051",
+	"application": "p9demo_sap_ui_layout_blocklayout",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": null,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

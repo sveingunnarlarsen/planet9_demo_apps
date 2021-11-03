@@ -1,0 +1,188 @@
+{
+	"id": "6a424c2b-3909-4087-a014-21e0bddbf936",
+	"createdAt": "2019-08-12T07:33:57.000Z",
+	"updatedAt": "2019-08-12T09:04:56.000Z",
+	"createdBy": "oah",
+	"changedBy": "gunnar",
+	"objects": [
+		{
+			"fieldNo": "2be8f815-137e-46bf-db25-63378e1a7c9f",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "a163fdc3-6f27-4b03-9d79-c34d24ad6bec",
+					"fieldName": "oApp",
+					"fieldParent": "2be8f815-137e-46bf-db25-63378e1a7c9f",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "7c0da898-212d-4b37-c199-e460cfa632b4",
+							"fieldName": "oPage",
+							"fieldParent": "a163fdc3-6f27-4b03-9d79-c34d24ad6bec",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "823d792a-84ae-476b-a5d8-3f100432d214",
+									"fieldName": "oHTMLObject",
+									"fieldParent": "7c0da898-212d-4b37-c199-e460cfa632b4",
+									"fieldType": "sap.ui.core.HTML",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "content",
+											"grouping": "Properties",
+											"value": "<input type='file'>",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "afterRendering",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"/*",
+												"$(\"#oHTMLObject\").click(function(event) {",
+												"    $(\"#oHTMLObject\").val(\"\");",
+												"});",
+												"",
+												"$(\"#oHTMLObject\").on('change', function(event) {",
+												"    alert(\"selected file: \" + $(\"#oHTMLObject\").val());",
+												"});",
+												"*/",
+												"",
+												""
+											],
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "539a2dac-20ae-4d8e-d377-967733d58863",
+											"fieldName": "oHTML",
+											"fieldParent": "823d792a-84ae-476b-a5d8-3f100432d214",
+											"fieldType": "neptune.Html",
+											"script": "<input type=\"file\" placeholder=\"Select file\" id=\"file\"/>",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "c2b7e4fb-1074-4cef-8622-903aa5f31b68",
+									"fieldName": "oButtonUploadClient",
+									"fieldParent": "7c0da898-212d-4b37-c199-e460cfa632b4",
+									"fieldType": "sap.m.Button",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Upload Client",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"var data = new FormData();",
+												"jQuery.each(jQuery('#file')[0].files, function(i, file) {",
+												"    data.append('file-' + i, file);",
+												"});",
+												"",
+												"$.ajax({",
+												"    // url: \"/proxy/\" + encodeURIComponent(\"https://demo.xyzmo.com/Api/v4.0/sspfile/uploadtemporary\"),",
+												"    url: \"https://demo.xyzmo.com/Api/v4.0/sspfile/uploadtemporary\",",
+												"    type: 'POST',",
+												"    data: data,",
+												"    processData: false,",
+												"    contentType: false,",
+												"    headers: {",
+												"        userLoginName: \"ioana@neptune-software.com\",",
+												"        organizationKey: \"9b4144ef-4790-4662-b51f-515569fa5952\",",
+												"    },",
+												"    success: function(r) {",
+												"        console.log('success', r);",
+												"    },",
+												"    error: function(r) {",
+												"        console.log('error', r);",
+												"    }",
+												"});"
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": []
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.12.115",
+	"application": "test_proxy_files",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

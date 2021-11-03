@@ -1,0 +1,663 @@
+{
+	"id": "0ec50347-98a3-498d-aeeb-09759cd8e0c9",
+	"createdAt": "2017-12-18T09:47:24.000Z",
+	"updatedAt": "2019-11-22T09:29:38.000Z",
+	"createdBy": "rsletta",
+	"changedBy": "arne",
+	"objects": [
+		{
+			"fieldNo": "2",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "1",
+					"fieldName": "oApp",
+					"fieldParent": "2",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "3",
+							"fieldName": "oPage",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Hello Planet 9",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "4",
+									"fieldName": "oSimpleForm",
+									"fieldParent": "3",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"bindingValue": "API demo_tasks>demo_tasks",
+									"bindingType": "u",
+									"bindingSource": "API",
+									"bindingParentID": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+									"bindingPathID": "1b455e3d-59ef-4c83-ffbc-ddde6b1e16ae",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "8",
+											"fieldName": "oInput",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "value",
+													"grouping": "Properties",
+													"value": "{/description}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "9",
+											"fieldName": "oButtonSave",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Save",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"var options = {",
+														"    data: modeloSimpleForm.oData",
+														"};",
+														"",
+														"if (modeloSimpleForm.oData.id) {",
+														"",
+														"    options.parameters = {",
+														"        where: JSON.stringify({",
+														"            \"id\": modeloSimpleForm.oData.id",
+														"        })",
+														"    }",
+														"",
+														"    apipostTask(options);",
+														"",
+														"} else {",
+														"    apiputTask(options);",
+														"}",
+														"",
+														"modeloSimpleForm.setData({});"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "17",
+											"fieldName": "oButtonCreate",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Ceate",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": "modeloSimpleForm.setData({});",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "b4b49a0d-6725-4bbc-dfae-6e168dda00fc",
+											"fieldName": "oLabel3",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "a0304463-54d9-49eb-f734-8e0ff20b4fd9",
+											"fieldName": "oLabel5",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "307386e8-b872-4167-f169-4b97338591c1",
+											"fieldName": "oLabel",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "2ea0b118-377e-45d6-97e3-24dfdc26a96b",
+											"fieldName": "oLabel6",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "5aa3a8bb-b24d-48fa-fe9f-e1393ecc0fa3",
+											"fieldName": "oLabel7",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "278d6cef-7306-43f3-94e7-10385df1e200",
+											"fieldName": "oLabel4",
+											"fieldParent": "4",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "5f30d1fe-3d95-4dbf-92f9-ea876d552e15",
+									"fieldName": "oIconTabBar",
+									"fieldParent": "3",
+									"fieldType": "sap.m.IconTabBar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "5",
+											"fieldName": "oList",
+											"fieldParent": "5f30d1fe-3d95-4dbf-92f9-ea876d552e15",
+											"fieldType": "sap.m.List",
+											"bindingValue": "API demo_tasks>demo_tasks",
+											"bindingType": "h",
+											"bindingSource": "API",
+											"bindingParentID": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+											"bindingPathID": "1b455e3d-59ef-4c83-ffbc-ddde6b1e16ae",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "mode",
+													"grouping": "Properties",
+													"value": "Delete",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "delete",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"var deleteItem = oEvent.getParameter(\"listItem\");",
+														"var context = deleteItem.getBindingContext();",
+														"var value = context.getProperty(\"id\");",
+														"",
+														"var options = {",
+														"    parameters: {",
+														"        where: JSON.stringify({\"id\": value}) ",
+														"    }",
+														"};",
+														"",
+														"apideleteTask(options);"
+													],
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "11",
+													"fieldName": "oObjectListItem",
+													"fieldParent": "5",
+													"fieldType": "sap.m.ObjectListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Active",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "{description}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "intro",
+															"grouping": "Properties",
+															"value": "{taskDeadline}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var context = oEvent.oSource.getBindingContext();  ",
+																"var data = context.getObject();",
+																"modeloSimpleForm.setData(data);"
+															],
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "12",
+															"fieldName": "oObjectStatus",
+															"fieldParent": "11",
+															"fieldType": "sap.m.ObjectStatus",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "18",
+									"fieldName": "oBar",
+									"fieldParent": "3",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "19",
+											"fieldName": "Right",
+											"fieldParent": "18",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "20",
+													"fieldName": "oButtoUpdate",
+													"fieldParent": "19",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Update",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://synchronize",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "apigetTasks();",
+															"script": "apigetTasks();",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "21",
+													"fieldName": "oButtonPost",
+													"fieldParent": "19",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Post Array",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// Create Dummy Data ",
+																"",
+																"var dataArr = [];",
+																"for (i = 0; i < 500; i++) {",
+																"    var rec = {};",
+																"    rec.description = \"New record \" + i;",
+																"    rec.taskDeadline = new Date();",
+																"    dataArr.push(rec);",
+																"}",
+																"",
+																"",
+																"",
+																"var options = {",
+																"    data: dataArr",
+																"};",
+																"",
+																"apiputTask(options);",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "93acd874-308b-461e-b2ac-0d851e56f12c",
+									"fieldName": "oList1",
+									"fieldParent": "3",
+									"fieldType": "sap.m.List",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "3ccd624a-0c84-44ac-9f58-7c20bf1fc9ad",
+											"fieldName": "oInputListItem",
+											"fieldParent": "93acd874-308b-461e-b2ac-0d851e56f12c",
+											"fieldType": "sap.m.InputListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "c22578bc-d09b-4129-d42c-3d2a426827c1",
+									"fieldName": "oLabel1",
+									"fieldParent": "3",
+									"fieldType": "sap.m.Label",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								},
+								{
+									"fieldNo": "89668b12-3835-4dc6-8bc9-43b6973d5324",
+									"fieldName": "oLabel2",
+									"fieldParent": "3",
+									"fieldType": "sap.m.Label",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "13",
+					"fieldName": "postTask",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+					"restOperation": "e5e09a2e-399f-4c1f-f229-c48060120ea5",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "apigetTasks();",
+							"script": "apigetTasks();",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "10",
+					"fieldName": "putTask",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+					"restOperation": "c5b448f3-5a47-4740-cfe7-6c1a0a2dbbfc",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "apigetTasks();",
+							"script": "apigetTasks();",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "14",
+					"fieldName": "deleteTask",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+					"restOperation": "f81825f9-d9a9-45df-e94e-74061d5723a3",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": [
+								"==OBJECT STRING==",
+								"/**",
+								" * Name: API demo_tasks",
+								" * Description:",
+								" *",
+								" * Path: /demo_tasks",
+								" * Method: GET",
+								" *",
+								" * Parameters:",
+								" * $filter - Optional parameter",
+								" * $select - Optional parameter",
+								" *",
+								" */",
+								"var options = {};",
+								"",
+								"apigetTasks(options);"
+							],
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "15",
+					"fieldName": "getTasks",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+					"restOperation": "99a7a69d-4793-47df-ece5-30537245fab5",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": 200,
+							"dataId": "1b455e3d-59ef-4c83-ffbc-ddde6b1e16ae",
+							"modelFieldNo": "5"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.11.22.1029",
+	"application": "demo_tasks_api",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": true,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "1b105379-260f-40f9-ba6a-b0070be2e9b7",
+			"name": "API demo_tasks",
+			"ver": "18.3.27.1828",
+			"updatedAt": "2018-03-27T16:28:09.000Z",
+			"changedBy": "oah"
+		}
+	]
+}

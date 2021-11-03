@@ -1,0 +1,1704 @@
+{
+	"id": "0132228e-688d-4143-91bb-5d8cbd0fe046",
+	"createdAt": "2017-09-21T10:29:17.000Z",
+	"updatedAt": "2018-09-18T09:40:03.000Z",
+	"createdBy": "priyanka",
+	"changedBy": "priyanka",
+	"objects": [
+		{
+			"fieldNo": "13",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "1",
+					"fieldName": "oApp",
+					"fieldParent": "13",
+					"fieldType": "sap.m.SplitApp",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "2",
+							"fieldName": "oPageMaster",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Master Page",
+									"script": "",
+									"translation": [
+										{
+											"language": "CS",
+											"value": "Hlavní stránka"
+										},
+										{
+											"language": "FR",
+											"value": "La page principale"
+										}
+									]
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addMasterPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "15",
+									"fieldName": "oSubMaster",
+									"fieldParent": "2",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setSubHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "16",
+											"fieldName": "Left",
+											"fieldParent": "15",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "17",
+													"fieldName": "oFilterMaster",
+													"fieldParent": "16",
+													"fieldType": "sap.m.SearchField",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "14",
+									"fieldName": "oList",
+									"fieldParent": "2",
+									"fieldType": "sap.m.List",
+									"bindingValue": "Contacts API 2>Contact",
+									"bindingType": "h",
+									"bindingSource": "API",
+									"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+									"bindingPathID": "1f045892-db3a-47e1-a151-fed3147a8700",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "18",
+											"fieldName": "oObjectListItem",
+											"fieldParent": "14",
+											"fieldType": "sap.m.ObjectListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Active",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "title",
+													"grouping": "Properties",
+													"value": "{firstName},{lastName}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "intro",
+													"grouping": "Properties",
+													"value": "{name}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://customer",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"var context = oEvent.oSource.getBindingContext();",
+														"",
+														"var data = context.getObject();",
+														"",
+														"data = JSON.parse(JSON.stringify(data));",
+														"",
+														"modelformDetail.setData(data)",
+														"",
+														"var companyId = context.getProperty(\"company\");",
+														"",
+														" ",
+														" apiCompanyAPI({",
+														"     companyid: companyId",
+														" });",
+														""
+													],
+													"translation": []
+												},
+												{
+													"attribute": "detailPress",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "19",
+													"fieldName": "oObjectAttribute",
+													"fieldParent": "18",
+													"fieldType": "sap.m.ObjectAttribute",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Active",
+															"script": "",
+															"translation": [
+																{
+																	"language": "FR",
+																	"value": "actif"
+																}
+															]
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{active}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "console.log(\"saf\")",
+															"script": "console.log(\"saf\")",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "20",
+													"fieldName": "oObjectStatus",
+													"fieldParent": "18",
+													"fieldType": "sap.m.ObjectStatus",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Rank",
+															"script": "",
+															"translation": [
+																{
+																	"language": "FR",
+																	"value": "Rang"
+																}
+															]
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{rank}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "state",
+															"grouping": "Properties",
+															"value": "Success",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "4",
+									"fieldName": "oFooterMaster",
+									"fieldParent": "2",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5",
+											"fieldName": "Right",
+											"fieldParent": "4",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "6",
+													"fieldName": "butCreate",
+													"fieldParent": "5",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://add",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"",
+																"var options = {",
+																"    parameters: {",
+																"        \"$size\": \"\", // Optional ",
+																"        \"$page\": \"\", // Optional ",
+																"        \"$sort\": \"\", // Optional ",
+																"        \"firstName\": \"\", // Optional ",
+																"        \"lastName\": \"\", // Optional ",
+																"        \"active\": \"\", // Optional ",
+																"        \"company\": \"\" // Optional ",
+																"    }",
+																"};",
+																"",
+																"apiContactsAPI(options);",
+																"var options = {",
+																"    parameters: {",
+																"        \"$size\": \"\", // Optional ",
+																"        \"$page\": \"\", // Optional ",
+																"        \"$sort\": \"\", // Optional ",
+																"        \"firstName\": \"\", // Optional ",
+																"        \"lastName\": \"\", // Optional ",
+																"        \"active\": \"\", // Optional ",
+																"        \"company\": \"\" // Optional ",
+																"    }",
+																"};",
+																"",
+																"apiContactsAPI(options);",
+																"var options = {",
+																"    parameters: {",
+																"        \"$size\": \"\", // Optional ",
+																"        \"$page\": \"\", // Optional ",
+																"        \"$sort\": \"\", // Optional ",
+																"        \"firstName\": \"\", // Optional ",
+																"        \"lastName\": \"\", // Optional ",
+																"        \"active\": \"\", // Optional ",
+																"        \"company\": \"\" // Optional ",
+																"    }",
+																"};",
+																"",
+																"apiContactsAPI(options);"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "3",
+							"fieldName": "oPageDetail",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Detail Page",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addDetailPage",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "navButtonPress",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "21",
+									"fieldName": "barDetail",
+									"fieldParent": "3",
+									"fieldType": "sap.m.IconTabBar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "expandable",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "select",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"if (this.getSelectedKey() === 'map') {",
+												"",
+												"    map = new google.maps.Map(document.getElementById('gmaps'), {",
+												"        center: new google.maps.LatLng(42.4992, -94.02181),",
+												"        zoom: 7,",
+												"        mapTypeId: 'roadmap',",
+												"        // zoomControl: boolean,",
+												"        mapTypeControl: false,",
+												"        // scaleControl: boolean,",
+												"        streetViewControl: false,",
+												"        // rotateControl: boolean,",
+												"        fullscreenControl: false,",
+												"        styles: [{",
+												"            featureType: \"poi\",",
+												"            stylers: [{",
+												"                visibility: \"off\"",
+												"            }]",
+												"        }]",
+												"    });",
+												"}"
+											],
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "22",
+											"fieldName": "barDetailInfo",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "General",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://hint",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "24",
+													"fieldName": "formDetail",
+													"fieldParent": "22",
+													"fieldType": "sap.ui.layout.form.SimpleForm",
+													"bindingValue": "Contacts API 2>Contact",
+													"bindingType": "u",
+													"bindingSource": "API",
+													"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+													"bindingPathID": "1f045892-db3a-47e1-a151-fed3147a8700",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "editable",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "setInitLoad",
+															"grouping": "Model",
+															"value": "cache",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "cacheInitLoadFinished",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "e45220c7-f019-419b-c0c9-1a09c17255cf",
+															"fieldName": "lblformDetailid",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Auto-generated primary key field",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "536ad358-a389-469d-80a4-e253dc425553",
+															"fieldName": "informDetailid",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/id}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "0b35b2bb-b5ad-4f0c-eb36-36a38abb384a",
+															"fieldName": "lblformDetailfirstName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "FirstName",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "6073c67f-cb20-4336-b824-04c78086dd3f",
+															"fieldName": "informDetailfirstName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/firstName}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "47113f0c-1b6e-4981-a370-0641c12e1974",
+															"fieldName": "lblformDetaillastName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "LastName",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "595aaddd-c0bc-4a7d-996f-8888e10db4af",
+															"fieldName": "informDetaillastName",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/lastName}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "6a39f1b0-97bc-4a82-eced-fab4723affac",
+															"fieldName": "lblformDetailbirthday",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Birthday as unix timestamp (in ms)",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "d94b8d03-930b-4e29-d6b7-db54419542c6",
+															"fieldName": "informDetailbirthday",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/birthday}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "f8735928-4d83-478b-bba8-21f52f54aa90",
+															"fieldName": "lblformDetailactive",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Active",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "37662cee-446c-4c88-f4b4-2f87f7455051",
+															"fieldName": "informDetailactive",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/active}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "eb2577a9-e6dd-42b1-927a-7ad131904b39",
+															"fieldName": "lblformDetailrank",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "rank",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "26340de8-2a51-4084-b31a-7e4cf14429f9",
+															"fieldName": "informDetailrank",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/rank}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "d392a2c2-c57d-4043-f5e2-9617933c273e",
+															"fieldName": "lblformDetailcompany",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "This property is a reference to a Company",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "3df91a2d-204d-4dfa-e6cf-c2eb38f5242c",
+															"fieldName": "informDetailcompany",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/company}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "bc95aa43-e53f-47bc-8704-c3d06e1d5a1c",
+															"fieldName": "oButton",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Button",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "type",
+																	"grouping": "Properties",
+																	"value": "Accept",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "send",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"// Use this script in your App or from external systems",
+																		"var wfData = {",
+																		"    \"id\": \"37eeefa8-0eeb-45c4-b148-30954ff175ed\",",
+																		"    \"objectType\": \"objType\",",
+																		"    \"objectKey\": \"objKey\",",
+																		"    \"amount\": \"1000\",",
+																		"    \"currency\": \"EUR\",",
+																		"    \"approver\": \"\"",
+																		"}",
+																		"$.ajax({",
+																		"    type: \"POST\",",
+																		"    contentType: \"application/json\",",
+																		"    url: \"/api/functions/WorkflowInbox/Start\", // Remember full path if triggered externally",
+																		"    data: JSON.stringify(wfData),",
+																		"    success: function(data) {",
+																		"        // Succes Handler",
+																		"    },",
+																		"    error: function(result, status) {",
+																		"        // Error Handler",
+																		"    }",
+																		"});"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "23",
+											"fieldName": "barDetailList",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Items",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://list",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+													"fieldName": "oSimpleForm",
+													"fieldParent": "23",
+													"fieldType": "sap.ui.layout.form.SimpleForm",
+													"bindingValue": "Contacts API 2>Company",
+													"bindingType": "u",
+													"bindingSource": "API",
+													"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+													"bindingPathID": "72839400-14d3-4c9b-8829-992a8107bfa9",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "editable",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "7fe18195-aa8b-4338-a6ad-88609045b965",
+															"fieldName": "lbloSimpleFormid",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Auto-generated primary key field",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "04294076-3b35-41bb-ecf2-d6e0efd8b7fa",
+															"fieldName": "inoSimpleFormid",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/id}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "2c233c92-31b1-41c8-826d-2a06f9e88c23",
+															"fieldName": "lbloSimpleFormname",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "name",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "e9211ecd-9c8d-484b-cd77-1327ca5c0280",
+															"fieldName": "inoSimpleFormname",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/name}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "7d451fd1-b271-4c69-b490-b2412fbf3159",
+															"fieldName": "lbloSimpleFormstreet",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "street",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "64fa4b0d-89ba-49e1-e4e8-00d14078643a",
+															"fieldName": "inoSimpleFormstreet",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/address/street}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "91fad748-987e-43a1-9f02-749d08f5cfe1",
+															"fieldName": "lbloSimpleFormcity",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "city",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "c3f228ce-9fd2-4484-8188-562ecf9cf250",
+															"fieldName": "inoSimpleFormcity",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/address/city}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "988157af-7bc2-4228-dd79-d0b682d57582",
+															"fieldName": "lbloSimpleFormzipcode",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "zipcode",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "e758f1ef-6d64-409f-b968-fe01c0e58f1a",
+															"fieldName": "inoSimpleFormzipcode",
+															"fieldParent": "1506b79f-2f85-48f0-a9e6-98e6182f8141",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "{/address/zipcode}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "8431ae58-077e-4223-cd67-fa91bf046458",
+											"fieldName": "oIconTabFilter",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "LightBox",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://picture",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "df1219d3-cd7c-4f45-9ed4-d57dae963418",
+													"fieldName": "oSimpleForm1",
+													"fieldParent": "8431ae58-077e-4223-cd67-fa91bf046458",
+													"fieldType": "sap.ui.layout.form.SimpleForm",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Lightbox",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "e6c6bfb0-dd47-4129-97f6-288e4c7c2824",
+															"fieldName": "oLightBox",
+															"fieldParent": "df1219d3-cd7c-4f45-9ed4-d57dae963418",
+															"fieldType": "sap.m.LightBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "a9e94e17-b3df-49b7-a96b-505ee49cc6b8",
+																	"fieldName": "oLightBoxItem",
+																	"fieldParent": "e6c6bfb0-dd47-4129-97f6-288e4c7c2824",
+																	"fieldType": "sap.m.LightBoxItem",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "imageSrc",
+																			"grouping": "Properties",
+																			"value": "/media/root/mobilize.jpg",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": []
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "8560f59d-58ef-4266-f3c6-3fdab5a6a3c1",
+											"fieldName": "oIconTabFilter1",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "highchart",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "key",
+													"grouping": "Properties",
+													"value": "map",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://picture",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "6a2b1160-6abd-486e-d2d3-a06964c767e5",
+													"fieldName": "oIconChartBar",
+													"fieldParent": "8560f59d-58ef-4266-f3c6-3fdab5a6a3c1",
+													"fieldType": "sap.m.IconTabBar",
+													"bindingType": "u",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "e52421f6-c396-4963-9570-f657be14df53",
+															"fieldName": "oBlockLayout",
+															"fieldParent": "6a2b1160-6abd-486e-d2d3-a06964c767e5",
+															"fieldType": "sap.ui.layout.BlockLayout",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "d9496296-65f4-4a99-8b16-3ed689b80661",
+																	"fieldName": "oBlockLayoutRow",
+																	"fieldParent": "e52421f6-c396-4963-9570-f657be14df53",
+																	"fieldType": "sap.ui.layout.BlockLayoutRow",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "ef99a3e9-c22a-4887-d9ed-c86b895d514b",
+																			"fieldName": "oBlockLayoutCell",
+																			"fieldParent": "d9496296-65f4-4a99-8b16-3ed689b80661",
+																			"fieldType": "sap.ui.layout.BlockLayoutCell",
+																			"bindingValue": "Contacts API 2>Contact",
+																			"bindingType": "u",
+																			"bindingSource": "API",
+																			"bindingParentID": "107e345f-f7d3-4caa-801c-858d030a8960",
+																			"bindingPathID": "1f045892-db3a-47e1-a151-fed3147a8700",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [],
+																			"data": [
+																				{
+																					"fieldNo": "00529c68-322f-4c32-9997-bde4cd2a566a",
+																					"fieldName": "oImage",
+																					"fieldParent": "ef99a3e9-c22a-4887-d9ed-c86b895d514b",
+																					"fieldType": "sap.m.Image",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "src",
+																							"grouping": "Properties",
+																							"value": "https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "height",
+																							"grouping": "Properties",
+																							"value": "400px",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "bb4417d2-d724-4989-98f4-c7c98117d21f",
+																					"fieldName": "oLink",
+																					"fieldParent": "ef99a3e9-c22a-4887-d9ed-c86b895d514b",
+																					"fieldType": "sap.m.Link",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Link",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "emphasized",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "press",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"handleLink(this)",
+																								""
+																							],
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "7",
+									"fieldName": "oFooterDetail",
+									"fieldParent": "3",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "8",
+											"fieldName": "Right",
+											"fieldParent": "7",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "c1beb5a1-b32c-46d6-a196-cb4ad30a17e7",
+													"fieldName": "oButtonMap",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var map = new google.maps.Map(document.getElementById('gmaps'), {",
+																"    center: new google.maps.LatLng(42.4992, -94.02181),",
+																"    zoom: 7,",
+																"    mapTypeId: 'roadmap',",
+																"    // zoomControl: boolean,",
+																"    mapTypeControl: false,",
+																"    // scaleControl: boolean,",
+																"    streetViewControl: false,",
+																"    // rotateControl: boolean,",
+																"    fullscreenControl: false,",
+																"    styles: [{",
+																"        featureType: \"poi\",",
+																"        stylers: [{",
+																"            visibility: \"off\"",
+																"        }]",
+																"    }]",
+																"});",
+																"",
+																"navigator.geolocation.getCurrentPosition(function(e) {",
+																"    console.log(e);",
+																"});",
+																"",
+																"var marker = new google.maps.Marker({",
+																"",
+																"    position: new google.maps.LatLng(42.4992, -94.02181),",
+																"    map: map,",
+																"    animation: google.maps.Animation.DROP",
+																"    // label: {",
+																"    //     text: terminal.text,",
+																"    //     fontWeight: 'bold',",
+																"    //     color: '#333'",
+																"    // },",
+																"    // icon: {",
+																"    //     url: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png',",
+																"    //     labelOrigin: new google.maps.Point(40, 50),",
+																"    //     anchor: new google.maps.Point(0, 0),",
+																"    // }",
+																"",
+																"}).addListener('click', function() {",
+																"",
+																"",
+																"});",
+																"",
+																"// var origin      = new google.maps.LatLng(oriLat, oriLng);",
+																"// var destination = new google.maps.LatLng(desLat, desLng);",
+																"",
+																"// var service = new google.maps.DistanceMatrixService();",
+																"",
+																"// service.getDistanceMatrix({",
+																"//     origins: [origin],",
+																"//     destinations: [destination],",
+																"//     travelMode: 'DRIVING'",
+																"//     // transitOptions: TransitOptions,",
+																"//     // drivingOptions: DrivingOptions,",
+																"//     // unitSystem: UnitSystem,",
+																"//     // avoidHighways: Boolean,",
+																"//     // avoidTolls: Boolean,",
+																"",
+																"// }, function(response, status) {",
+																"",
+																"",
+																"// });"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "9",
+													"fieldName": "butApprove",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Approve",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "10",
+													"fieldName": "butReject",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Reject",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Reject",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "11",
+													"fieldName": "butEmp",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "12",
+													"fieldName": "butTransp",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "dbc7b7a6-0f93-4fc3-f553-4dcbabad9b48",
+					"fieldName": "oJavascript",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "694ab533-42ed-4692-f458-b38ad5081411",
+					"fieldName": "onInit",
+					"fieldParent": 99999,
+					"fieldType": "neptune.event.oninit",
+					"script": [
+						"==OBJECT STRING==",
+						"// barDetail.setHeight('500px');",
+						"// oIconTabFilter1.setHeight('500px');",
+						"// oHTMLObject.setHeight('500px');"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "50120a32-907b-407f-8912-0539719324a1",
+					"fieldName": "ContactsAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "107e345f-f7d3-4caa-801c-858d030a8960",
+					"restOperation": "f4f44b63-a1be-4263-9c9a-c4745085de1f",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "1f045892-db3a-47e1-a151-fed3147a8700",
+							"modelFieldNo": "14"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setAutoRefresh",
+							"grouping": "Model",
+							"value": "true",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "4d016a79-e04a-4990-a430-bf96b68fa2f8",
+					"fieldName": "CompanyAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "107e345f-f7d3-4caa-801c-858d030a8960",
+					"restOperation": "261011e4-ee4e-4f2e-8f99-da190f58a116",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "72839400-14d3-4c9b-8829-992a8107bfa9",
+							"modelFieldNo": "1506b79f-2f85-48f0-a9e6-98e6182f8141"
+						}
+					],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "18.9.18.1140",
+	"application": "testdemo",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": null,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": [
+		"==OBJECT STRING==",
+		"<script async defer src=\"https://maps.googleapis.com/maps/api/js?key=<YOUR_KEY>\" type=\"text/javascript\"></script>",
+		""
+	],
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": [
+		{
+			"id": "107e345f-f7d3-4caa-801c-858d030a8960",
+			"name": "Contacts API 2",
+			"ver": "18.11.12.933",
+			"updatedAt": "2018-11-12T08:33:23.000Z",
+			"changedBy": "oah"
+		}
+	]
+}

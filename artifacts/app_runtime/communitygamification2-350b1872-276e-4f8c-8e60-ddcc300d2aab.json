@@ -1,0 +1,3459 @@
+{
+	"id": "350b1872-276e-4f8c-8e60-ddcc300d2aab",
+	"createdAt": "2018-11-27T08:21:38.000Z",
+	"updatedAt": "2019-06-03T07:58:24.000Z",
+	"createdBy": "nils",
+	"changedBy": "nils",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "appWidthLimited",
+					"grouping": "Properties",
+					"value": "false",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "2",
+					"fieldName": "oApp",
+					"fieldParent": "1",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "4",
+							"fieldName": "oPage",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Community Stats",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "showSubHeader",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "showHeader",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "showFooter",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableScrolling",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "dff6712a-a549-41d6-a375-8c82a493104d",
+									"fieldName": "toolbarMain",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Toolbar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "enableCompactMode",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "design",
+											"grouping": "Properties",
+											"value": "Transparent",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "HeaderToolbar",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "console.log(\"hello world\");",
+											"script": "console.log(\"hello world\");",
+											"translation": []
+										},
+										{
+											"attribute": "style",
+											"grouping": "Properties",
+											"value": "Clear",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "69167395-4c6c-43ec-91e5-2203792c01f5",
+											"fieldName": "showUserList",
+											"fieldParent": "dff6712a-a549-41d6-a375-8c82a493104d",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://fa-solid/users",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"if (!layoutUserList.getResizable()) {",
+														"    layoutUserList.setResizable(true);",
+														"    layoutUserList.setSize(\"20%\");",
+														"    toolbarUserlist.setVisible(true);",
+														"} else {",
+														"    layoutUserList.setResizable(false);",
+														"    layoutUserList.setSize(\"0%\");",
+														"    toolbarUserlist.setVisible(false);",
+														"}",
+														"// if (layoutUserInfo.getResizable()) {",
+														"//     layoutUserInfo.setResizable(false);",
+														"//     layoutUserInfo.setSize(\"0%\");",
+														"// }"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "2defb87e-eb1b-4fdc-c7d3-8a2fede20471",
+											"fieldName": "showGeneralStats",
+											"fieldParent": "dff6712a-a549-41d6-a375-8c82a493104d",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://bar-chart",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"if (!layoutGeneralStats.getResizable()) {",
+														"    layoutGeneralStats.setResizable(true);",
+														"    layoutGeneralStats.setSize(\"100%\");",
+														"}",
+														"if (layoutUserInfo.getResizable()) {",
+														"    layoutUserInfo.setResizable(false);",
+														"    layoutUserInfo.setSize(\"0%\");",
+														"}",
+														"updateGeneralData();"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+									"fieldName": "toolbarUserlist",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Toolbar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "stickytoolbar",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "enableCompactMode",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "HeaderToolbar",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "bc2b5b2e-8d51-4696-85ed-720ba8d12f6f",
+											"fieldName": "oSearchField",
+											"fieldParent": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+											"fieldType": "sap.m.SearchField",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "width",
+													"grouping": "Properties",
+													"value": "35%",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "liveChange",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"var binding = userList.getBinding(\"items\");",
+														"",
+														"var filter = new sap.ui.model.Filter({",
+														"    filters: [",
+														"        new sap.ui.model.Filter(\"name\", \"Contains\", this.getValue()),",
+														"        new sap.ui.model.Filter(\"tagline\", \"Contains\", this.getValue())",
+														"    ],",
+														"    and: false",
+														"});",
+														"binding.filter([filter]);",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "714af399-f482-42b2-8967-7d48057bf12a",
+											"fieldName": "oToolbarSeparator",
+											"fieldParent": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+											"fieldType": "sap.m.ToolbarSeparator",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "434e65f2-f991-41de-a75e-0e34d8ff65e4",
+											"fieldName": "butSortName",
+											"fieldParent": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://alphabetical-order",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"var binding = userList.getBinding(\"items\");",
+														"",
+														"let appliedSorters = binding.aSorters;",
+														"let nextSort = false; ",
+														"",
+														"appliedSorters.forEach(sorter => {",
+														"    if(sorter.sPath === \"name\"){",
+														"        nextSort = ! sorter.bDescending;",
+														"    }",
+														"});",
+														"",
+														"var oSorter = new sap.ui.model.Sorter(\"name\", nextSort, false);",
+														"binding.sort(oSorter);",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "b54c20de-c501-431a-e2ad-5f0632e64eeb",
+											"fieldName": "butSortScore",
+											"fieldParent": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://number-sign",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"var binding = userList.getBinding(\"items\");",
+														"",
+														"let appliedSorters = binding.aSorters;",
+														"let nextSort = true; ",
+														"",
+														"appliedSorters.forEach(sorter => {",
+														"    if(sorter.sPath === \"scoreDisplay\"){",
+														"        nextSort = ! sorter.bDescending;",
+														"    }",
+														"});",
+														"",
+														"",
+														"var oSorter = new sap.ui.model.Sorter(\"scoreDisplay\", nextSort, false);",
+														"binding.sort(oSorter);",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "4dea317f-bef2-49f0-81d8-fdc9e532c3bb",
+											"fieldName": "oToolbarSpacer",
+											"fieldParent": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+											"fieldType": "sap.m.ToolbarSpacer",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "886dd5e2-1d03-45d2-ca4f-4839ca6ede6d",
+											"fieldName": "segButTime",
+											"fieldParent": "904802bf-5a0a-45ee-9a38-94726e5fb3b4",
+											"fieldType": "sap.m.SegmentedButton",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "selectedKey",
+													"grouping": "Properties",
+													"value": "all",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "select",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"",
+														"if (oEvent.getParameters().id === \"segButTime6M-button\") {",
+														"",
+														"    changeScoreValue(\"scoreLastSixMonths\");",
+														"    //userListItem.setNumber(\"{scoreLastSixMonths}\");",
+														"    //userList.bindAggregation(\"items\",\"/\",userListItem);",
+														"} else if (oEvent.getParameters().id === \"segButTime1M-button\") {",
+														"    changeScoreValue(\"scoreCurrentMonth\");",
+														"",
+														"} else if (oEvent.getParameters().id === \"segButTimeAll-button\") {",
+														"    changeScoreValue(\"score\");",
+														"",
+														"}",
+														"//console.log(modeluserList.oData);",
+														""
+													],
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "4ba2ba46-b342-4df7-fa6c-9ac584cd1ee5",
+													"fieldName": "segButTimeAll",
+													"fieldParent": "886dd5e2-1d03-45d2-ca4f-4839ca6ede6d",
+													"fieldType": "sap.m.SegmentedButtonItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "All",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "key",
+															"grouping": "Properties",
+															"value": "all",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "0d196a27-3924-47a7-fe3c-c918b7dcd201",
+													"fieldName": "segButTime6M",
+													"fieldParent": "886dd5e2-1d03-45d2-ca4f-4839ca6ede6d",
+													"fieldType": "sap.m.SegmentedButtonItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "6 Months",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "key",
+															"grouping": "Properties",
+															"value": "last6Months",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "3116d0a7-1ca3-4d25-a857-6761c874ebd2",
+													"fieldName": "segButTime1M",
+													"fieldParent": "886dd5e2-1d03-45d2-ca4f-4839ca6ede6d",
+													"fieldType": "sap.m.SegmentedButtonItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Current Month",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "key",
+															"grouping": "Properties",
+															"value": "currentMonth",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "15a11c20-8a67-4b29-f7a7-ee4c1ac3cc52",
+									"fieldName": "oSplitter",
+									"fieldParent": "4",
+									"fieldType": "sap.ui.layout.Splitter",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "orientation",
+											"grouping": "Properties",
+											"value": "Vertical",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "670b2d47-7452-4276-8545-9bac418fa79c",
+											"fieldName": "oPanel1",
+											"fieldParent": "15a11c20-8a67-4b29-f7a7-ee4c1ac3cc52",
+											"fieldType": "sap.m.Panel",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "styleClassPadding",
+													"grouping": "Properties",
+													"value": "sapUiNoContentPadding",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "expandAnimation",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "true",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "f99bf7ef-ea49-47b6-8a03-ff709c8ac4c2",
+													"fieldName": "userList",
+													"fieldParent": "670b2d47-7452-4276-8545-9bac418fa79c",
+													"fieldType": "sap.m.List",
+													"bindingValue": "API comusers>comusers",
+													"bindingType": "h",
+													"bindingSource": "API",
+													"bindingParentID": "47a193b8-c8b6-474d-b8d7-63d3e174f0b5",
+													"bindingPathID": "249c46c1-242c-4c97-ddf1-751847835d81",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "mode",
+															"grouping": "Properties",
+															"value": "None",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "1c989e94-0765-4e54-8b09-024065b40963",
+															"fieldName": "userListItem",
+															"fieldParent": "f99bf7ef-ea49-47b6-8a03-ff709c8ac4c2",
+															"fieldType": "sap.m.ObjectListItem",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "type",
+																	"grouping": "Properties",
+																	"value": "Active",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "title",
+																	"grouping": "Properties",
+																	"value": "{name}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "number",
+																	"grouping": "Properties",
+																	"value": "{scoreDisplay}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "intro",
+																	"grouping": "Properties",
+																	"value": "{tagline}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "enableCompactMode",
+																	"grouping": "Properties",
+																	"value": "true",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"if (layoutGeneralStats.getResizable()) {",
+																		"    layoutGeneralStats.setResizable(false);",
+																		"    layoutGeneralStats.setSize(\"0%\");",
+																		"}",
+																		"",
+																		"if (!layoutUserInfo.getResizable()) {",
+																		"    layoutUserInfo.setResizable(true);",
+																		"    layoutUserInfo.setSize(\"80%\");",
+																		"}",
+																		"",
+																		"var data = oEvent.getSource().getBindingContext().getObject();",
+																		"",
+																		"modelblockUserInfoCell0.setData(data);",
+																		"",
+																		"var seriesData = [];",
+																		"if (data.scoreDisplayName === \"score\") {",
+																		"    seriesData = [data.blogsOwned, data.postsOwned, data.pageLikes, data.commentsOwned, data.commentLikes, data.likeCount, data.questionsAnswered, {",
+																		"        y: data.score,",
+																		"        color: colorScheme.slice(1, 2)[0]",
+																		"    }]",
+																		"    updateUserCompositionGraph(seriesData);",
+																		"} else if (data.scoreDisplayName === \"scoreLastSixMonths\") {",
+																		"    var tmp_data = JSON.parse(data.scoreCompositionLastSixMonths);",
+																		"    seriesData = [tmp_data.blogsOwned, tmp_data.postsOwned, tmp_data.pageLikes, tmp_data.commentsOwned,",
+																		"        tmp_data.commentLikes, tmp_data.likeCount, tmp_data.questionsAnswered, {",
+																		"            y: data.scoreLastSixMonths,",
+																		"            color: colorScheme.slice(1, 2)[0]",
+																		"        }",
+																		"    ]",
+																		"    updateUserCompositionGraph(seriesData);",
+																		"} else if (data.scoreDisplayName === \"scoreCurrentMonth\") {",
+																		"    const date = new Date();",
+																		"    var whereObj = {userid: Number(data.id), date: {\">\": new Date(date.getFullYear(), date.getMonth(), 1)}}",
+																		"    var options2 = {",
+																		"        parameters: {",
+																		"            \"where\": JSON.stringify(whereObj),",
+																		"            //\"date\": '{\"startsWith\": '+new Date(date.getFullYear(), date.getMonth(), 1)+'}'//new Date(date.getFullYear(), date.getMonth(), 1)",
+																		"        }",
+																		"",
+																		"    };",
+																		"    //console.log(options);",
+																		"    apiapiUserCurrentMonth(options2).then(xhr => {",
+																		"        console.log(\"XHR: \", xhr);",
+																		"        var tmp_data = JSON.parse(xhr[0].composition);",
+																		"        console.log(\"COMPOSITION: \", tmp_data);",
+																		"        seriesData = [tmp_data.blogsOwned, tmp_data.postsOwned, tmp_data.pageLikes, tmp_data.commentsOwned,",
+																		"            tmp_data.commentLikes, tmp_data.likeCount, tmp_data.questionsAnswered, {",
+																		"                y: Number(xhr[0].score),",
+																		"                color: colorScheme.slice(1, 2)[0]",
+																		"            }",
+																		"        ]",
+																		"        ",
+																		"        updateUserCompositionGraph(seriesData);",
+																		"    });",
+																		"}",
+																		"",
+																		"function updateUserCompositionGraph(seriesData) {",
+																		"",
+																		"    setTimeout(function() {",
+																		"",
+																		"        //var totalScore = Math.ceil((data.blogsOwned + data.postsOwned + data.pageLikes / 1 + data.commentsOwned / 1 + data.commentLikes / 1 + data.likeCount/1 + data.questionsAnswered*2) / 7);",
+																		"        console.log(data);",
+																		"        chartUserScoreComposition.update({",
+																		"            chart: {",
+																		"                height: \"40%\"",
+																		"            },",
+																		"            title: {",
+																		"                text: 'Score Composition'",
+																		"            },",
+																		"            legend: {",
+																		"                enabled: false",
+																		"            },",
+																		"            column: {",
+																		"                colors: colorScheme.slice(0, 1)",
+																		"            },",
+																		"            colors: colorScheme.slice(0, 1),",
+																		"            xAxis: {",
+																		"                categories: [",
+																		"                    \"Created Blogs\",",
+																		"                    \"Created Posts\",",
+																		"                    \"Page Likes\",",
+																		"                    \"Given Comments\",",
+																		"                    \"Comment LIkes\",",
+																		"                    \"Followers\",",
+																		"                    \"Questions Answered\",",
+																		"                    \"Score\"",
+																		"                ],",
+																		"                crosshair: true,",
+																		"                lineWidth: 0,",
+																		"                minorGridLineWidth: 0,",
+																		"                tickWidth: 0,",
+																		"                lineColor: 'transparent',",
+																		"            },",
+																		"            yAxis: [{",
+																		"                    type: 'logarithmic',",
+																		"                    //min: 0,",
+																		"                    max: 100, //30,",
+																		"                    gridLineWidth: 0,",
+																		"                    minorGridLineWidth: 0,",
+																		"                    title: {",
+																		"                        text: \"Points\"",
+																		"                    }",
+																		"                },",
+																		"                // {",
+																		"                //     opposite: true,",
+																		"                //     min: 0,",
+																		"                //     max: 70, //30,",
+																		"                //     gridLineWidth: 0,",
+																		"                //     minorGridLineWidth: 0,",
+																		"                //     title: {",
+																		"                //         text: \"Score\"",
+																		"                //     }",
+																		"                // }",
+																		"            ],",
+																		"            // tooltip: {",
+																		"            //     headerFormat: '<span style=\"font-size:10px\">{point.key}</span><table>',",
+																		"            //     pointFormat: '<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>' +",
+																		"            //         '<td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>',",
+																		"            //     footerFormat: '</table>',",
+																		"            //     shared: true,",
+																		"            //     useHTML: true",
+																		"            // },",
+																		"            plotOptions: {",
+																		"                column: {",
+																		"                    pointPadding: 0.2,",
+																		"                    borderWidth: 0",
+																		"                }",
+																		"            },",
+																		"            series: [{",
+																		"                    yAxis: 0,",
+																		"                    name: 'Points',",
+																		"                    data: seriesData //[data.blogsOwned, data.postsOwned, data.pageLikes, data.commentsOwned, data.commentLikes, data.likeCount, data.questionsAnswered, {y:data.score, color: colorScheme.slice(1,2)[0]}]",
+																		"                },",
+																		"                // {",
+																		"                //     name: \"Score\",",
+																		"                //     yAxis: 1,",
+																		"                //     //type: \"column\",",
+																		"                //     data: [0,0,0,0,0,0,0,data.score]//{",
+																		"                //     //    y: data.score,",
+																		"                //     //    color: colorScheme.slice(1, 2)[0]",
+																		"                //     //}]",
+																		"                // }",
+																		"            ]",
+																		"        });",
+																		"",
+																		"        chartUserScoreComposition.reflow();",
+																		"    }, 100);",
+																		"}",
+																		"",
+																		"",
+																		"",
+																		"",
+																		"/**",
+																		" * Name: API compages",
+																		" * Description: ",
+																		" * ",
+																		" * Path: /compages",
+																		" * Method: GET",
+																		" * ",
+																		" * Parameters:",
+																		" * where - Optional parameter ",
+																		" * Example: Equals: { \"column\": \"value\" }",
+																		"Not equal: { \"column\": { \"!=\": \"value\" } }",
+																		"",
+																		" * select - Optional parameter ",
+																		" * Example: column1,column2,column3",
+																		" * limit - Optional parameter ",
+																		" * skip - Optional parameter ",
+																		" * sort - Optional parameter ",
+																		" * ",
+																		" */",
+																		"var options = {",
+																		"    parameters: {",
+																		"        \"where\": '{\"ownerId\": ' + data.id + '}', // Optional ",
+																		"        \"select\": \"\", // Optional ",
+																		"        \"limit\": \"\", // Optional ",
+																		"        \"skip\": \"\", // Optional ",
+																		"        \"sort\": \"\" // Optional ",
+																		"    }",
+																		"};",
+																		"",
+																		"let formattedPages = [];",
+																		"",
+																		"",
+																		"",
+																		"apiapiComPages(options).then(xhr => {",
+																		"    formattedPages = xhr.map(row => { // .responseJSON",
+																		"        //console.log(row);",
+																		"        const pageId = pageIdMapping(row.pageTypeId)",
+																		"        tmp = {",
+																		"            pageTypeId: row.pageTypeId,",
+																		"            createDate: row.createDate,",
+																		"            type: pageId,",
+																		"            likeCount: row.likeCount,",
+																		"            title: row.title,",
+																		"            enableLink: pageId === \"Other Page\" ? false : true",
+																		"        };",
+																		"        return tmp;",
+																		"    });",
+																		"    modeltableUserLatest.setData(formattedPages.reverse());",
+																		"});",
+																		"",
+																		"// apiapiComComments(options).then(xhr => {",
+																		"//     formattedPages = xhr.map(row => { // .responseJSON",
+																		"//         console.log(\"Comments: \", row);",
+																		"//         tmp = {",
+																		"//             createDate: row.createDate,",
+																		"//             type: \"Page\",",
+																		"//             likeCount: row.likeCount,",
+																		"//             title: row.title",
+																		"//         };",
+																		"//         return tmp;",
+																		"//     });",
+																		"//     modeltableUserLatest.setData(formattedPages);",
+																		"// });",
+																		"",
+																		"",
+																		"",
+																		"",
+																		"// console.log(formattedPages);"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "0749aaa9-6fd8-4c99-843b-87108785cd0e",
+											"fieldName": "panelGeneralStats",
+											"fieldParent": "15a11c20-8a67-4b29-f7a7-ee4c1ac3cc52",
+											"fieldType": "sap.m.Panel",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "enableCompactMode",
+													"grouping": "Properties",
+													"value": "false",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "07db2839-f290-4e62-d85e-f0bae4f7f83c",
+													"fieldName": "toolbarGeneralStats",
+													"fieldParent": "0749aaa9-6fd8-4c99-843b-87108785cd0e",
+													"fieldType": "sap.m.Toolbar",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "position",
+															"grouping": "Parent",
+															"value": "HeaderToolbar",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "a85e44de-553b-4d81-fdfa-df4db334bb94",
+															"fieldName": "dateRangeGeneralStats",
+															"fieldParent": "07db2839-f290-4e62-d85e-f0bae4f7f83c",
+															"fieldType": "sap.m.DateRangeSelection",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "40%",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "displayFormat",
+																	"grouping": "Properties",
+																	"value": "yyyy-MM-dd",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "delimiter",
+																	"grouping": "Properties",
+																	"value": "\"/\"",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "change",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"console.log(this._lastValue);",
+																		"",
+																		"const splitDate = this._lastValue.replace(\" \", \"\").split(\"/\");",
+																		"let lowerDateBound = splitDate[0];",
+																		"let upperDateBound = splitDate[1];",
+																		"",
+																		"",
+																		"var options = {",
+																		"    parameters: {//'{\"Date\": {\">\": \"2018-11-01\", \"<\": \"2018-12-01\"}}'",
+																		"        \"where\": '{\"Date\": {\">\": \"' + lowerDateBound + '\", \"<\": \"'+upperDateBound+'\"}}', // Optional ",
+																		"        \"select\": \"\", // Optional ",
+																		"        \"limit\": \"\", // Optional ",
+																		"        \"skip\": \"\", // Optional ",
+																		"        \"sort\": \"\" // Optional ",
+																		"    }",
+																		"};",
+																		"",
+																		"apiapiComGeneral(options).then(function(result) {",
+																		"    modelgeneralStats.setData(result)",
+																		"    updateGeneralData();",
+																		"})",
+																		"",
+																		"",
+																		"",
+																		"",
+																		"",
+																		"// function asyncFunction() {",
+																		"//     return new Promise(function(resole, reject) {",
+																		"//       setTimeout(function() {",
+																		"//           resolve();",
+																		"//       }, 5000);",
+																		"//     });",
+																		"// }",
+																		"",
+																		"// asyncFunction().then(function() {",
+																		"//     // 5seconds has past;",
+																		"// })",
+																		"",
+																		"",
+																		"// var dataPromises = [];",
+																		"// for (var i = 0; data.length; i++) {",
+																		"//     dataPromises.push(getDataAsync(i));",
+																		"// }",
+																		"",
+																		"// Promise.all(dataPromises).then(function(allData) {",
+																		"    ",
+																		"// }).catch(function(error) {",
+																		"    ",
+																		"// })",
+																		"",
+																		"// function getDataAsync(i) {",
+																		"//     return Promise.resolve();",
+																		"// }",
+																		"",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "6f91a89b-3b69-4f48-e896-5a170844ece0",
+															"fieldName": "toolbarGSSpacer",
+															"fieldParent": "07db2839-f290-4e62-d85e-f0bae4f7f83c",
+															"fieldType": "sap.m.ToolbarSpacer",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": []
+														},
+														{
+															"fieldNo": "1c2d6ca4-29f6-4301-a7d4-606332b07bea",
+															"fieldName": "butGeneralStatsAll",
+															"fieldParent": "07db2839-f290-4e62-d85e-f0bae4f7f83c",
+															"fieldType": "sap.m.Button",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "See all",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "icon",
+																	"grouping": "Properties",
+																	"value": "sap-icon://show",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"",
+																		"var options = {",
+																		"    parameters: {",
+																		"        \"where\": \"\", // Optional ",
+																		"        \"select\": \"\", // Optional ",
+																		"        \"limit\": \"\", // Optional ",
+																		"        \"skip\": \"\", // Optional ",
+																		"        \"sort\": \"\" // Optional ",
+																		"    }",
+																		"};",
+																		"",
+																		"apiapiComGeneral(options).then(function(result) {",
+																		"    modelgeneralStats.setData(result);",
+																		"    updateGeneralData();",
+																		"});",
+																		"",
+																		"dateRangeGeneralStats.setValue(\"\")"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "15357766-14b2-4711-98c1-c111a9d6b91e",
+															"fieldName": "butGeneralStatsLastMonth",
+															"fieldParent": "07db2839-f290-4e62-d85e-f0bae4f7f83c",
+															"fieldType": "sap.m.Button",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "30 Days",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "icon",
+																	"grouping": "Properties",
+																	"value": "sap-icon://fa-solid/calendar",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"let lowerDateBound = getTodaysDate(30);",
+																		"console.log(lowerDateBound);",
+																		"var options = {",
+																		"    parameters: {",
+																		"        \"where\": '{\"Date\": {\">\": \"' + lowerDateBound + '\"}}', // Optional ",
+																		"        \"select\": \"\", // Optional ",
+																		"        \"limit\": \"\", // Optional ",
+																		"        \"skip\": \"\", // Optional ",
+																		"        \"sort\": \"\" // Optional ",
+																		"    }",
+																		"};",
+																		"",
+																		"apiapiComGeneral(options).then(function(result) {",
+																		"    modelgeneralStats.setData(result);",
+																		"    updateGeneralData();",
+																		"});",
+																		"",
+																		"dateRangeGeneralStats.setValue(\"\")"
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "475b762f-c4bd-4db9-e26f-0d8a59413685",
+															"fieldName": "checkAggregation",
+															"fieldParent": "07db2839-f290-4e62-d85e-f0bae4f7f83c",
+															"fieldType": "sap.m.CheckBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Aggregate",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "enableCompactMode",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "select",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"let alldata = modelgeneralStats.oData;",
+																		"",
+																		"if (this.getSelected()) {",
+																		"",
+																		"    let sumUsers = 0;",
+																		"    let sumComments = 0;",
+																		"    let sumPages = 0;",
+																		"    let dates = [];",
+																		"",
+																		"",
+																		"",
+																		"    for (let i = 0; i < alldata.length; i++) {",
+																		"        if (i === 0 || i === alldata.length - 1) {",
+																		"            dates.push(alldata[i].Date);",
+																		"        }",
+																		"        sumUsers += alldata[i].NewUsers;",
+																		"        sumPages += alldata[i].NewPages;",
+																		"        sumComments += alldata[i].NewComments;",
+																		"    }",
+																		"",
+																		"    chartLatestActivity.update({",
+																		"        title: {",
+																		"            text: \"Aggregation: \" + dates[0] + \" / \" + dates[1]",
+																		"        }, //Number(newPages.slice(-1)[0] + newUsers.slice(-1)[0] +  newComments.slice(-1)[0])",
+																		"",
+																		"        series: [{",
+																		"            data: [{",
+																		"                    name: \"Pages\",",
+																		"                    y: sumPages",
+																		"                },",
+																		"                {",
+																		"                    name: \"Users\",",
+																		"                    y: sumUsers",
+																		"                },",
+																		"                {",
+																		"                    name: \"Comments\",",
+																		"                    y: sumComments",
+																		"                }",
+																		"            ]",
+																		"        }]",
+																		"    });",
+																		"",
+																		"} else {",
+																		"    let formattedLastDate = alldata.slice(-1)[0].Date.split(\"-\");",
+																		"    formattedLastDate = formattedLastDate[2] + \".\" + formattedLastDate[1] + \".\" + formattedLastDate[0];",
+																		"    //console.log(newPages.slice(-1), newUsers.slice(-1), newComments.slice(-1));",
+																		"",
+																		"    chartLatestActivity.update({",
+																		"        title: {",
+																		"            text: \"Latest Activity on \" + formattedLastDate",
+																		"        }, //Number(newPages.slice(-1)[0] + newUsers.slice(-1)[0] +  newComments.slice(-1)[0])",
+																		"",
+																		"        series: [{",
+																		"            data: [{",
+																		"                    name: \"Pages\",",
+																		"                    y: alldata.slice(-1)[0].NewPages //newPages.slice(-1)[0]",
+																		"                },",
+																		"                {",
+																		"                    name: \"Users\",",
+																		"                    y: alldata.slice(-1)[0].NewUsers",
+																		"                },",
+																		"                {",
+																		"                    name: \"Comments\",",
+																		"                    y: alldata.slice(-1)[0].NewComments",
+																		"                }",
+																		"            ]",
+																		"        }]",
+																		"    });",
+																		"}",
+																		"",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "828eb6e9-b9af-405c-ade9-5611de12d503",
+													"fieldName": "blockGeneralStats",
+													"fieldParent": "0749aaa9-6fd8-4c99-843b-87108785cd0e",
+													"fieldType": "sap.ui.layout.BlockLayout",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "background",
+															"grouping": "Properties",
+															"value": "Dashboard",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "1d344282-1599-4c8b-f791-d88b8c5fdefe",
+															"fieldName": "blockGeneralStatsRowIntro",
+															"fieldParent": "828eb6e9-b9af-405c-ade9-5611de12d503",
+															"fieldType": "sap.ui.layout.BlockLayoutRow",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "8ba4a814-0f7d-4279-cabd-1fd19b0fe62d",
+																	"fieldName": "blockGeneralStatsCellIntro",
+																	"fieldParent": "1d344282-1599-4c8b-f791-d88b8c5fdefe",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "title",
+																			"grouping": "Properties",
+																			"value": "Welcome",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "ecfd3d27-0e42-4054-dbb6-544e379e2c67",
+																			"fieldName": "oFormattedText",
+																			"fieldParent": "8ba4a814-0f7d-4279-cabd-1fd19b0fe62d",
+																			"fieldType": "sap.m.FormattedText",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "htmlText",
+																					"grouping": "Properties",
+																					"value": "Welcome to our Community statistics page! We use the openly available API of our community to provide you an overview of what's going on. Feel free to explore! <br><br> Built with Neptune DX",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"fieldNo": "88e53c25-637a-4f07-a60f-5770147d33c2",
+															"fieldName": "blockGeneralStatsRow0",
+															"fieldParent": "828eb6e9-b9af-405c-ade9-5611de12d503",
+															"fieldType": "sap.ui.layout.BlockLayoutRow",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "ee77276b-038f-4a1f-e601-2165a6bb3a0b",
+																	"fieldName": "blockGeneralStatsCell0",
+																	"fieldParent": "88e53c25-637a-4f07-a60f-5770147d33c2",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "34b7efae-11d3-4c1d-b6aa-8c44e8e5c902",
+																			"fieldName": "chartNewUsers",
+																			"fieldParent": "ee77276b-038f-4a1f-e601-2165a6bb3a0b",
+																			"fieldType": "neptune.chart.highchart",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "title.text",
+																					"grouping": "Properties",
+																					"value": "Number of New Users",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "legend.enable",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "5f3efe78-fbf6-43c5-9f6e-ca6b59afd086",
+																					"fieldName": "yAxisNewUsers",
+																					"fieldParent": "34b7efae-11d3-4c1d-b6aa-8c44e8e5c902",
+																					"fieldType": "neptune.chart.yaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "allowDecimals",
+																							"grouping": "Properties",
+																							"value": "false",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "ebf17baa-34fb-4b85-8cd8-bb4b7122af57",
+																					"fieldName": "xAxisNewUsers",
+																					"fieldParent": "34b7efae-11d3-4c1d-b6aa-8c44e8e5c902",
+																					"fieldType": "neptune.chart.xaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "c3d2dc6d-aa41-4eef-cc32-67b2a2789858",
+																					"fieldName": "splineNewUsers",
+																					"fieldParent": "34b7efae-11d3-4c1d-b6aa-8c44e8e5c902",
+																					"fieldType": "neptune.chart.series.spline",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "aa5b8b29-29fb-48b4-e5e3-36e895e3ba60",
+																	"fieldName": "blockGeneralStatsCell1",
+																	"fieldParent": "88e53c25-637a-4f07-a60f-5770147d33c2",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "99ff3172-f649-41e6-9d90-7beba16dd0b5",
+																			"fieldName": "chartLatestActivity",
+																			"fieldParent": "aa5b8b29-29fb-48b4-e5e3-36e895e3ba60",
+																			"fieldType": "neptune.chart.highchart",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "title.text",
+																					"grouping": "Properties",
+																					"value": "Latest Activity",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "chart.reflow",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "ab0062b7-ac2b-4d51-d105-495e074625d1",
+																					"fieldName": "pieLatestActivity",
+																					"fieldParent": "99ff3172-f649-41e6-9d90-7beba16dd0b5",
+																					"fieldType": "neptune.chart.series.pie",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "click",
+																							"grouping": "Events",
+																							"value": "debugger;",
+																							"script": "debugger;",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "bc3643fc-bcb0-43c1-ad6b-66f140a0da5a",
+																					"fieldName": "yAxisLatestActivity",
+																					"fieldParent": "99ff3172-f649-41e6-9d90-7beba16dd0b5",
+																					"fieldType": "neptune.chart.yaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "596f0af7-8ad9-4698-ec54-c98a173daae6",
+																					"fieldName": "xAxisLatestActivity",
+																					"fieldParent": "99ff3172-f649-41e6-9d90-7beba16dd0b5",
+																					"fieldType": "neptune.chart.xaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"fieldNo": "b14dd543-9922-4aaa-9e32-428345656627",
+															"fieldName": "blockGeneralStatsRow1",
+															"fieldParent": "828eb6e9-b9af-405c-ade9-5611de12d503",
+															"fieldType": "sap.ui.layout.BlockLayoutRow",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "610a1ee3-ffa7-484e-ae67-30c21dd66ec3",
+																	"fieldName": "blockGeneralStatsCell2",
+																	"fieldParent": "b14dd543-9922-4aaa-9e32-428345656627",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "acaec64f-fdba-4932-9d5b-00d2b695d9e6",
+																			"fieldName": "chartNewComments",
+																			"fieldParent": "610a1ee3-ffa7-484e-ae67-30c21dd66ec3",
+																			"fieldType": "neptune.chart.highchart",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "title.text",
+																					"grouping": "Properties",
+																					"value": "Number of New Comments",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "legend.enable",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "90943d4e-5030-462d-dbcd-301d4efebfd5",
+																					"fieldName": "yAxisNewComments",
+																					"fieldParent": "acaec64f-fdba-4932-9d5b-00d2b695d9e6",
+																					"fieldType": "neptune.chart.yaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "6821d4f0-cebf-4052-e991-200ddf204a5e",
+																					"fieldName": "xAxisNewComments",
+																					"fieldParent": "acaec64f-fdba-4932-9d5b-00d2b695d9e6",
+																					"fieldType": "neptune.chart.xaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "94a18943-7f73-477f-ede6-41b60be999d6",
+																					"fieldName": "splineNewComments",
+																					"fieldParent": "acaec64f-fdba-4932-9d5b-00d2b695d9e6",
+																					"fieldType": "neptune.chart.series.spline",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "9b073bb3-60b2-4bbd-93fb-d13f57129b77",
+																	"fieldName": "blockGeneralStatsCell3",
+																	"fieldParent": "b14dd543-9922-4aaa-9e32-428345656627",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "backgroundColorSet",
+																			"grouping": "Properties",
+																			"value": "ColorSet1",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "c8ccb5e1-644b-47a8-c183-dfd06baaafa5",
+																			"fieldName": "chartNewPages",
+																			"fieldParent": "9b073bb3-60b2-4bbd-93fb-d13f57129b77",
+																			"fieldType": "neptune.chart.highchart",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "title.text",
+																					"grouping": "Properties",
+																					"value": "Number of New Pages",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "marginTop",
+																					"grouping": "Properties",
+																					"value": "1em",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "legend.enable",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "3ba1ead2-53b2-417c-8ac4-07477901a7c1",
+																					"fieldName": "yAxisNewPages",
+																					"fieldParent": "c8ccb5e1-644b-47a8-c183-dfd06baaafa5",
+																					"fieldType": "neptune.chart.yaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "3cdf6789-24fd-4aea-b731-d89f3c834fbb",
+																					"fieldName": "xAxisNewPages",
+																					"fieldParent": "c8ccb5e1-644b-47a8-c183-dfd06baaafa5",
+																					"fieldType": "neptune.chart.xaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "8319f022-4084-4876-e83c-9cae7bd717cd",
+																					"fieldName": "splineNewPages",
+																					"fieldParent": "c8ccb5e1-644b-47a8-c183-dfd06baaafa5",
+																					"fieldType": "neptune.chart.series.spline",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "00dd44c8-5049-4d87-8146-63fa978c0bd2",
+											"fieldName": "panelUserInfo",
+											"fieldParent": "15a11c20-8a67-4b29-f7a7-ee4c1ac3cc52",
+											"fieldType": "sap.m.Panel",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "ad67db38-692d-4dd8-b711-04f699af71ea",
+													"fieldName": "blockUserInfo",
+													"fieldParent": "00dd44c8-5049-4d87-8146-63fa978c0bd2",
+													"fieldType": "sap.ui.layout.BlockLayout",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "background",
+															"grouping": "Properties",
+															"value": "Dashboard",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "d5747f20-ecd3-43ad-c001-d8360bc557f0",
+															"fieldName": "blockUserInfoRow0",
+															"fieldParent": "ad67db38-692d-4dd8-b711-04f699af71ea",
+															"fieldType": "sap.ui.layout.BlockLayoutRow",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "20a0d6ee-e8cd-4010-d46c-2f1fc187ea6e",
+																	"fieldName": "blockUserInfoCell0",
+																	"fieldParent": "d5747f20-ecd3-43ad-c001-d8360bc557f0",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"bindingValue": "Generic Object",
+																	"bindingType": "u",
+																	"bindingSource": "P9",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "title",
+																			"grouping": "Properties",
+																			"value": "{/name}",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "5f343ede-e03a-4569-fbe1-5fb549a3bce1",
+																			"fieldName": "oHBox",
+																			"fieldParent": "20a0d6ee-e8cd-4010-d46c-2f1fc187ea6e",
+																			"fieldType": "sap.m.HBox",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "justifyContent",
+																					"grouping": "Properties",
+																					"value": "Start",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "alignItems",
+																					"grouping": "Properties",
+																					"value": "Start",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "alignContent",
+																					"grouping": "Properties",
+																					"value": "Start",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "d165db04-5b7c-4eef-f539-8d1a1c1cb313",
+																					"fieldName": "imgProfilePicture",
+																					"fieldParent": "5f343ede-e03a-4569-fbe1-5fb549a3bce1",
+																					"fieldType": "sap.m.Image",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "width",
+																							"grouping": "Properties",
+																							"value": "30%",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "styleClassMargin",
+																							"grouping": "Properties",
+																							"value": "sapUiNoMargin",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "src",
+																							"grouping": "Properties",
+																							"value": "{/profilePicture}",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "decorative",
+																							"grouping": "Properties",
+																							"value": "false",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "src",
+																							"grouping": "Formatter",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"if (typeof profilePicture === \"undefined\" || profilePicture === null || profilePicture === \"\") { return; }  \r",
+																								"var formattedText = profilePicture;\r",
+																								"if(!formattedText.startsWith(\"https\")){\r",
+																								"    formattedText = \"https://community.neptune-software.com/\" + profilePicture;\r",
+																								"}\r",
+																								"return formattedText;"
+																							],
+																							"translation": []
+																						},
+																						{
+																							"attribute": "press",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"let uname = modelblockUserInfoCell0.oData.name;",
+																								"uname = uname.toLowerCase();",
+																								"uname = uname.replace(/[\\s-]/g, \"\");",
+																								"",
+																								"//\"àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ\"",
+																								"",
+																								"const accentedA = new RegExp(\"[àáâãå]\", \"g\");",
+																								"const accentedE = new RegExp(\"[èéêë]\", \"g\");",
+																								"const accentedO = new RegExp(\"[òóôõø]\", \"g\");",
+																								"const accentedU = new RegExp(\"[ùúû]\", \"g\");",
+																								"",
+																								"const accentedAE = new RegExp(\"[äæ]\", \"g\");",
+																								"const accentedUE = new RegExp(\"ü\", \"g\");",
+																								"const accentedOE = new RegExp(\"ö\", \"g\");",
+																								"const accentedSS = new RegExp(\"ß\", \"g\")",
+																								"",
+																								"uname = uname.replace(accentedA, \"a\");",
+																								"uname = uname.replace(accentedU, \"u\");",
+																								"uname = uname.replace(accentedO, \"o\");",
+																								"uname = uname.replace(accentedE, \"e\");",
+																								"",
+																								"uname = uname.replace(accentedAE, \"ae\");",
+																								"uname = uname.replace(accentedUE, \"ue\");",
+																								"uname = uname.replace(accentedOE, \"oe\");",
+																								"uname = uname.replace(accentedSS, \"ss\");",
+																								"",
+																								"console.log(uname);",
+																								"",
+																								"window.open(\"https://community.neptune-software.com/users/\"+uname);"
+																							],
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																					"fieldName": "formBasicUserInfo",
+																					"fieldParent": "5f343ede-e03a-4569-fbe1-5fb549a3bce1",
+																					"fieldType": "sap.ui.layout.form.SimpleForm",
+																					"bindingType": "u",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "styleClassMargin",
+																							"grouping": "Properties",
+																							"value": "sapUiNoMargin",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "layout",
+																							"grouping": "Properties",
+																							"value": "ResponsiveLayout",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "enableCompactMode",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "adjustLabelSpan",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "50436b17-6cf8-491c-cbe3-024217cfef5b",
+																							"fieldName": "labelcreateDate",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Contributor since",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "design",
+																									"grouping": "Properties",
+																									"value": "Bold",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "dfc8f0c8-92f1-48e5-a71e-35eebf9e9ee0",
+																							"fieldName": "textcreateDate",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{/createDate}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "text",
+																									"grouping": "Formatter",
+																									"value": "date:BrowserSetting",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "f8828add-55f9-40c3-c342-b3b1390a45bb",
+																							"fieldName": "labelScore",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Score",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "design",
+																									"grouping": "Properties",
+																									"value": "Bold",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "d16c6a84-51ff-424f-91da-2e156eaa4bb6",
+																							"fieldName": "textScore",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{/score}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "c0ee7cdd-32ef-4f67-b832-1cbf56a69fe1",
+																							"fieldName": "labelcreatedPages",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Owned Pages",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "design",
+																									"grouping": "Properties",
+																									"value": "Bold",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "0e590bfb-dc94-4de5-ebd5-9d7f2f9802b4",
+																							"fieldName": "textcreatedPages",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{/pagesOwned}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "338832b4-c666-476a-ea6b-7f0264cf7e89",
+																							"fieldName": "labelPageLikes",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Received Likes",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "design",
+																									"grouping": "Properties",
+																									"value": "Bold",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "2a32c13a-3539-4f95-d0c1-41778c2e68d0",
+																							"fieldName": "textPageLikes",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{/pageLikes}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "cc5c8b33-e394-4bab-b5ae-25d51f5bd209",
+																							"fieldName": "labelcreatedComments",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Owned Comments",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "design",
+																									"grouping": "Properties",
+																									"value": "Bold",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "cc3e00d7-d1a6-4d7a-e115-796a6e1226ef",
+																							"fieldName": "textcreatedComments",
+																							"fieldParent": "72056d3e-72c8-4778-fef1-cee95907ab5b",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{/commentsOwned}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "f65d6e8f-e459-46c2-f915-9dc6f09766c6",
+																	"fieldName": "blockUserInfoCell1",
+																	"fieldParent": "d5747f20-ecd3-43ad-c001-d8360bc557f0",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": [
+																		{
+																			"fieldNo": "36e52297-8b67-4963-b242-71998b7e1efc",
+																			"fieldName": "chartUserScoreComposition",
+																			"fieldParent": "f65d6e8f-e459-46c2-f915-9dc6f09766c6",
+																			"fieldType": "neptune.chart.highchart",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "legend.enable",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "95ff1e36-e21e-4ac3-855e-c2ad30083f07",
+																					"fieldName": "oxAxis",
+																					"fieldParent": "36e52297-8b67-4963-b242-71998b7e1efc",
+																					"fieldType": "neptune.chart.xaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "ddd01259-56fc-4f5b-c60d-07fa81c478e0",
+																					"fieldName": "oyAxis1",
+																					"fieldParent": "36e52297-8b67-4963-b242-71998b7e1efc",
+																					"fieldType": "neptune.chart.yaxis",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "40f107f4-f810-4237-9ca3-f0a62b389aa2",
+																					"fieldName": "oColumn",
+																					"fieldParent": "36e52297-8b67-4963-b242-71998b7e1efc",
+																					"fieldType": "neptune.chart.series.column",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"fieldNo": "a20530ee-a4d8-4120-cafd-f5a796f0457c",
+															"fieldName": "blockUserInfoRow1",
+															"fieldParent": "ad67db38-692d-4dd8-b711-04f699af71ea",
+															"fieldType": "sap.ui.layout.BlockLayoutRow",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [],
+															"data": [
+																{
+																	"fieldNo": "571bdd93-bf90-4e07-e8da-a11f0c91df09",
+																	"fieldName": "blockUserInfoCell2",
+																	"fieldParent": "a20530ee-a4d8-4120-cafd-f5a796f0457c",
+																	"fieldType": "sap.ui.layout.BlockLayoutCell",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "title",
+																			"grouping": "Properties",
+																			"value": "Latest Activity",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "1b26cfee-c0cd-4665-c993-969e19f1bca6",
+																			"fieldName": "blockUserLatestToolbar",
+																			"fieldParent": "571bdd93-bf90-4e07-e8da-a11f0c91df09",
+																			"fieldType": "sap.m.Toolbar",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "enableCompactMode",
+																					"grouping": "Properties",
+																					"value": "true",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "design",
+																					"grouping": "Properties",
+																					"value": "Transparent",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "position",
+																					"grouping": "Parent",
+																					"value": "HeaderToolbar",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "style",
+																					"grouping": "Properties",
+																					"value": "Clear",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "1bfc99d1-6601-4166-f93d-be33e4f6cbec",
+																					"fieldName": "oSearchField1",
+																					"fieldParent": "1b26cfee-c0cd-4665-c993-969e19f1bca6",
+																					"fieldType": "sap.m.SearchField",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "liveChange",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"// Set List Filter",
+																								"// Replace yourList with List Name, FIELD1/FIELD2 and replace FilterValue",
+																								"",
+																								"var binding = tableUserLatest.getBinding();",
+																								"",
+																								"var filter = new sap.ui.model.Filter(\"title\", \"Contains\", this.getValue());",
+																								"binding.filter([filter]);",
+																								"",
+																								""
+																							],
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "9a88cddf-db85-4169-b784-f189ae1481a8",
+																					"fieldName": "oToolbarSeparator1",
+																					"fieldParent": "1b26cfee-c0cd-4665-c993-969e19f1bca6",
+																					"fieldType": "sap.m.ToolbarSeparator",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "1e22ec2f-da1d-437d-b358-209601c4ffab",
+																					"fieldName": "butShowRecentPages",
+																					"fieldParent": "1b26cfee-c0cd-4665-c993-969e19f1bca6",
+																					"fieldType": "sap.m.Button",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Pages",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "icon",
+																							"grouping": "Properties",
+																							"value": "sap-icon://newspaper",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "press",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"",
+																								"var options = {",
+																								"    parameters: {",
+																								"        \"where\": '{\"ownerId\": ' + modelblockUserInfoCell0.oData.id + '}', // Optional ",
+																								"        \"select\": \"\", // Optional ",
+																								"        \"limit\": \"\", // Optional ",
+																								"        \"skip\": \"\", // Optional ",
+																								"        \"sort\": \"\" // Optional ",
+																								"    }",
+																								"};",
+																								"",
+																								"let formattedPages = [];",
+																								"",
+																								"",
+																								"",
+																								"apiapiComPages(options).then(xhr => {",
+																								"    formattedPages = xhr.map(row => { // .responseJSON",
+																								"        console.log(row);",
+																								"        tmp = {",
+																								"            pageTypeId: row.pageTypeId,",
+																								"            createDate: row.createDate,",
+																								"            type: pageIdMapping(row.pageTypeId),",
+																								"            likeCount: row.likeCount,",
+																								"            title: row.title,",
+																								"            enableLink: row.pageTypeId === 306 ? true: false ",
+																								"        };",
+																								"        return tmp;",
+																								"    });",
+																								"    modeltableUserLatest.setData(formattedPages.reverse());",
+																								"});",
+																								"",
+																								"// let formattedPages = [];",
+																								"",
+																								"",
+																								"// apiapiComPages(options).then(xhr => {",
+																								"//     formattedPages = xhr.map(row => { // .responseJSON",
+																								"//         console.log(row);",
+																								"//         tmp = {",
+																								"//             createDate: row.createDate,",
+																								"//             type: \"Page\",",
+																								"//             likeCount: row.likeCount,",
+																								"//             title: row.title",
+																								"//         };",
+																								"//         return tmp;",
+																								"//     });",
+																								"//     modeltableUserLatest.setData(formattedPages.reverse());",
+																								"// });"
+																							],
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "2c37d25f-1596-4b89-9a5d-a3932e6ed3a6",
+																					"fieldName": "butShowRecentComments",
+																					"fieldParent": "1b26cfee-c0cd-4665-c993-969e19f1bca6",
+																					"fieldType": "sap.m.Button",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Comments",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "icon",
+																							"grouping": "Properties",
+																							"value": "sap-icon://comment",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "press",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": [
+																								"==OBJECT STRING==",
+																								"",
+																								"var options = {",
+																								"    parameters: {",
+																								"        \"where\": '{\"ownerId\": ' + modelblockUserInfoCell0.oData.id + '}', // Optional ",
+																								"        \"select\": \"\", // Optional ",
+																								"        \"limit\": \"\", // Optional ",
+																								"        \"skip\": \"\", // Optional ",
+																								"        \"sort\": \"\" // Optional ",
+																								"    }",
+																								"};",
+																								"",
+																								"let formattedPages = [];",
+																								"",
+																								"",
+																								"apiapiComComments(options).then(xhr => {",
+																								"    formattedPages = xhr.map(row => { // .responseJSON",
+																								"        console.log(\"Comments: \", row);",
+																								"        let rowContent = row.content.replace(/\\n+/g, \" \").split(\" \").slice(0,14).join(\" \") + \"...\";",
+																								"        tmp = {",
+																								"            createDate: row.createDate,",
+																								"            type: \"Comment\",",
+																								"            likeCount: row.likeCount,",
+																								"            title: rowContent",
+																								"        };",
+																								"        return tmp;",
+																								"    });",
+																								"    modeltableUserLatest.setData(formattedPages.reverse());",
+																								"});",
+																								""
+																							],
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				}
+																			]
+																		},
+																		{
+																			"fieldNo": "04253451-6556-4470-aa65-de68a9b8da31",
+																			"fieldName": "tableUserLatest",
+																			"fieldParent": "571bdd93-bf90-4e07-e8da-a11f0c91df09",
+																			"fieldType": "sap.ui.table.Table",
+																			"bindingValue": "Generic Array",
+																			"bindingType": "h",
+																			"bindingSource": "P9",
+																			"script": "",
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "visibleRowCountMode",
+																					"grouping": "Properties",
+																					"value": "Auto",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "selectionMode",
+																					"grouping": "Properties",
+																					"value": "None",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "selectionBehavior",
+																					"grouping": "Properties",
+																					"value": "Row",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "enableSelectAll",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "enableColumnReordering",
+																					"grouping": "Properties",
+																					"value": "false",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "enableCellFilter",
+																					"grouping": "Properties",
+																					"value": "true",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "columnSelect",
+																					"grouping": "Events",
+																					"value": "Anonymous Function",
+																					"script": [
+																						"==OBJECT STRING==",
+																						"// oEvent.getSource().sort();// Set List Sorter",
+																						"if(oEvent.getParameters().column.getSortProperty() === \"\") return;",
+																						"oEvent.getParameters().column.sort();",
+																						"",
+																						"// var oSorter = new sap.ui.model.Sorter(oEvent.getParameters().column.getSortProperty(), false, false);",
+																						"// var binding = sap.ui.getCore().byId(\"tableUserLatest\").getBinding(\"name\");",
+																						"// binding.sort(oSorter);",
+																						""
+																					],
+																					"translation": []
+																				},
+																				{
+																					"attribute": "enableCompactMode",
+																					"grouping": "Properties",
+																					"value": "true",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "3575988d-13f8-4559-990f-ff4f5e2fe9be",
+																					"fieldName": "tableUserLatestColDATE",
+																					"fieldParent": "04253451-6556-4470-aa65-de68a9b8da31",
+																					"fieldType": "sap.ui.table.Column",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "width",
+																							"grouping": "Properties",
+																							"value": "10%",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "label",
+																							"grouping": "Properties",
+																							"value": "Date",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "sorted",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "sortProperty",
+																							"grouping": "Properties",
+																							"value": "createDate",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "sortOrder",
+																							"grouping": "Properties",
+																							"value": "Descending",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "b6b9717d-5c18-4f86-d3b1-1993812a88ba",
+																							"fieldName": "tableUserLatestTextDATE",
+																							"fieldParent": "3575988d-13f8-4559-990f-ff4f5e2fe9be",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{createDate}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						}
+																					]
+																				},
+																				{
+																					"fieldNo": "7904aa71-0a2b-4311-9df1-a45c9d09bbf3",
+																					"fieldName": "tableUserLatestColTYPE",
+																					"fieldParent": "04253451-6556-4470-aa65-de68a9b8da31",
+																					"fieldType": "sap.ui.table.Column",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "width",
+																							"grouping": "Properties",
+																							"value": "10%",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "label",
+																							"grouping": "Properties",
+																							"value": "Type",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "sortProperty",
+																							"grouping": "Properties",
+																							"value": "type",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "sortOrder",
+																							"grouping": "Properties",
+																							"value": "Ascending",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "autoResizable",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "7bea26c0-081f-44ba-e2e4-ddf2708a4dd0",
+																							"fieldName": "tableUserLatestTextTYPE",
+																							"fieldParent": "7904aa71-0a2b-4311-9df1-a45c9d09bbf3",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{type}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						}
+																					]
+																				},
+																				{
+																					"fieldNo": "0edd2307-f662-4883-da44-8adb1c299dbd",
+																					"fieldName": "tableUserLatestColLIKES",
+																					"fieldParent": "04253451-6556-4470-aa65-de68a9b8da31",
+																					"fieldType": "sap.ui.table.Column",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "width",
+																							"grouping": "Properties",
+																							"value": "10%",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "label",
+																							"grouping": "Properties",
+																							"value": "Likes",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "sortProperty",
+																							"grouping": "Properties",
+																							"value": "likeCount",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "autoResizable",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "4a2e1407-f225-44f8-81d9-0a23ff00f546",
+																							"fieldName": "tableUserLatestTextLIKES",
+																							"fieldParent": "0edd2307-f662-4883-da44-8adb1c299dbd",
+																							"fieldType": "sap.m.Text",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{likeCount}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						}
+																					]
+																				},
+																				{
+																					"fieldNo": "a11a9277-2547-474d-f0f8-1cdd512c905a",
+																					"fieldName": "tableUserLatestColTITLE",
+																					"fieldParent": "04253451-6556-4470-aa65-de68a9b8da31",
+																					"fieldType": "sap.ui.table.Column",
+																					"script": "",
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "width",
+																							"grouping": "Properties",
+																							"value": "60%",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "label",
+																							"grouping": "Properties",
+																							"value": "Title",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "filterProperty",
+																							"grouping": "Properties",
+																							"value": "title",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "filterOperator",
+																							"grouping": "Properties",
+																							"value": "Contains",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "autoResizable",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "41576a8c-4b67-408e-b3e4-03f22429cc78",
+																							"fieldName": "linkToBlog",
+																							"fieldParent": "a11a9277-2547-474d-f0f8-1cdd512c905a",
+																							"fieldType": "sap.m.Link",
+																							"script": "",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "{title}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "enabled",
+																									"grouping": "Properties",
+																									"value": "{enableLink}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "press",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": [
+																										"==OBJECT STRING==",
+																										"const context = oEvent.getSource().getBindingContext().getObject();",
+																										"console.log(modeltableUserLatest.getData());",
+																										"if (context.pageTypeId === 306 || context.pageTypeId === 304) {",
+																										"    let title = context.title;",
+																										"    title = title.toLowerCase();",
+																										"    //title = title.replace(/[\\s]/g, \"-\");",
+																										"",
+																										"    //\"àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ\"",
+																										"",
+																										"    const accentedA = new RegExp(\"[àáâãå]\", \"g\");",
+																										"    const accentedE = new RegExp(\"[èéêë]\", \"g\");",
+																										"    const accentedO = new RegExp(\"[òóôõø]\", \"g\");",
+																										"    const accentedU = new RegExp(\"[ùúû]\", \"g\");",
+																										"",
+																										"    const accentedAE = new RegExp(\"[äæ]\", \"g\");",
+																										"    const accentedUE = new RegExp(\"ü\", \"g\");",
+																										"    const accentedOE = new RegExp(\"ö\", \"g\");",
+																										"    const accentedSS = new RegExp(\"ß\", \"g\");",
+																										"",
+																										"    const specialChars = new RegExp(/[^\\w\\d\\s]/, \"g\");",
+																										"",
+																										"    title = title.replace(accentedA, \"a\");",
+																										"    title = title.replace(accentedU, \"u\");",
+																										"    title = title.replace(accentedO, \"o\");",
+																										"    title = title.replace(accentedE, \"e\");",
+																										"",
+																										"    title = title.replace(accentedAE, \"ae\");",
+																										"    title = title.replace(accentedUE, \"ue\");",
+																										"    title = title.replace(accentedOE, \"oe\");",
+																										"    title = title.replace(accentedSS, \"ss\");",
+																										"",
+																										"    title = title.replace(/\\./g, \"\");",
+																										"    title = title.replace(specialChars, \"-\");",
+																										"    title = title.replace(/\\s/g, \"-\");",
+																										"",
+																										"    title = title.replace(/-{1,}/g, \"-\");",
+																										"",
+																										"    console.log(title);",
+																										"",
+																										"    if (context.pageTypeId === 306) {",
+																										"        window.open(\"https://community.neptune-software.com/blogs/\" + title);",
+																										"    } else {",
+																										"        window.open(\"https://community.neptune-software.com/posts/\" + title);",
+																										"    }",
+																										"",
+																										"}",
+																										"// else {",
+																										"//     this.setSubtle(true);",
+																										"//     this.setEnabled(false);",
+																										"// }"
+																									],
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "9cd218ea-f269-4cc1-8f75-bda37dba416e",
+							"fieldName": "layoutGeneralStats",
+							"fieldParent": "2",
+							"fieldType": "sap.ui.layout.SplitterLayoutData",
+							"refObject": "panelGeneralStats",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "size",
+									"grouping": "Properties",
+									"value": "100%",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "217dcb6d-d49c-4b94-ee7a-e49b081ccd23",
+							"fieldName": "layoutUserList",
+							"fieldParent": "2",
+							"fieldType": "sap.ui.layout.SplitterLayoutData",
+							"refObject": "oPanel1",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "size",
+									"grouping": "Properties",
+									"value": "0px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "resizable",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "735977a8-a7eb-437e-e8a7-91ada86c5bfb",
+							"fieldName": "layoutUserInfo",
+							"fieldParent": "2",
+							"fieldType": "sap.ui.layout.SplitterLayoutData",
+							"refObject": "panelUserInfo",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "size",
+									"grouping": "Properties",
+									"value": "0px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "resizable",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "cabefdab-a353-477f-cbe3-9ded4a93b0ca",
+					"fieldName": "Init",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"// Only for View - Custom beforeDisplay - Trigger everytime the view is started",
+						"if (sap.n) {",
+						"    sap.n.Shell.attachBeforeDisplay(function() {",
+						"        // setTimeout(function() {",
+						"        //     updateGeneralData();",
+						"        // }, 400);",
+						"",
+						"    });",
+						"}",
+						"//Pages, Users, Comments",
+						"var colorScheme = [\"#003E52\", \"#F6B221\", \"#83C3B8\", \"#00839B\", \"#007D50\"];",
+						"",
+						"function pageIdMapping(id) {",
+						"    switch (id) {",
+						"        case 304:",
+						"            return \"Post\";",
+						"        case 306:",
+						"            return \"Blog\";",
+						"        default:",
+						"            return \"Other Page\";",
+						"    }",
+						"}",
+						"",
+						"// Custom Init - Happens only once",
+						"sap.ui.getCore().attachInit(function(data) {",
+						"    setTimeout(function() {",
+						"",
+						"        // data = startParameters from NAM Action settings on the tile",
+						"        // Do your Stuff",
+						"        let lowerDateBound = getTodaysDate(30);",
+						"        console.log(lowerDateBound);",
+						"        var options = {",
+						"            parameters: {",
+						"                \"where\": '{\"Date\": MoreThanOrEqual(' + lowerDateBound + ')}',  //'{\"Date\": {\">\": \"' + lowerDateBound + '\"}}', // Optional ",
+						"                \"select\": \"\", // Optional ",
+						"                \"limit\": \"\", // Optional ",
+						"                \"skip\": \"\", // Optional ",
+						"                \"sort\": \"\" // Optional ",
+						"            }",
+						"        };",
+						"",
+						"        apiapiComGeneral(options).then(function(result) {",
+						"            console.log(\"RESULT\");",
+						"            console.log(result);",
+						"            modelgeneralStats.setData(result);",
+						"            updateGeneralData();",
+						"        });",
+						"",
+						"    }, 200);",
+						"});",
+						"",
+						"function getTodaysDate(delta) {",
+						"    let today = new Date();",
+						"    delta = delta || 0;",
+						"    today.setDate(today.getDate() - delta);",
+						"    let dd = today.getDate();",
+						"    let mm = today.getMonth() + 1;",
+						"    const yyyy = today.getFullYear();",
+						"",
+						"    if (dd < 10) {",
+						"        dd = \"0\" + dd;",
+						"    }",
+						"",
+						"    if (mm < 10) {",
+						"        mm = \"0\" + mm;",
+						"    }",
+						"",
+						"    //Format here e.g. mm + '/' + dd + '/' + yyyy;",
+						"    today = yyyy + \"-\" + mm + \"-\" + dd;",
+						"    return today;",
+						"}",
+						"",
+						"function updateGeneralData() {",
+						"",
+						"    checkAggregation.setSelected(false);",
+						"",
+						"    // console.log(\"Received Data: \");",
+						"    // console.log(modelgeneralStats.oData);",
+						"",
+						"    const dates = modelgeneralStats.getData().map(data => {",
+						"        return data.Date;",
+						"    });",
+						"",
+						"    const newUsers = modelgeneralStats.getData().map(data => {",
+						"        return data.NewUsers;",
+						"    });",
+						"",
+						"    const newPages = modelgeneralStats.getData().map(data => {",
+						"        return data.NewPages;",
+						"    });",
+						"",
+						"    const newComments = modelgeneralStats.getData().map(data => {",
+						"        return data.NewComments;",
+						"    });",
+						"",
+						"    let formattedLastDate = dates.slice(-1)[0].split(\"-\");",
+						"    formattedLastDate = formattedLastDate[2] + \".\" + formattedLastDate[1] + \".\" + formattedLastDate[0];",
+						"    console.log(newPages.slice(-1), newUsers.slice(-1), newComments.slice(-1));",
+						"",
+						"    chartLatestActivity.update({",
+						"        title: {",
+						"            text: \"Latest Activity on \" + formattedLastDate",
+						"        }, //Number(newPages.slice(-1)[0] + newUsers.slice(-1)[0] +  newComments.slice(-1)[0])",
+						"        plotOptions: {",
+						"            pie: {",
+						"                allowPointSelect: true,",
+						"                cursor: 'pointer',",
+						"                dataLabels: {",
+						"                    enabled: true,",
+						"                    format: '<b>{point.name}</b>: {point.y}',",
+						"                    style: {",
+						"                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'",
+						"                    }",
+						"                },",
+						"                tooltip: {",
+						"                    enabled: false,",
+						"                    formatter: function() {",
+						"                        return false",
+						"                    } //'<b>{point.name}</b>: {point.y}',",
+						"                },",
+						"                colors: colorScheme.slice(0, 3),",
+						"            }",
+						"        },",
+						"        tooltip: {",
+						"            enabled: false,",
+						"        },",
+						"        series: [{",
+						"            data: [{",
+						"                    name: \"Pages\",",
+						"                    y: newPages.slice(-1)[0]",
+						"                },",
+						"                {",
+						"                    name: \"Users\",",
+						"                    y: newUsers.slice(-1)[0]",
+						"                },",
+						"                {",
+						"                    name: \"Comments\",",
+						"                    y: newComments.slice(-1)[0]",
+						"                }",
+						"            ]",
+						"        }]",
+						"    });",
+						"",
+						"    chartNewUsers.update({",
+						"        chart: {",
+						"            zoomType: \"x\",",
+						"        },",
+						"        xAxis: {",
+						"            categories: dates,",
+						"            tickInterval: 20",
+						"        },",
+						"        tooltip: {",
+						"            shared: true",
+						"        },",
+						"        legend: {",
+						"            enabled: false",
+						"        },",
+						"        colors: colorScheme.slice(1, 2),",
+						"        yAxis: { // Primary yAxis",
+						"            labels: {",
+						"                format: '{value}',",
+						"            },",
+						"            title: {",
+						"                text: 'New Users',",
+						"            },",
+						"            gridLineWidth: 0,",
+						"            minorGridLineWidth: 0,",
+						"        },",
+						"        series: {",
+						"            name: \"New Users\",",
+						"            data: newUsers",
+						"        },",
+						"    });",
+						"",
+						"",
+						"",
+						"    chartNewPages.update({",
+						"        chart: {",
+						"            zoomType: \"x\",",
+						"        },",
+						"        xAxis: {",
+						"            categories: dates,",
+						"            tickInterval: 20",
+						"        },",
+						"        tooltip: {",
+						"            shared: true",
+						"        },",
+						"        legend: {",
+						"            enabled: false",
+						"        },",
+						"        colors: colorScheme.slice(0, 1),",
+						"        yAxis: { // Primary yAxis",
+						"            labels: {",
+						"                format: '{value}',",
+						"            },",
+						"            title: {",
+						"                text: 'New Pages',",
+						"            },",
+						"            gridLineWidth: 0,",
+						"            minorGridLineWidth: 0,",
+						"        },",
+						"        series: {",
+						"            name: \"New Pages\",",
+						"            data: newPages",
+						"        },",
+						"    });",
+						"",
+						"",
+						"",
+						"    chartNewComments.update({",
+						"        chart: {",
+						"            zoomType: \"x\",",
+						"        },",
+						"        xAxis: {",
+						"            categories: dates,",
+						"            tickInterval: 20",
+						"        },",
+						"        tooltip: {",
+						"            shared: true",
+						"        },",
+						"        legend: {",
+						"            enabled: false",
+						"        },",
+						"        colors: colorScheme.slice(2, 3),",
+						"        yAxis: { // Primary yAxis",
+						"            labels: {",
+						"                format: '{value}',",
+						"            },",
+						"            title: {",
+						"                text: 'New Comments',",
+						"            },",
+						"            gridLineWidth: 0,",
+						"            minorGridLineWidth: 0,",
+						"        },",
+						"        series: {",
+						"            name: \"New Comments\",",
+						"            data: newComments",
+						"        },",
+						"    });",
+						"}",
+						"",
+						"function changeScoreValue(field) {",
+						"    for (var i = 0; i < modeluserList.oData.length; i++) {",
+						"        modeluserList.oData[i][\"scoreDisplay\"] = modeluserList.oData[i][field];",
+						"        modeluserList.oData[i][\"scoreDisplayName\"] = field;",
+						"    }",
+						"    modeluserList.oData.sort(function(a, b) {",
+						"        return b.scoreDisplay - a.scoreDisplay;",
+						"    });",
+						"    modeluserList.refresh();",
+						"}",
+						"",
+						"// Highcharts.wrap(Highcharts.Chart.prototype, 'setReflow', function(proceed, reflow) {",
+						"",
+						"// \tvar chart = this;",
+						"",
+						"//     proceed.call(this, reflow);",
+						"",
+						"//     if (reflow !== false && typeof ResizeObserver === 'function') {",
+						"",
+						"//         // Unbind window.onresize handler so we don't do double redraws",
+						"//         if (this.unbindReflow) {",
+						"//         \tthis.unbindReflow();",
+						"//         }",
+						"",
+						"//         var ro = new ResizeObserver(function () {",
+						"//             chart.reflow();",
+						"//         });",
+						"",
+						"//         ro.observe(this.renderTo);",
+						"//     }",
+						"// });"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "d73d127c-b9cd-4c87-902b-e98319d2c038",
+					"fieldName": "Models",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "397f01a4-5495-483f-968e-1317c32a66f0",
+							"fieldName": "generalStats",
+							"fieldParent": "d73d127c-b9cd-4c87-902b-e98319d2c038",
+							"fieldType": "neptune.model.array",
+							"bindingValue": "API communitygeneralstats>communitygeneralstats",
+							"bindingType": "h",
+							"bindingSource": "API",
+							"bindingParentID": "f2dec5c0-8c3a-459d-8222-d713fe55b722",
+							"bindingPathID": "39b2da3c-afc5-4429-8d02-cfb8b2800c5a",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "93b7391c-42e2-432a-94ca-79cc32a3190e",
+							"fieldName": "oModelArray",
+							"fieldParent": "d73d127c-b9cd-4c87-902b-e98319d2c038",
+							"fieldType": "neptune.model.array",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "c85aab66-f6c1-4340-f29a-c6c71a63717e",
+							"fieldName": "multiModelUsers",
+							"fieldParent": "d73d127c-b9cd-4c87-902b-e98319d2c038",
+							"fieldType": "neptune.model",
+							"bindingType": "h",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "511e3c6a-da4c-4744-e326-ff9d0320051a",
+					"fieldName": "APIs",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "6aff7541-ac03-47a6-af91-1f4f1da771f7",
+							"fieldName": "apiComGeneral",
+							"fieldParent": "511e3c6a-da4c-4744-e326-ff9d0320051a",
+							"fieldType": "neptune.restapi",
+							"restSource": "f2dec5c0-8c3a-459d-8222-d713fe55b722",
+							"restOperation": "327c7828-0586-41da-b9a8-5c7919173985",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "ajaxSuccess",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"//updateGeneralData();",
+										""
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "4d26a51a-3f2b-46da-bcd6-af47e4e2a785",
+							"fieldName": "apiComComments",
+							"fieldParent": "511e3c6a-da4c-4744-e326-ff9d0320051a",
+							"fieldType": "neptune.restapi",
+							"restSource": "ebd06ae1-4fd9-44df-a7f0-65f4a86c0444",
+							"restOperation": "352bf2aa-a4ac-4922-b60b-78288e765833",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "71597520-7079-4001-a083-8ed1417fa969",
+							"fieldName": "apiComPages",
+							"fieldParent": "511e3c6a-da4c-4744-e326-ff9d0320051a",
+							"fieldType": "neptune.restapi",
+							"restSource": "e372d266-24ec-43bb-9326-5bb97c02a619",
+							"restOperation": "0921adc5-9299-4f4e-8655-01871c41c5b5",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "ajaxSuccess",
+									"grouping": "Events",
+									"value": "//console.log(xhr.responseJSON);",
+									"script": "//console.log(xhr.responseJSON);",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "e9e7832e-3aa0-4637-84e5-afd722867e5b",
+							"fieldName": "apiComUsers",
+							"fieldParent": "511e3c6a-da4c-4744-e326-ff9d0320051a",
+							"fieldType": "neptune.restapi",
+							"restSource": "47a193b8-c8b6-474d-b8d7-63d3e174f0b5",
+							"restOperation": "18797c88-3dea-4749-dd81-0fef862b2eea",
+							"script": "",
+							"request": [],
+							"response": [
+								{
+									"status": 200,
+									"dataId": "249c46c1-242c-4c97-ddf1-751847835d81",
+									"modelFieldNo": "f99bf7ef-ea49-47b6-8a03-ff709c8ac4c2"
+								}
+							],
+							"attributes": [
+								{
+									"attribute": "setInitLoad",
+									"grouping": "Model",
+									"value": "online",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "ajaxSuccess",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"const tmp = xhr.responseJSON;",
+										"",
+										"tmp.sort(function(a,b){",
+										"    return b.score - a.score;",
+										"});",
+										"modeluserList.setData(tmp);",
+										"changeScoreValue(\"score\");"
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "84e9042a-3aab-42cc-8c67-dac3a71b2234",
+							"fieldName": "apiUserCurrentMonth",
+							"fieldParent": "511e3c6a-da4c-4744-e326-ff9d0320051a",
+							"fieldType": "neptune.restapi",
+							"restSource": "909e8c5d-9d97-4325-a1dd-3c48ab009b3d",
+							"restOperation": "51656ba2-efbc-4548-eb2e-b9866b739256",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "ajaxError",
+									"grouping": "Events",
+									"value": "console.log(xhr.responseJSON);",
+									"script": "console.log(xhr.responseJSON);",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.3.958",
+	"application": "communitygamification2",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": true,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		"html * {",
+		"    text-shadow: none;",
+		"}",
+		"/*highcharts-chart::ng-deep {*/",
+		"/*  .highcharts-container,*/",
+		"/*  .highcharts-container svg {*/",
+		"/*     width: 100% !important;*/",
+		"/*     height: 100% !important;*/",
+		"/*  }*/",
+		"/*}*/",
+		"",
+		".stickytoolbar {",
+		"    position: sticky !important;",
+		"    top: 0 !important;",
+		"    z-index: 101 !important;",
+		"}"
+	],
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": true,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

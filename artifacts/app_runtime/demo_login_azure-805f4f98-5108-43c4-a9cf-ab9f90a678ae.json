@@ -1,0 +1,609 @@
+{
+	"id": "805f4f98-5108-43c4-a9cf-ab9f90a678ae",
+	"createdAt": "2019-03-28T08:20:30.000Z",
+	"updatedAt": "2020-04-26T18:05:07.372Z",
+	"createdBy": "oah",
+	"changedBy": "ole-andre.haugen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "c54e9b8a-9ac5-41ea-b175-0164a6639860",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "c8d0314d-2c75-4c2c-b782-b5961f04577a",
+					"fieldName": "oApp",
+					"fieldParent": "c54e9b8a-9ac5-41ea-b175-0164a6639860",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "e7cabdfb-5055-47d9-b819-91079d75930d",
+							"fieldName": "oPage",
+							"fieldParent": "c8d0314d-2c75-4c2c-b782-b5961f04577a",
+							"fieldType": "sap.m.Page",
+							"bindingType": "u",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "11f89b91-7341-4521-d704-5e30d2a173d7",
+									"fieldName": "formLogin2",
+									"fieldParent": "e7cabdfb-5055-47d9-b819-91079d75930d",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanM",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanL",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "7a2f0bf0-c224-4163-a07a-f061bf57eebc",
+											"fieldName": "lblformLogin2username",
+											"fieldParent": "11f89b91-7341-4521-d704-5e30d2a173d7",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Username",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "f06c9e22-db3f-4f0a-cc62-a6f2f7f98ab5",
+											"fieldName": "informLogin2username",
+											"fieldParent": "11f89b91-7341-4521-d704-5e30d2a173d7",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "value",
+													"grouping": "Properties",
+													"value": "ole-andre.haugen@neptune-software.com",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "b4869012-6a4c-44d8-a4c8-dbf4ea5611e1",
+											"fieldName": "lblformLogin2password",
+											"fieldParent": "11f89b91-7341-4521-d704-5e30d2a173d7",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Password",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "d6b4d2bb-9695-4120-b178-edbda82527fa",
+											"fieldName": "informLogin2password",
+											"fieldParent": "11f89b91-7341-4521-d704-5e30d2a173d7",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "type",
+													"grouping": "Properties",
+													"value": "Password",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "993a63f3-ba40-461e-e0a6-6151582e66e3",
+									"fieldName": "oBarFooter",
+									"fieldParent": "e7cabdfb-5055-47d9-b819-91079d75930d",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "loggedOut",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "75128ef7-b0e0-4e23-ba1a-85f168889358",
+											"fieldName": "Left",
+											"fieldParent": "993a63f3-ba40-461e-e0a6-6151582e66e3",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "dfdf77b2-8a7f-4fd1-f7bd-09a7d8860678",
+													"fieldName": "oButtonMSALNew",
+													"fieldParent": "75128ef7-b0e0-4e23-ba1a-85f168889358",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Force Select",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "login",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "msalLogin(\"select_account\");",
+															"script": "msalLogin(\"select_account\");",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "848f0741-a6b8-4e41-a629-86f756a3da7c",
+													"fieldName": "oButtonMSALLogin",
+													"fieldParent": "75128ef7-b0e0-4e23-ba1a-85f168889358",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Login ",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "login",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": "msalLogin();",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "04bdc1f6-71e8-4aff-b7d1-9a4476c11a9a",
+													"fieldName": "oButtonMSALSilen",
+													"fieldParent": "75128ef7-b0e0-4e23-ba1a-85f168889358",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Login Silent",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "login",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var request = {",
+																"    scopes: [\"user.read\", \"offline_access\", \"openid\", \"profile\", \"email\"],",
+																"    prompt: 'none',",
+																"    loginHint: informLogin2username.getValue(),",
+																"    extraQueryParameters: {",
+																"        domain_hint: 'organizations'",
+																"    }",
+																"};",
+																"",
+																"",
+																"if (myMSALObj.getAccount()) {",
+																"",
+																"    myMSALObj.acquireTokenSilent(request).then(function(response) {",
+																"",
+																"        console.log(\"From SILENT \");",
+																"        console.log(response);",
+																"",
+																"        // Login to Planet 9",
+																"        $.ajax({",
+																"            type: \"POST\",",
+																"            url: \"https://planet9dev.neptune-software.com:8081/user/logon/azure-bearer/planet9-ad-bearer\",",
+																"            headers: {",
+																"                \"Authorization\": \"Bearer \" + response.idToken.rawIdToken,",
+																"            },",
+																"            success: function(data) {",
+																"",
+																"            },",
+																"            error: function(result, status) {",
+																"",
+																"            }",
+																"        });",
+																"",
+																"        // Get Access Token",
+																"        msalGetAccessToken();",
+																"",
+																"        // Test SAML2",
+																"        samlrequest();",
+																"",
+																"        console.log(\"COMPLETED LOGON FROM SILENT\");",
+																"",
+																"",
+																"",
+																"    }).catch(function(error) {",
+																"",
+																"        console.log(error);",
+																"",
+																"        if (error.name === \"InteractionRequiredAuthError\") {",
+																"            msalLogin(\"login\");",
+																"        }",
+																"",
+																"",
+																"    });",
+																"",
+																"} else {",
+																"    msalLogin(\"login\");",
+																"}"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "b990bb56-599a-44e0-d302-b9203cd7d70c",
+													"fieldName": "oButtonLogout2",
+													"fieldParent": "75128ef7-b0e0-4e23-ba1a-85f168889358",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Logout ",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "myMSALObj.logout();",
+															"script": "myMSALObj.logout();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "8afc173f-b9f4-418d-a8b3-c4da6a718c55",
+					"fieldName": "Init",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"function parseJwt(token) {",
+						"    try {",
+						"        return JSON.parse(atob(token.split('.')[1]));",
+						"    } catch (e) {",
+						"        return null;",
+						"    }",
+						"};",
+						"",
+						"",
+						"var AppCacheMSAL = {",
+						"",
+						"    msalConfig: {",
+						"        auth: {",
+						"            clientId: \"ca21abbe-b065-47a3-b38a-e0e2271e0144\",",
+						"            authority: \"https://login.microsoftonline.com/8fdb51da-e45d-423f-ae33-cf92118d5311\",",
+						"            redirectUri: \"https://s4dev.neptune-software.com/sap/saml2/sp/acs/100\",",
+						"        },",
+						"        cache: {",
+						"            cacheLocation: \"localStorage\",",
+						"            storeAuthStateInCookie: true",
+						"        }",
+						"    },",
+						"",
+						"    msalObject: new Msal.UserAgentApplication(msalConfig),",
+						"",
+						"    Logon: function(prompt, loginHint) {",
+						"",
+						"        var request = {",
+						"            scopes: [\"user.read\", \"offline_access\", \"openid\", \"profile\", \"email\"],",
+						"            prompt: prompt || 'select_account',",
+						"            loginHint: loginHint || \"\",",
+						"        };",
+						"",
+						"        AppCacheMSAL.msalObject.loginPopup(request).then(function(response) {",
+						"",
+						"            // Get Access Token",
+						"            // msalGetAccessToken();",
+						"",
+						"        }).catch(function(error) {",
+						"            console.log(error);",
+						"        });",
+						"",
+						"    }",
+						"",
+						"};",
+						"",
+						"",
+						"window.AppCacheMSAL = AppCacheMSAL;",
+						"",
+						"",
+						"",
+						"// myMSALObj.handleRedirectCallback(function(error, response) {",
+						"//     alert(\"Inside handleRedirectCallback\");",
+						"//     // handle error or response",
+						"// });",
+						"",
+						"",
+						"function msalLogin(prompt) {",
+						"",
+						"    var request = {",
+						"        scopes: [\"user.read\", \"offline_access\", \"openid\", \"profile\", \"email\"],",
+						"        prompt: prompt || 'none',",
+						"        loginHint: informLogin2username.getValue(),",
+						"    };",
+						"",
+						"    myMSALObj.loginPopup(request).then(function(response) {",
+						"",
+						"        console.log(\"From loginPopup\");",
+						"        console.log(response);",
+						"",
+						"        // Login to Planet 9",
+						"        $.ajax({",
+						"            type: \"POST\",",
+						"            url: \"https://planet9dev.neptune-software.com:8081/user/logon/azure-bearer/planet9-ad-bearer\",",
+						"            headers: {",
+						"                \"Authorization\": \"Bearer \" + response.idToken.rawIdToken,",
+						"            },",
+						"            success: function(data) {",
+						"",
+						"            },",
+						"            error: function(result, status) {",
+						"",
+						"            }",
+						"        });",
+						"",
+						"        // Get Access Token",
+						"        msalGetAccessToken();",
+						"",
+						"        // Test SAML2",
+						"        samlrequest();",
+						"",
+						"        console.log(\"COMPLETED LOGON FROM LOGIN\");",
+						"",
+						"    }).catch(function(error) {",
+						"        console.log(error);",
+						"    });",
+						"",
+						"}",
+						"",
+						"",
+						"function msalGetAccessToken() {",
+						"",
+						"    var request = {",
+						"        scopes: [\"user.read\", \"offline_access\", \"openid\", \"profile\", \"email\"],",
+						"        prompt: 'none',",
+						"        loginHint: informLogin2username.getValue(),",
+						"    };",
+						"",
+						"    myMSALObj.acquireTokenSilent(request).then(function(response) {",
+						"        console.log(\"TOKEN from acquireTokenSilent: \");",
+						"        console.log(response);",
+						"        console.log(\"ACCESS TOKEN: \");",
+						"        console.log(parseJwt(response.accessToken));",
+						"    }, function(error) {",
+						"        console.log(error);",
+						"",
+						"        if (error.name === \"InteractionRequiredAuthError\") {",
+						"            myMSALObj.acquireTokenPopup(request).then(",
+						"                function(response) {",
+						"                    console.log(response);",
+						"                    console.log(\"ACCESS TOKEN: \");",
+						"                    console.log(parseJwt(response.accessToken));",
+						"                }).catch(function(error) {",
+						"                console.log(error);",
+						"            });",
+						"        }",
+						"    });",
+						"",
+						"}",
+						"",
+						"",
+						"function samlrequest(samlRequest, samlRelayState, process, token) {",
+						"    return;",
+						"",
+						"    var url = \"https://login.microsoftonline.com/8fdb51da-e45d-423f-ae33-cf92118d5311/saml2?login_hint=ole-andre.haugen@neptune-software.com\";",
+						"",
+						"    var dataRequest = {",
+						"        SAMLRequest: \"skdfløksdjføljkadsfølfjkad\",",
+						"        RelayState: \"lskdflsdjflskdjfløkj\"",
+						"    };",
+						"",
+						"    $.ajax({",
+						"        type: \"POST\",",
+						"        url: url,",
+						"        contentType: \"application/x-www-form-urlencoded\",",
+						"        data: dataRequest,",
+						"        success: function(data) {",
+						"",
+						"            console.log(data);",
+						"",
+						"        },",
+						"        error: function(result, status) {",
+						"",
+						"        }",
+						"",
+						"    });",
+						"}",
+						"",
+						"",
+						"window.myMSALObj = myMSALObj;"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "20.4.26.205",
+	"application": "demo_login_azure",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "1.71CDN",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		".loggedIn .login { display: none; }",
+		".loggedOut .logout { display: none; }"
+	],
+	"header": [
+		"==OBJECT STRING==",
+		"<!--<script src=\"https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js\"></script>-->",
+		"<script type=\"text/javascript\" src=\"https://alcdn.msauth.net/lib/1.2.2/js/msal.js\"></script>"
+	],
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

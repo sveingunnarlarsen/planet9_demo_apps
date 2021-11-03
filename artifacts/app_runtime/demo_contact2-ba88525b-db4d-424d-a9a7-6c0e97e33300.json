@@ -1,0 +1,420 @@
+{
+	"id": "ba88525b-db4d-424d-a9a7-6c0e97e33300",
+	"createdAt": "2017-11-21T15:21:26.000Z",
+	"updatedAt": "2019-06-10T11:09:34.000Z",
+	"createdBy": "oah",
+	"changedBy": "ole-andre.haugen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "2",
+					"fieldName": "oApp",
+					"fieldParent": "1",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "31e05eec-325a-4639-cc62-1ef70a9db828",
+							"fieldName": "oPage",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+									"fieldName": "oTable",
+									"fieldParent": "31e05eec-325a-4639-cc62-1ef70a9db828",
+									"fieldType": "sap.m.Table",
+									"bindingValue": "Contacts API>Contact",
+									"bindingType": "h",
+									"bindingSource": "API",
+									"bindingParentID": "09de5b25-6e0e-4d92-8b2e-f3a9a6c2fbbb",
+									"bindingPathID": "6364255a-2d63-4966-9d94-cb4fb856389c",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "setInitLoad",
+											"grouping": "Model",
+											"value": "cache",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "setEnableEncryption",
+											"grouping": "Model",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "setEnableCache",
+											"grouping": "Model",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "setCacheType",
+											"grouping": "Model",
+											"value": "IndexedDB",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5f2c4e10-7045-43ad-c4eb-5d5c88782477",
+											"fieldName": "coloTablefirstName",
+											"fieldParent": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "30dcaa2c-e2fe-4248-9d23-8c533a3285aa",
+													"fieldName": "colHoTablefirstName",
+													"fieldParent": "5f2c4e10-7045-43ad-c4eb-5d5c88782477",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "firstName",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "7ae2166b-33cb-4a92-e3ff-a5da6f26451e",
+											"fieldName": "coloTablelastName",
+											"fieldParent": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "e5266121-bfa7-40c0-8bcf-bd55aa0dc233",
+													"fieldName": "colHoTablelastName",
+													"fieldParent": "7ae2166b-33cb-4a92-e3ff-a5da6f26451e",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "lastName",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "428cf233-e50b-46a3-8c4f-6e41f4d9a76d",
+											"fieldName": "coloTablebirthday",
+											"fieldParent": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "25ae8619-1ac0-4fa5-ad84-a5772eb7a3c3",
+													"fieldName": "colHoTablebirthday",
+													"fieldParent": "428cf233-e50b-46a3-8c4f-6e41f4d9a76d",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Birthday as unix timestamp (in ms)",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "efb6596a-22a0-4ffa-c716-47a564e2e46b",
+											"fieldName": "coloTableactive",
+											"fieldParent": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "b7c34ebf-f72f-4f5c-e46e-e20b2f6b8d25",
+													"fieldName": "colHoTableactive",
+													"fieldParent": "efb6596a-22a0-4ffa-c716-47a564e2e46b",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "active",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "6702da26-b605-4208-d0f3-6688b0093533",
+											"fieldName": "oColumn",
+											"fieldParent": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										},
+										{
+											"fieldNo": "c01def71-08c3-47e6-b396-1f18e29447d4",
+											"fieldName": "colItemoTable",
+											"fieldParent": "bbc2b569-11cc-4420-f2f4-38346a97a9e2",
+											"fieldType": "sap.m.ColumnListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "86256952-f3e4-44ab-970d-0e97d2790def",
+													"fieldName": "txtoTablefirstName",
+													"fieldParent": "c01def71-08c3-47e6-b396-1f18e29447d4",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{firstName}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "0fffa034-521b-44d9-f51a-94a14164d6a0",
+													"fieldName": "txtoTablelastName",
+													"fieldParent": "c01def71-08c3-47e6-b396-1f18e29447d4",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{lastName}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "312f6fee-72b1-478b-d95f-0a694facbef4",
+													"fieldName": "txtoTablebirthday",
+													"fieldParent": "c01def71-08c3-47e6-b396-1f18e29447d4",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{birthday}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Formatter",
+															"value": "date:BrowserSetting",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "0f708773-6dcc-4c8e-8e91-0e814d161ee7",
+													"fieldName": "txtoTableactive",
+													"fieldParent": "c01def71-08c3-47e6-b396-1f18e29447d4",
+													"fieldType": "sap.m.CheckBox",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "selected",
+															"grouping": "Properties",
+															"value": "{active}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "d526d3f5-cfee-43e6-d8df-ea76068284c9",
+													"fieldName": "oButton",
+													"fieldParent": "c01def71-08c3-47e6-b396-1f18e29447d4",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Delete row",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// Use MessageToast",
+																"sap.m.MessageToast.show(\"Button pressed\");"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "6",
+					"fieldName": "Contact",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "09de5b25-6e0e-4d92-8b2e-f3a9a6c2fbbb",
+					"restOperation": "79e3771c-e7be-4163-d8a7-722c6c939ce8",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "6364255a-2d63-4966-9d94-cb4fb856389c",
+							"modelFieldNo": "bbc2b569-11cc-4420-f2f4-38346a97a9e2"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.10.139",
+	"application": "demo_contact2",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

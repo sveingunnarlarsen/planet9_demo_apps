@@ -1,0 +1,197 @@
+{
+	"id": "40d8df3d-18b3-4be8-b712-cc671f994414",
+	"createdAt": "2019-08-26T10:09:57.000Z",
+	"updatedAt": "2019-08-28T13:15:54.000Z",
+	"createdBy": "rommel",
+	"changedBy": "rommel",
+	"objects": [
+		{
+			"fieldNo": "ca04fc31-f81a-4a54-ef2a-c6b60e37143f",
+			"fieldName": "oPage",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Page",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "title",
+					"grouping": "Properties",
+					"value": "Test App 2",
+					"script": "",
+					"translation": [
+						{
+							"language": "NO",
+							"value": "Test app 2"
+						}
+					]
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "2bd7f40c-5e33-4721-c16e-3a09c36468ef",
+					"fieldName": "oBarFooter",
+					"fieldParent": "ca04fc31-f81a-4a54-ef2a-c6b60e37143f",
+					"fieldType": "sap.m.Bar",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "setFooter",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "69d4c842-691b-4a10-9c54-e376a0f98a16",
+							"fieldName": "Left",
+							"fieldParent": "2bd7f40c-5e33-4721-c16e-3a09c36468ef",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentLeft",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "8e2206ed-87d3-4f35-d9fc-d758b763ede6",
+							"fieldName": "Middle",
+							"fieldParent": "2bd7f40c-5e33-4721-c16e-3a09c36468ef",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentMiddle",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "d028a4bb-cd60-4e4e-c1df-e6aeb7667212",
+									"fieldName": "oTitle",
+									"fieldParent": "8e2206ed-87d3-4f35-d9fc-d758b763ede6",
+									"fieldType": "sap.m.Title",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Sample Application",
+											"script": "",
+											"translation": [
+												{
+													"language": "NO",
+													"value": "Eksempel på søknad"
+												}
+											]
+										},
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "title",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "level",
+											"grouping": "Properties",
+											"value": "H1",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						},
+						{
+							"fieldNo": "47e08f16-611c-410c-f2d9-09199ec86122",
+							"fieldName": "Right",
+							"fieldParent": "2bd7f40c-5e33-4721-c16e-3a09c36468ef",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentRight",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": []
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.8.28.1515",
+	"application": "test_app_v1",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize_plus",
+	"ui5_version": "",
+	"ui5_language": "",
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		".title {",
+		"    font-weight: bold;",
+		"    color: Gold !important;",
+		"}"
+	],
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": true,
+	"ui5_bootstrap": null,
+	"apis": []
+}

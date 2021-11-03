@@ -1,0 +1,995 @@
+{
+	"id": "115a3e9a-07c1-4362-a232-5aa793d82d7f",
+	"createdAt": "2019-05-29T13:09:33.000Z",
+	"updatedAt": "2019-06-01T14:54:25.000Z",
+	"createdBy": "oah",
+	"changedBy": "oah",
+	"objects": [
+		{
+			"fieldNo": "6eb4d474-5b04-4ffc-8ae5-4e7da7332662",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "9f6c03d0-c8fc-44ad-8db3-91453a5f356b",
+					"fieldName": "oApp",
+					"fieldParent": "6eb4d474-5b04-4ffc-8ae5-4e7da7332662",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "98e2ed56-e0f7-4bbd-db99-96dea788be7f",
+							"fieldName": "oPage",
+							"fieldParent": "9f6c03d0-c8fc-44ad-8db3-91453a5f356b",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Performance Test",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "502b26d1-7b40-4fc8-e905-7025616776fd",
+									"fieldName": "oObjectHeader",
+									"fieldParent": "98e2ed56-e0f7-4bbd-db99-96dea788be7f",
+									"fieldType": "sap.m.ObjectHeader",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Performance Measurement",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "responsive",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "intro",
+											"grouping": "Properties",
+											"value": "Neptune DX Platform ",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://performance",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "8e1a4d43-de01-4ad7-9155-c486eac700a9",
+									"fieldName": "oBlockLayout",
+									"fieldParent": "98e2ed56-e0f7-4bbd-db99-96dea788be7f",
+									"fieldType": "sap.ui.layout.BlockLayout",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiSmallMarginTop",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "background",
+											"grouping": "Properties",
+											"value": "Default",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "keepFontSize",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "848bd127-c7e8-4439-ce2d-bd935375f6bc",
+											"fieldName": "oBlockLayoutRow1",
+											"fieldParent": "8e1a4d43-de01-4ad7-9155-c486eac700a9",
+											"fieldType": "sap.ui.layout.BlockLayoutRow",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "2d794dab-cf14-4ee4-f626-6ccc789e8c1d",
+													"fieldName": "oBlockLayoutCell1",
+													"fieldParent": "848bd127-c7e8-4439-ce2d-bd935375f6bc",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Timer",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepTileCards",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet7",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeA",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "cf12e7f4-4afb-431e-f0b9-47a7c302d859",
+															"fieldName": "titleTimer",
+															"fieldParent": "2d794dab-cf14-4ee4-f626-6ccc789e8c1d",
+															"fieldType": "sap.m.ObjectNumber",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "unit",
+																	"grouping": "Properties",
+																	"value": "SEC",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "styleClass",
+																	"grouping": "Properties",
+																	"value": "myTitle",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "state",
+																	"grouping": "Properties",
+																	"value": "Warning",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "number",
+																	"grouping": "Properties",
+																	"value": "0",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "618657d3-4221-434d-9663-4b2c45eb67f4",
+													"fieldName": "oBlockLayoutCell2",
+													"fieldParent": "848bd127-c7e8-4439-ce2d-bd935375f6bc",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Requests",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepTileCards",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet7",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeB",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "e8792880-c7d6-49e1-a43b-8b53c4455dce",
+															"fieldName": "titleCount",
+															"fieldParent": "618657d3-4221-434d-9663-4b2c45eb67f4",
+															"fieldType": "sap.m.ObjectNumber",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "unit",
+																	"grouping": "Properties",
+																	"value": "ENTRIES",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "styleClass",
+																	"grouping": "Properties",
+																	"value": "myTitle",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "state",
+																	"grouping": "Properties",
+																	"value": "Warning",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "number",
+																	"grouping": "Properties",
+																	"value": "0",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "3f03943d-2bd2-4c5d-801f-28e13c354902",
+													"fieldName": "oBlockLayoutCell3",
+													"fieldParent": "848bd127-c7e8-4439-ce2d-bd935375f6bc",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Requests/sec",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepTileCards",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet7",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeB",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "e32cd2e5-f624-45dd-9e62-c28090b2650c",
+															"fieldName": "titleCountSec",
+															"fieldParent": "3f03943d-2bd2-4c5d-801f-28e13c354902",
+															"fieldType": "sap.m.ObjectNumber",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "unit",
+																	"grouping": "Properties",
+																	"value": "PER SEC",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "styleClass",
+																	"grouping": "Properties",
+																	"value": "myTitle",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "state",
+																	"grouping": "Properties",
+																	"value": "Warning",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "number",
+																	"grouping": "Properties",
+																	"value": "0",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "4208f231-f8f2-47c5-9e22-d2902ff3fe46",
+											"fieldName": "oBlockLayoutRow2",
+											"fieldParent": "8e1a4d43-de01-4ad7-9155-c486eac700a9",
+											"fieldType": "sap.ui.layout.BlockLayoutRow",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "801b98dd-3022-4dbe-b556-0500da59c04e",
+													"fieldName": "oBlockLayoutCell21",
+													"fieldParent": "4208f231-f8f2-47c5-9e22-d2902ff3fe46",
+													"fieldType": "sap.ui.layout.BlockLayoutCell",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Requests",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "nepTileCards",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorSet",
+															"grouping": "Properties",
+															"value": "ColorSet9",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "backgroundColorShade",
+															"grouping": "Properties",
+															"value": "ShadeA",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "9e92d80a-9c75-42bd-8170-07466d9c752a",
+															"fieldName": "panChart",
+															"fieldParent": "801b98dd-3022-4dbe-b556-0500da59c04e",
+															"fieldType": "sap.m.Panel",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "styleClassPadding",
+																	"grouping": "Properties",
+																	"value": "sapUiNoContentPadding",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "height",
+																	"grouping": "Properties",
+																	"value": "400px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "backgroundDesign",
+																	"grouping": "Properties",
+																	"value": "Transparent",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": [
+																{
+																	"fieldNo": "d8c7da91-2c4a-4ab4-d802-1ca3e360adfe",
+																	"fieldName": "oHTMLObject",
+																	"fieldParent": "9e92d80a-9c75-42bd-8170-07466d9c752a",
+																	"fieldType": "sap.ui.core.HTML",
+																	"script": "",
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "afterRendering",
+																			"grouping": "Events",
+																			"value": "Anonymous Function",
+																			"script": [
+																				"==OBJECT STRING==",
+																				"chartReq = Highcharts.chart('container', {\r",
+																				"    time: {\r",
+																				"        useUTC: false\r",
+																				"    },\r",
+																				"\r",
+																				"    title: {\r",
+																				"        text: null\r",
+																				"    },\r",
+																				"\r",
+																				"    xAxis: {\r",
+																				"        type: 'datetime',\r",
+																				"        tickPixelInterval: 100\r",
+																				"    },\r",
+																				"    yAxis: {\r",
+																				"        title: {\r",
+																				"            text: null\r",
+																				"        },\r",
+																				"        plotLines: [{\r",
+																				"            value: 0,\r",
+																				"            width: 1,\r",
+																				"            color: '#808080'\r",
+																				"        }]\r",
+																				"    },\r",
+																				"\r",
+																				"    credits: {\r",
+																				"        enabled: false\r",
+																				"    },\r",
+																				"\r",
+																				"    legend: {\r",
+																				"        enabled: false\r",
+																				"    },\r",
+																				"    \r",
+																				"    exporting: {\r",
+																				"        enabled: false\r",
+																				"    },\r",
+																				"    \r",
+																				"    series: [{\r",
+																				"        name: \"Requests\",\r",
+																				"        type: \"spline\",\r",
+																				"        data: (function() {\r",
+																				"            var data = [],\r",
+																				"                time = (new Date()).getTime(),\r",
+																				"                i;\r",
+																				"\r",
+																				"            for (i = -15; i <= 0; i += 1) {\r",
+																				"                data.push({\r",
+																				"                    x: time + i * 1000,\r",
+																				"                    y: 0\r",
+																				"                });\r",
+																				"            }\r",
+																				"            return data;\r",
+																				"        }())\r",
+																				"    }]\r",
+																				"});"
+																			],
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "37fa7132-1c52-4814-d2ce-3d41fcb576dd",
+																			"fieldName": "oHTML",
+																			"fieldParent": "d8c7da91-2c4a-4ab4-d802-1ca3e360adfe",
+																			"fieldType": "neptune.Html",
+																			"script": "<div id=\"container\"></div>",
+																			"request": [],
+																			"response": [],
+																			"attributes": [],
+																			"data": []
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "cd206d38-75fd-4355-fbeb-6c247d7c6a9c",
+									"fieldName": "formName",
+									"fieldParent": "98e2ed56-e0f7-4bbd-db99-96dea788be7f",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Data",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "layout",
+											"grouping": "Properties",
+											"value": "ResponsiveGridLayout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanM",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "labelSpanL",
+											"grouping": "Properties",
+											"value": "12",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "editable",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "8dc6bade-95bc-4b00-f545-c644405be10f",
+											"fieldName": "labelName",
+											"fieldParent": "cd206d38-75fd-4355-fbeb-6c247d7c6a9c",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Your Name",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "e288c337-cf5b-48c9-d58a-3f34663f5917",
+											"fieldName": "inName",
+											"fieldParent": "cd206d38-75fd-4355-fbeb-6c247d7c6a9c",
+											"fieldType": "sap.m.Input",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "5ab670c6-7aa6-46af-e31b-82a8d0b8a5d7",
+									"fieldName": "oBarFooter",
+									"fieldParent": "98e2ed56-e0f7-4bbd-db99-96dea788be7f",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "650dae0a-7845-416f-95b9-9f8f087ee84c",
+											"fieldName": "Left",
+											"fieldParent": "5ab670c6-7aa6-46af-e31b-82a8d0b8a5d7",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "64e2cd2a-8ba7-4e21-e67d-2521dab0999d",
+													"fieldName": "butDelete",
+													"fieldParent": "650dae0a-7845-416f-95b9-9f8f087ee84c",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Delete",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "apiDelete();",
+															"script": "apiDelete();",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "8c5acdf3-6e5f-4610-848e-ea5240beb361",
+													"fieldName": "butSend",
+													"fieldParent": "650dae0a-7845-416f-95b9-9f8f087ee84c",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Add",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var options = {",
+																"    parameters: {",
+																"        \"name\": inName.getValue()",
+																"    }",
+																"};",
+																"",
+																"apiAdd(options);"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "d0e48238-94de-4adb-dc93-2248beecb2af",
+													"fieldName": "butCount",
+													"fieldParent": "650dae0a-7845-416f-95b9-9f8f087ee84c",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Count",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "apiCount();",
+															"script": "apiCount();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "da10e29d-ea8a-4036-c919-aaffb6a262cc",
+											"fieldName": "Right",
+											"fieldParent": "5ab670c6-7aa6-46af-e31b-82a8d0b8a5d7",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "14424076-ab0d-4a0b-d438-9d2aa58c123e",
+													"fieldName": "butStart",
+													"fieldParent": "da10e29d-ea8a-4036-c919-aaffb6a262cc",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Start",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/play",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																" function startTimer() {",
+																"",
+																"     if (sec < 30) {",
+																"",
+																"         setTimeout(function() {",
+																"",
+																"             sec++;",
+																"             titleTimer.setNumber(sec);",
+																"            //  apiCount();",
+																"             startTimer();",
+																"",
+																"         }, 1000);",
+																"",
+																"     } else {",
+																"         apiCount();",
+																"     }",
+																"",
+																" }",
+																"",
+																" sec = 0;",
+																" apiDelete().then(function() {",
+																"     startTimer();",
+																" });"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "523b1117-ac93-42ce-e453-26c989db1d8d",
+					"fieldName": "Init",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"var sec = 0",
+						"var chartReq = \"\";",
+						"",
+						"sap.ui.getCore().attachInit(function(data) {",
+						"",
+						"    setTimeout(function() {",
+						"",
+						"        apiCount();",
+						"",
+						"    }, 200);",
+						"",
+						"});"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "0062784b-5140-4daa-969d-38cb63c84a28",
+					"fieldName": "Count",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "b4723fab-a24d-47d1-882c-1aa6cb924ce0",
+					"restOperation": "6cf64f1e-8682-4a2b-c3ea-42d5a36aa3a7",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "Anonymous Function",
+							"script": [
+								"==OBJECT STRING==",
+								"titleCount.setNumber(xhr.responseJSON.count);",
+								"",
+								"jQuery.sap.require(\"sap.ui.core.format.NumberFormat\");",
+								"var oNumberFormat = sap.ui.core.format.NumberFormat.getFloatInstance({",
+								"    maxFractionDigits: 0,",
+								"    minFractionDigits: 0,",
+								"    groupingEnabled: true,",
+								"    groupingSeparator: \" \"",
+								"});",
+								"",
+								"var resSec = xhr.responseJSON.count / 30",
+								"titleCountSec.setNumber(oNumberFormat.format(resSec));",
+								"",
+								"var newRec = [new Date().getTime(), xhr.responseJSON.count];",
+								"chartReq.series[0].addPoint(newRec, true, true);",
+								"",
+								"// window.chartReq = chartReq;"
+							],
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "dc7b12c7-4a8b-495b-821d-213862e58756",
+					"fieldName": "Add",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "b4723fab-a24d-47d1-882c-1aa6cb924ce0",
+					"restOperation": "4ee8733a-d79c-4c00-ae01-87bbb37fb11d",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "8e629e53-4b28-4026-85ca-15ef99efee85",
+					"fieldName": "Delete",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "b4723fab-a24d-47d1-882c-1aa6cb924ce0",
+					"restOperation": "194f01f4-3f48-4166-c55a-e04cdf426f8d",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "ajaxSuccess",
+							"grouping": "Events",
+							"value": "apiCount();",
+							"script": "apiCount();",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.1.1654",
+	"application": "test_performance",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		".myTitle .sapMObjectNumberText {",
+		"    font-size: 50px !important;",
+		"}",
+		"",
+		".myTitle .sapMObjectNumberUnit {",
+		"    font-size: 25px !important;",
+		"}",
+		"",
+		".nepTileCards {",
+		"    margin: 8px 8px 8px 8px;",
+		"    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);",
+		"    border-radius: 4px;",
+		"}"
+	],
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": true,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}

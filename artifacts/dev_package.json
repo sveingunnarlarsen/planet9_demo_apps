@@ -1,0 +1,410 @@
+{
+	"id": "ebf9fa20-e061-460c-b9ab-b1340d1a24c1",
+	"createdAt": "2017-12-18T08:33:30.000Z",
+	"createdBy": "rsletta",
+	"git": {
+		"branch": "",
+		"targetServers": [],
+		"testServers": [],
+		"remote": "https://github.com/sveingunnarlarsen/planet9_demo_apps.git"
+	},
+	"name": "Planet 9 Demo Apps",
+	"description": null,
+	"ver": "21.11.3.1649",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "9bd7a949-a22d-4401-b685-02d44831b787",
+			"ver": "19.8.29.158",
+			"application": "testlockworking",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "0132228e-688d-4143-91bb-5d8cbd0fe046",
+			"ver": "18.9.18.1140",
+			"application": "testdemo",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "4a5b5d6c-9850-46c6-bb6a-5aa38e30c8f0",
+			"ver": "18.6.7.1132",
+			"application": "demofirstapp",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "921144da-39c0-45f6-abc2-d401ff32dfdc",
+			"ver": "21.5.31.1041",
+			"application": "demo_sap02",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "ab73be61-ee11-4102-b1c6-8d2933d206d8",
+			"ver": "21.3.17.1313",
+			"application": "planet9_monitor_db",
+			"title": "Monitor Database",
+			"description": "Monitor Database"
+		},
+		{
+			"id": "bfa95ca0-9fc0-4e2b-846d-fa4853764c77",
+			"ver": "18.6.15.159",
+			"application": "demovideo",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "8a3dbf58-127f-4335-9d56-1a72cba83415",
+			"ver": "21.3.19.219",
+			"application": "planet9_inbox_backup_1621002437455",
+			"title": "Workflow Inbox",
+			"description": "Workflow Inbox"
+		},
+		{
+			"id": "00bef4a2-6c50-4a5b-a157-ac092301bf61",
+			"ver": "20.10.18.155",
+			"application": "test_odata_api",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "cd2baea3-2ccf-4f2a-aaeb-dca915bce9bc",
+			"ver": "20.8.12.930",
+			"application": "firstapp",
+			"title": "",
+			"description": "DDD"
+		},
+		{
+			"id": "9fde50a1-8335-4590-bb2e-8a0bc2db361f",
+			"ver": "18.4.10.1051",
+			"application": "p9demo_sap_ui_layout_blocklayout",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "884a8cdf-c3d6-492a-8ef8-dd034e84934e",
+			"ver": "19.1.15.1211",
+			"application": "secondapp",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "7b36a716-b04b-438d-9ec8-931afb891fba",
+			"ver": "18.4.6.163",
+			"application": "p9demo.sap.m.hbox",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "0ec50347-98a3-498d-aeeb-09759cd8e0c9",
+			"ver": "19.11.22.1029",
+			"application": "demo_tasks_api",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "75465a88-a564-4493-a8a4-ecc363225f6c",
+			"ver": "19.1.15.946",
+			"application": "demosecondapp",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "bfa0667b-c967-485e-ba98-3663b0ebe827",
+			"ver": "18.9.3.138",
+			"application": "testnils",
+			"title": "",
+			"description": "This is just some text "
+		},
+		{
+			"id": "d1a85046-b2da-4aa4-b8ea-5895ca99fb1f",
+			"ver": "19.7.23.2146",
+			"application": "spill",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "350b1872-276e-4f8c-8e60-ddcc300d2aab",
+			"ver": "19.6.3.958",
+			"application": "communitygamification2",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "94add53d-cbf6-499b-b63d-670f20a747f9",
+			"ver": "19.6.28.923",
+			"application": "samplecharting",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "70136324-ef9e-4216-a4b8-a99bb9c0f43b",
+			"ver": "19.11.26.1313",
+			"application": "demo_login_azure_oah",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "abadef28-fa2a-433e-a02b-0244b38528fe",
+			"ver": "19.9.3.1514",
+			"application": "testdisableapp",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "f3ae62ff-5146-4d37-a4e4-8c83cda4a669",
+			"ver": "19.8.20.1323",
+			"application": "hello_world",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "de8eb66e-c62e-4e4c-994c-46ee4b614c79",
+			"ver": "19.7.1.937",
+			"application": "test_scroll",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "115a3e9a-07c1-4362-a232-5aa793d82d7f",
+			"ver": "19.6.1.1654",
+			"application": "test_performance",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "16dc9fa6-a814-4660-bae9-e8166bb28e37",
+			"ver": "19.5.30.929",
+			"application": "pwanjal",
+			"title": "PWA",
+			"description": "PWA"
+		},
+		{
+			"id": "208a9ab9-8a1f-4f72-a986-dd96c47004d4",
+			"ver": "19.8.23.1552",
+			"application": "planet9_testing",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "c8006d10-2e0c-41ec-b95c-f4fce1811a6f",
+			"ver": "19.7.2.1748",
+			"application": "hello_neptune",
+			"title": "",
+			"description": "Say hello to Neptune application"
+		},
+		{
+			"id": "3af790d9-36b6-4ab6-88fc-ca3876ebd371",
+			"ver": "19.8.26.1124",
+			"application": "code_snippet",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "68813a80-2e96-463c-accd-7dfea523e245",
+			"ver": "19.7.11.112",
+			"application": "zwm_np_palmov",
+			"title": "",
+			"description": "Bin to kitting"
+		},
+		{
+			"id": "6418181f-2b2b-462d-9db7-d7b08a0fd838",
+			"ver": "19.7.11.117",
+			"application": "zwm_np_palmov2",
+			"title": "",
+			"description": "Bin to kitting"
+		},
+		{
+			"id": "a0ebe606-9bdd-4257-b18d-3aac468309d7",
+			"ver": "19.9.19.1547",
+			"application": "split_test_app",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "24d44ef4-0b8f-46e8-8d5c-cd9062d3da85",
+			"ver": "20.11.30.1024",
+			"application": "test_api_table",
+			"title": "",
+			"description": "Testsuite"
+		},
+		{
+			"id": "6a424c2b-3909-4087-a014-21e0bddbf936",
+			"ver": "19.8.12.115",
+			"application": "test_proxy_files",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "a97869d1-9815-4729-ae22-01a54650ce65",
+			"ver": "19.6.4.943",
+			"application": "demoforrester",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "9b725c27-482c-4853-9c09-c6ae88b871cd",
+			"ver": "19.6.20.1522",
+			"application": "demo_teched",
+			"title": "Planet9 - JS Class",
+			"description": "Planet9 - JS Class"
+		},
+		{
+			"id": "04f3ad0f-9fee-4694-bc7f-17d590d98da2",
+			"ver": "19.9.17.1541",
+			"application": "demodeleteapp",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "e9b082f6-ea9d-4a23-9719-52ec8d5bb623",
+			"ver": "19.9.5.1416",
+			"application": "demo_redirect_azure",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "83047606-e32d-4774-a752-689c81c6b813",
+			"ver": "19.6.7.1259",
+			"application": "planet9_login_custom_debug",
+			"title": "Planet 9 Login",
+			"description": "Planet 9 Login"
+		},
+		{
+			"id": "f8c54060-b87a-45ef-bf9d-4b9438f5e31c",
+			"ver": "19.6.7.1430",
+			"application": "testsapmcolumnstyleclass",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "723d9c73-9674-49b6-96ea-d67d5b617c30",
+			"ver": "19.8.12.1632",
+			"application": "demo_myapp",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "40d8df3d-18b3-4be8-b712-cc671f994414",
+			"ver": "19.8.28.1515",
+			"application": "test_app_v1",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "7c762306-e783-4d96-9a9a-7d38fa797e7e",
+			"ver": "19.6.17.1044",
+			"application": "demo_git",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "ba88525b-db4d-424d-a9a7-6c0e97e33300",
+			"ver": "19.6.10.139",
+			"application": "demo_contact2",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "aeca8d12-5474-4af1-bf55-810a561f18b6",
+			"ver": "19.8.29.1628",
+			"application": "demo_login_azure_fabres",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "2c4a99ea-ed81-4cdc-a5b7-3fb9afa16e27",
+			"ver": "18.5.2.1338",
+			"application": "secondappdemo",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "c94789a5-610d-4a16-9186-94deaf071aea",
+			"ver": "20.2.19.1354",
+			"application": "test_app",
+			"title": "MyGroup",
+			"description": "Description"
+		},
+		{
+			"id": "805f4f98-5108-43c4-a9cf-ab9f90a678ae",
+			"ver": "20.4.26.205",
+			"application": "demo_login_azure",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "fc0cbdb3-721a-47ee-9f4e-39b8eeb117fc",
+			"ver": "19.8.19.1522",
+			"application": "treeitemcustom",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "683db117-77f4-4ccb-95de-dad056ab2734",
+			"ver": "19.11.8.1219",
+			"application": "demo_highchart_api",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "19cfe171-fefb-408b-80a6-6bcff95243ec",
+			"ver": "21.5.19.1747",
+			"application": "custom_app",
+			"title": "Rockstar",
+			"description": ""
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [
+		{
+			"id": "31f4fb11-8ed3-4d1f-acf3-ab6e2ff30d0d",
+			"name": "demo_tasks",
+			"description": "Planet9 tasklist app demo - tasks",
+			"ver": "18.11.21.1741"
+		},
+		{
+			"id": "c38bde7a-6691-4285-8816-c61cd0367e96",
+			"name": "sample_table",
+			"description": "This is a sample description",
+			"ver": "19.5.23.1037"
+		}
+	],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [
+		{
+			"id": "8e36d932-aa07-496b-856c-f3192c8e0780",
+			"name": "test5",
+			"ver": "20.6.8.1510",
+			"description": ""
+		},
+		{
+			"id": "0516f2a2-532a-4094-8b75-97d22f5f9406",
+			"name": "Demo",
+			"ver": "21.4.7.1343",
+			"description": "Demo "
+		}
+	],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}

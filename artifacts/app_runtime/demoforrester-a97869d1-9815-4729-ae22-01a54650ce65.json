@@ -1,0 +1,848 @@
+{
+	"id": "a97869d1-9815-4729-ae22-01a54650ce65",
+	"createdAt": "2019-06-04T08:39:06.000Z",
+	"updatedAt": "2019-06-04T10:03:09.000Z",
+	"createdBy": "oah",
+	"changedBy": "oah",
+	"objects": [
+		{
+			"fieldNo": "13",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "appWidthLimited",
+					"grouping": "Properties",
+					"value": "false",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "1",
+					"fieldName": "oApp",
+					"fieldParent": "13",
+					"fieldType": "sap.m.SplitApp",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "2",
+							"fieldName": "oPageMaster",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Customer List",
+									"script": "",
+									"translation": [
+										{
+											"language": "ZH",
+											"value": "客户名单"
+										}
+									]
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addMasterPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "15",
+									"fieldName": "oSubMaster",
+									"fieldParent": "2",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setSubHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "16",
+											"fieldName": "Left",
+											"fieldParent": "15",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "17",
+													"fieldName": "oFilterMaster",
+													"fieldParent": "16",
+													"fieldType": "sap.m.SearchField",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "liveChange",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// Set List Filter",
+																"// Replace yourList with List Name, FIELD1/FIELD2 and replace FilterValue",
+																"",
+																"var binding = oList.getBinding(\"items\");",
+																"var filter = new sap.ui.model.Filter(\"NAME1\", \"Contains\", this.getValue());",
+																"binding.filter([filter]);",
+																"",
+																"",
+																"// Multiple Filters using AND",
+																"//var binding = yourList.getBinding(\"items\");",
+																"//var filter1 = new sap.ui.model.Filter(\"FIELD1\", \"EQ\", \"FilterValue1\");",
+																"//var filter2 = new sap.ui.model.Filter(\"FIELD2\", \"EQ\", \"FilterValue2\");",
+																"//binding.filter([filter1, filter2]);",
+																"",
+																"",
+																"// Multiple Filters using OR",
+																"// var binding = yourList.getBinding(\"items\");",
+																"// var filter = new sap.ui.model.Filter({",
+																"//     filters: [",
+																"//         new sap.ui.model.Filter(\"FIELD1\", \"Contains\", \"FilterValue1\"),",
+																"//         new sap.ui.model.Filter(\"FIELD2\", \"Contains\", \"FilterValue2\")",
+																"//     ],",
+																"//     and: false",
+																"// })",
+																"// binding.filter([filter]);",
+																"",
+																"",
+																"// FilterOperator",
+																"// BT",
+																"// Contains",
+																"// EndsWith",
+																"// EQ",
+																"// GE",
+																"// GT",
+																"// LE",
+																"// LT",
+																"// NE",
+																"// StartsWith"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "14",
+									"fieldName": "oList",
+									"fieldParent": "2",
+									"fieldType": "sap.m.List",
+									"bindingType": "h",
+									"modelPath": "oMultiModel>/result/IT_CUSTOMER",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "18",
+											"fieldName": "oObjectListItem",
+											"fieldParent": "14",
+											"fieldType": "sap.m.ObjectListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "title",
+													"grouping": "Properties",
+													"value": "{oMultiModel>NAME1}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "numberUnit",
+													"grouping": "Properties",
+													"value": "Customers",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "number",
+													"grouping": "Properties",
+													"value": "{oMultiModel>KUNNR}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "intro",
+													"grouping": "Properties",
+													"value": "{oMultiModel>LAND1}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://customer",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "number",
+													"grouping": "Formatter",
+													"value": "string:RemoveLeadingZero",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "4",
+									"fieldName": "oFooterMaster",
+									"fieldParent": "2",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5",
+											"fieldName": "Right",
+											"fieldParent": "4",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "6",
+													"fieldName": "butCreate",
+													"fieldParent": "5",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://add",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "3",
+							"fieldName": "oPageDetail",
+							"fieldParent": "1",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Detail Page",
+									"script": "",
+									"translation": [
+										{
+											"language": "ZH",
+											"value": "细节页面"
+										}
+									]
+								},
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "addDetailPage",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "21",
+									"fieldName": "barDetail",
+									"fieldParent": "3",
+									"fieldType": "sap.m.IconTabBar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "expandable",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "22",
+											"fieldName": "barDetailInfo",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "General",
+													"script": "",
+													"translation": [
+														{
+															"language": "ZH",
+															"value": "一般"
+														}
+													]
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://hint",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "24",
+													"fieldName": "formDetail",
+													"fieldParent": "22",
+													"fieldType": "sap.ui.layout.form.SimpleForm",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": [
+														{
+															"fieldNo": "25",
+															"fieldName": "oLabel",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Label 1",
+																	"script": "",
+																	"translation": [
+																		{
+																			"language": "ZH",
+																			"value": "标签1"
+																		}
+																	]
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "28",
+															"fieldName": "oText",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Some information text",
+																	"script": "",
+																	"translation": [
+																		{
+																			"language": "ZH",
+																			"value": "一些信息文本"
+																		}
+																	]
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "26",
+															"fieldName": "oLabel1",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Label 2",
+																	"script": "",
+																	"translation": [
+																		{
+																			"language": "ZH",
+																			"value": "标签2"
+																		}
+																	]
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "29",
+															"fieldName": "oText1",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Some information text",
+																	"script": "",
+																	"translation": [
+																		{
+																			"language": "ZH",
+																			"value": "一些信息文本"
+																		}
+																	]
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "27",
+															"fieldName": "oLabel2",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Label 3",
+																	"script": "",
+																	"translation": [
+																		{
+																			"language": "ZH",
+																			"value": "标签3"
+																		}
+																	]
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "30",
+															"fieldName": "oText2",
+															"fieldParent": "24",
+															"fieldType": "sap.m.Text",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "Some information text",
+																	"script": "",
+																	"translation": [
+																		{
+																			"language": "ZH",
+																			"value": "一些信息文本"
+																		}
+																	]
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "23",
+											"fieldName": "barDetailList",
+											"fieldParent": "21",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Items",
+													"script": "",
+													"translation": [
+														{
+															"language": "ZH",
+															"value": "项目"
+														}
+													]
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://list",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "7",
+									"fieldName": "oFooterDetail",
+									"fieldParent": "3",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "8",
+											"fieldName": "Right",
+											"fieldParent": "7",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "9",
+													"fieldName": "butApprove",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Approve",
+															"script": "",
+															"translation": [
+																{
+																	"language": "ZH",
+																	"value": "批准"
+																}
+															]
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "10",
+													"fieldName": "butReject",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Reject",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Reject",
+															"script": "",
+															"translation": [
+																{
+																	"language": "ZH",
+																	"value": "拒绝"
+																}
+															]
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "11",
+													"fieldName": "butEmp",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": [
+																{
+																	"language": "ZH",
+																	"value": "强调"
+																}
+															]
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "12",
+													"fieldName": "butTransp",
+													"fieldParent": "8",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": [
+																{
+																	"language": "ZH",
+																	"value": "透明"
+																}
+															]
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "5be5a67a-3f75-4fbf-af67-ff9836a24b9b",
+					"fieldName": "oMultiModel",
+					"fieldParent": 99999,
+					"fieldType": "neptune.model",
+					"bindingValue": "SAP Workshop Training>getCustomerListResponse",
+					"bindingType": "h",
+					"bindingSource": "API",
+					"bindingParentID": "363a709b-936f-4f18-bb21-41df2c2d412b",
+					"bindingPathID": "6a2a4dfd-5aa6-4555-b8d2-93725c062826",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "setCacheType",
+							"grouping": "Model",
+							"value": "IndexedDB",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "setEnableCache",
+							"grouping": "Model",
+							"value": "true",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "setEnableEncryption",
+							"grouping": "Model",
+							"value": "true",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "cache",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				},
+				{
+					"fieldNo": "f27b3ed5-7d50-46fa-b3ef-6d7483a23269",
+					"fieldName": "oRestAPI",
+					"fieldParent": 99999,
+					"fieldType": "neptune.restapi",
+					"restSource": "363a709b-936f-4f18-bb21-41df2c2d412b",
+					"restOperation": "d7899216-c1c6-41d1-9687-74f82ee3c706",
+					"script": "",
+					"request": [],
+					"response": [
+						{
+							"status": "200",
+							"dataId": "6a2a4dfd-5aa6-4555-b8d2-93725c062826",
+							"modelFieldNo": "5be5a67a-3f75-4fbf-af67-ff9836a24b9b"
+						}
+					],
+					"attributes": [
+						{
+							"attribute": "setInitLoad",
+							"grouping": "Model",
+							"value": "online",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "19.6.4.943",
+	"application": "demoforrester",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": true,
+	"onlyRunLaunchpad": false,
+	"disabled": null,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": true,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": null,
+	"apis": []
+}
